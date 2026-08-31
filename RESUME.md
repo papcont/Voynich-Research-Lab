@@ -30,9 +30,11 @@ Retained structural observations:
 
 ## Active frontier
 
-`E006_canonical_sequence_holdout`
+`E006_canonical_sequence_holdout` — **status PLAN_FROZEN**
 
 Question: if a narrow, predeclared set of attached and spaced final chains are surface realizations of the same unit sequence, does canonicalizing them improve **held-out distant contextual recurrence/context similarity** more than matched random normalizations?
+
+The executable plan is frozen in `experiments/E006_canonical_sequence_holdout/PLAN.md` and `experiment.json`. The holdout metric is **not yet computed**. Next action: implement `run.py`/`validate.py` exactly as frozen, compute the holdout metric and nulls once, write `results.json` before `REPORT.md`. Do not alter frozen scientific choices without a pre-reveal amendment.
 
 ## After E006
 

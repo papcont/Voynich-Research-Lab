@@ -1,7 +1,7 @@
 {
   "experiment_id": "E006",
   "name": "canonical_sequence_holdout",
-  "status": "DRAFT",
+  "status": "PLAN_FROZEN",
   "question": "Do narrow attached/spaced final-chain variants share held-out context beyond matched nulls?",
   "inputs": [
     {
@@ -9,13 +9,39 @@
       "identity": "upstream_git_blob_sha1:2a4533ab9bdfa85db9bad602d590978953055df1"
     }
   ],
-  "holdout": "MUST_BE_FIXED_IN_PLAN_BEFORE_REVEAL",
+  "parser": "src/voynichlab/canonical.py",
+  "grammar": {
+    "stems": ["ot", "ok", "qot", "qok"],
+    "finals": ["ar", "al", "aiin", "am", "or", "ol"],
+    "primary_chain_length_units": 3,
+    "primary_note": "k=2 finals (stem + two finals); k>=3 secondary/exploratory"
+  },
+  "holdout": {
+    "split_fn": "int(sha256(folio.lower()).hexdigest(),16) % 5",
+    "development_folds": [0, 1, 2],
+    "holdout_folds": [3, 4],
+    "reveal_policy": "computed once after development is finalized; no post-reveal tuning"
+  },
+  "context": {
+    "stream": "per-folio ordered strict-token stream, consumed chain tokens removed",
+    "band_A_distance": [1],
+    "band_A_weight": 1.0,
+    "band_B_distance": [2, 10],
+    "band_B_weight": 0.5,
+    "feature": "neighboring strict-token surface types"
+  },
   "metrics": [
-    "MUST_BE_FROZEN"
+    "primary: mean over qualifying chains of weighted Jensen-Shannon divergence between fused and spaced context distributions",
+    "n_min_occurrences_per_realization: 2",
+    "power_floor_qualifying_chains: 3"
   ],
   "nulls": [
-    "MUST_BE_FROZEN"
+    "N1: frequency/Currier-matched random surface pairing",
+    "N2: within-folio boundary-label permutation",
+    "N3: length+frequency-matched pseudo-canonicalization (specificity, not gate)"
   ],
+  "decision_rule": "H008 supported iff N1 p<0.05 AND N2 p<0.05 AND leave-one-chain-out keeps N1 p<0.10; underpowered (<3 chains) => INCONCLUSIVE",
+  "resamples": 1000,
   "seed": 20260831,
   "claim_ceiling": "Variable structural attachment only; no morphology/semantics/plaintext claim."
 }

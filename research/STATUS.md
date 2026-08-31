@@ -48,3 +48,8 @@ The stronger claim — same underlying unit sequence — has **not passed a cont
 ## Current frontier
 
 E006 tests variable attachment using context rather than visual similarity.
+**Plan is frozen** (`experiments/E006_canonical_sequence_holdout/PLAN.md`): a
+k=2 canonical grammar, deterministic folio-hash holdout (folds 3–4), and a
+mean fused/spaced Jensen-Shannon context divergence tested against three
+folio-clustered nulls with a preregistered p<0.05 gate. The holdout target
+metric has **not** been computed. Next cycle implements and reveals it once.

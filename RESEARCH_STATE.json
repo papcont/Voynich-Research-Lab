@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-08-31T12:44:00Z",
-  "status": "READY_TO_FREEZE_PLAN",
+  "updated_utc": "2026-08-31T13:10:00Z",
+  "status": "PLAN_FROZEN",
   "active_experiment": "E006_canonical_sequence_holdout",
-  "next_action": "Audit PLAN_DRAFT.md, freeze an executable PLAN.md without opening the designated holdout result, commit the plan freeze, then stop this cycle.",
+  "next_action": "Implement E006 exactly as frozen in experiments/E006_canonical_sequence_holdout/PLAN.md: add run.py + validate.py using voynichlab, compute the holdout metric and nulls ONCE, write results.json before REPORT.md. Do not change any frozen scientific choice; if implementation forces one, write an amendment before target reveal.",
   "blocked_reason": null,
   "last_completed_experiment": "E005_final_attachment",
   "scientific_claim_ceiling": "Structural evidence only; no plaintext, language or semantic decipherment claim.",

@@ -6,6 +6,6 @@ H004	Currier A/B is only scribal-hand style	EXPLORATORY	WEAKENED	Same LFD hand s
 H005	visible tokens are compositional modules	EXPLORATORY	OPEN	Productive families warrant testing; semantics unknown	E004,E007
 H006	predictable spaces are generally non-word boundaries	EXPLORATORY	WEAKENED	Naive boundary merging did not improve repeated blocks	historical
 H007	specific final chains have variable attachment	EXPLORATORY	OPEN	Multiple attached/spaced candidate pairs	E005,E006
-H008	canonicalizing attachment improves distant context	UNTESTED	ACTIVE	Must beat matched nulls on held-out data	E006
+H008	canonicalizing attachment improves distant context	FROZEN_HOLDOUT	PLAN_FROZEN	Plan frozen; k=2 grammar, folds 3-4 holdout, mean fused/spaced JSD vs N1/N2/N3, gate p<0.05; target uncomputed	E006
 H009	P70 4-slot grammar is uniquely explanatory	UNTESTED	QUEUED	Needs independent objective/holdout	E007
 H010	Deshuffling Matrix recovers Latin under fixed rules	UNTESTED	QUEUED	Needs independent implementation/blind controls	E009
