@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-08-31T14:20:00Z",
+  "updated_utc": "2026-08-31T14:45:00Z",
   "status": "PLAN_FROZEN",
   "active_experiment": "E007_p70_replication",
-  "next_action": "Implement E007 exactly as frozen in experiments/E007_p70_replication/PLAN.md: add src/voynichlab/p70.py (closed-inventory longest-match parser, layer A), run.py (competitors A0-A8, prequential KT description-length primary + secondary held-out arm + R1 reproduction diagnostics), validate.py. Write results.json before REPORT.md. Do NOT implement p70_rules_canonical.json layer B or use enriched_records as labels. Do NOT change frozen scientific choices; amend before reveal if forced. R3 stays DEFERRED.",
+  "next_action": "Implement frozen E007 PLAN.md + PREFLIGHT_AMENDMENT_001.md and perform the first reveal: add run.py (competitors A0,A1,A2,A3,A5,A6,A7,A8 -- A4 is DEFERRED_PRE_REVEAL -- using voynichlab.p70/mdl/loci; primary global prequential KT data_bits/token + model_bits + cross-fitted 5-fold + dev/holdout arm + R1 diagnostics + Currier(A/B) + major sections {S,H,B,P}) and validate.py. Write results.json before REPORT.md. Do NOT implement p70_rules_canonical.json layer B or use enriched_records as labels; R3 stays DEFERRED. Do NOT change frozen choices; amend before reveal if forced.",
   "blocked_reason": null,
   "last_completed_experiment": "E006_canonical_sequence_holdout",
   "last_completed_result": "INCONCLUSIVE_UNDERPOWERED",

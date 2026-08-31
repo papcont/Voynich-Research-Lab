@@ -43,7 +43,9 @@ Upstream `Voynichdecomp` audited @ `4f8a1117…`. Frozen design, three separated
 - **R2** (`EXTERNAL_MODEL_EVALUATION`): primary = prequential KT description-length (bits/surface-token), identical estimator + char-escape for P70 and competitors A0–A8; gate = beat A0 and every non-deferred competitor by ≥0.05 bits/token (or lowest in ≥4/5 folds), not a complexity/fallback artefact, stable across Currier A/B. Outcomes: STRUCTURAL_SUPPORT / REPRODUCED_BUT_NOT_VALIDATED / REPRODUCTION_FAILURE / SPECIFICATION_AMBIGUITY.
 - **R3** (`TRANSFER`): DEFERRED (needs a genuinely independent transcription with provenance/hash).
 
-Honesty anchors: zero chain-rule residual is a mathematical identity, not evidence; P70 is **non-prospective** (built on the whole VMS), so the folio split is only a common comparison surface, never "validated holdout". No E007 target computed. Next action: implement `p70.py`/`run.py`/`validate.py`, write `results.json` before `REPORT.md`.
+Honesty anchors: zero chain-rule residual is a mathematical identity, not evidence; P70 is **non-prospective** (built on the whole VMS), so the folio split is only a common comparison surface, never "validated holdout". No E007 target computed.
+
+**PREFLIGHT_AMENDMENT_001** (committed pre-reveal) fixed all open operationalizations: A8 = deterministic per-type sha256 cut with a development-only slot-length profile; **A4 = DEFERRED_PRE_REVEAL** (gate competitors = A0,A1,A2,A3,A5,A6,A7,A8); R1 tolerances (non-degenerate parse ≥85%, empty-core 52.7±10pp, total entropy 10.311±1.0; reconstruction/zero-residual descriptive only); model-cost = char-code of literal inventories + Elias-gamma ints; Gate-3 folds = 5-fold cross-fitted bits/token; Currier from ZL3b `$L` (A/B); major sections from ZL3b `$I` (tokens≥2000 & folios≥8 ⇒ {S,H,B,P}); running-text = paragraph `P*` loci (`loci.is_running_text`); P70 parse precedence in `p70.parse_p70`; KT coder in `mdl.KTCoder`. Helpers are fixture-tested; no corpus metric run. Next action: implement `run.py`/`validate.py` and perform the first reveal, writing `results.json` before `REPORT.md`.
 
 ## Previously completed
 

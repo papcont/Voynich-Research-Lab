@@ -2,6 +2,18 @@
   "experiment_id": "E007",
   "name": "p70_replication",
   "status": "PLAN_FROZEN",
+  "amendments": ["PREFLIGHT_AMENDMENT_001.md"],
+  "amendment_resolutions": {
+    "A8": "deterministic per token type via sha256('E007-A8|20260907|'+token); slot-length profile from development folds {0,1,2} only",
+    "A4": "DEFERRED_PRE_REVEAL (excluded from gate); competitors = A0,A1,A2,A3,A5,A6,A7,A8",
+    "R1_failure": "non-degenerate parse rate<85% OR (empty-core outside [42.7,62.7] AND total entropy outside 10.311±1.0); reconstruction/zero-residual are DESCRIPTIVE only",
+    "model_cost": "model_bits = charcost of literal closed-inventory strings (frozen char code) + elias_gamma(seed+1) + elias_gamma(n_slots); no source/JSON/README length; total_bits=model_bits+data_bits",
+    "fold_score": "5-fold cross-fitted: train on other 4 folds, freeze, code held fold, bits/token; Gate3 = P70 lowest in >=4/5 folds per competitor",
+    "currier": "ZL3b $L; A and B; unknown excluded from A/B gate",
+    "sections": "ZL3b $I; major (gate) = tokens>=2000 AND folios>=8 => {S,H,B,P}; {T,C,A} descriptive; upstream 2b map not used for scores",
+    "running_text": "loci.is_running_text: locus-type letters start with 'P' (paragraph); labels/circular/radial excluded",
+    "parse_precedence": "p70.parse_p70: longest prefix->gallows->suffix(from end of remainder)->core; tie longest then declaration order; empty=''"
+  },
   "question": "Under a fair external predictive-codelength benchmark, does the published P70 four-slot factorization generalize better than predeclared alternative segmentations, and can its structural values be independently reproduced?",
   "upstream": {
     "repo": "digitalgoldfisj79/Voynichdecomp",

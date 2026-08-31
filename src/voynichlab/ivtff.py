@@ -29,6 +29,7 @@ class LineRecord:
     line_number: str | None
     raw_text: str
     meta: FolioMeta
+    locator: str | None = None  # IVTFF locus locator after the comma, e.g. "@P0" (E007 running-text filter)
 
 
 @dataclass(frozen=True)
@@ -69,12 +70,14 @@ def parse_ivtff(path: str | Path) -> Iterator[LineRecord]:
             folio = _folio_from_locus(locus)
             meta = current.get(folio, active or FolioMeta(folio=folio))
             line_number = locus.split(".", 1)[1] if "." in locus else None
+            locator = tm.group("rest").lstrip(",") or None
             yield LineRecord(
                 locus=locus,
                 folio=folio,
                 line_number=line_number,
                 raw_text=tm.group("text"),
                 meta=meta,
+                locator=locator,
             )
 
 
