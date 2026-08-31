@@ -7,5 +7,5 @@ H005	visible tokens are compositional modules	EXPLORATORY	OPEN	Productive famili
 H006	predictable spaces are generally non-word boundaries	EXPLORATORY	WEAKENED	Naive boundary merging did not improve repeated blocks	historical
 H007	specific final chains have variable attachment	EXPLORATORY	OPEN	Multiple attached/spaced candidate pairs	E005,E006
 H008	canonicalizing attachment improves distant context	FROZEN_HOLDOUT	INCONCLUSIVE_UNDERPOWERED	E006 revealed: only 1 holdout chain has >=2 fused AND >=2 spaced (floor 3); N2 also degenerate. Unresolved, not falsified. No tuning permitted.	E006
-H009	P70 4-slot grammar is uniquely explanatory	UNTESTED	QUEUED	Needs independent objective/holdout	E007
+H009	P70 4-slot grammar is uniquely explanatory	EXTERNAL_MODEL_EVALUATION	PLAN_FROZEN	Plan frozen: reimplement layer-A closed-inventory parser; primary = prequential KT bits/token vs A0-A8; NON-PROSPECTIVE (P70 built on whole VMS); zero residual is an identity; ZL3b!=their 2b so R1 approximate; target uncomputed	E007
 H010	Deshuffling Matrix recovers Latin under fixed rules	UNTESTED	QUEUED	Needs independent implementation/blind controls	E009

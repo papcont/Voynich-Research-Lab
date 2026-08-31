@@ -1,0 +1,56 @@
+{
+  "experiment_id": "E007",
+  "name": "p70_replication",
+  "status": "PLAN_FROZEN",
+  "question": "Under a fair external predictive-codelength benchmark, does the published P70 four-slot factorization generalize better than predeclared alternative segmentations, and can its structural values be independently reproduced?",
+  "upstream": {
+    "repo": "digitalgoldfisj79/Voynichdecomp",
+    "pin": "4f8a11174189148f312205d088910361ee67bde6",
+    "license": "MIT (code+data); VMS public domain",
+    "spec_layer_A": "closed-inventory longest-match parser (independently reconstructible) — IMPLEMENTED",
+    "spec_layer_B": "p70_rules_canonical.json section-weighted 210 rules (not reconstructible) — NOT implemented; optional fixed external input only",
+    "their_target_rejected": "grammar's own entropy profile total 10.311 bits; zero residual is an identity, not evidence",
+    "transcription_version": "P70 used ZL_ivtff_2b; our corpus is ZL3b-n (3b) => reproduction approximate only"
+  },
+  "inputs": [
+    {
+      "source": "data/raw/ZL3b-n.txt",
+      "identity": "upstream_git_blob_sha1:2a4533ab9bdfa85db9bad602d590978953055df1"
+    }
+  ],
+  "arms": {
+    "R1": "EXTERNAL_REPLICATION/REPRODUCTION (approximate, on ZL3b)",
+    "R2": "EXTERNAL_MODEL_EVALUATION (adversarial retrospective codelength benchmark)",
+    "R3": "EXTERNAL_REPLICATION/TRANSFER (DEFERRED this cycle)"
+  },
+  "prospectivity": "NON-PROSPECTIVE: P70 was built on the whole VMS; the E007 folio split is only a common predictive comparison surface, not evidence P70 was unseen.",
+  "p70_spec": {
+    "prefix": ["∅", "o", "y", "d", "s", "ch", "sh", "qo"],
+    "gallows": ["∅", "k", "t", "p", "f", "ckh", "cth", "cph", "cfh"],
+    "suffix_families": {
+      "Y": ["y", "edy", "ey", "eey", "eedy", "dy", "ody", "chy", "shy"],
+      "N": ["aiin", "ain", "iin", "n", "aiiin", "iiin", "oiin", "oiiin"],
+      "L": ["ol", "al", "l"],
+      "R": ["ar", "or", "r", "ir"],
+      "BARE": ["∅"],
+      "M": ["am", "m"],
+      "OTHER": ["g", "he", "ee", "b", "ai", "a", "e", "s"]
+    },
+    "core": "open residual",
+    "parse": "longest-match prefix -> gallows -> suffix(from end) -> core=remainder; ch/sh are prefixes; degenerate fallback = whole token in core"
+  },
+  "primary_objective": "prequential (online) KT predictive description length, bits/surface-token, identical estimator + char-level escape for all models; lower = better generalization",
+  "token_population": "strict tokens (non-uncertain), running text only; identical for all models",
+  "competitors": ["A0_whole", "A1_prefix_rest", "A2_rest_suffix", "A3_fixed_cuts", "A4_stolfi_inspired_or_DEFERRED", "A5_no_gallows", "A6_no_suffix", "A7_chsh_not_prefix", "A8_matched_random_lossless"],
+  "split": {
+    "efold_fn": "int(sha256(('E007:'+folio.lower())).hexdigest(),16) % 5",
+    "development_folds": [0, 1, 2],
+    "holdout_folds": [3, 4],
+    "note": "domain-separated from E006; primary metric is prequential and split-free, split used for secondary held-out arm and 5-fold stability"
+  },
+  "decision_gate": "STRUCTURAL_SUPPORT iff coverage>=99% AND P70 beats A0 by >=0.05 bits/token AND beats every non-deferred competitor by >=0.05 bits/token or is lowest in >=4/5 folds AND not a complexity/fallback artefact AND lowest in both Currier A and B; else REPRODUCED_BUT_NOT_VALIDATED / REPRODUCTION_FAILURE / SPECIFICATION_AMBIGUITY",
+  "margins": {"bits_per_token": 0.05, "fold_consistency": "4_of_5"},
+  "a8_seed": 20260907,
+  "claim_ceiling": "Reproducible four-slot structural factorization that generalizes better than tested alternatives; NOT morphemes/language/decipherment.",
+  "enriched_records_policy": "never training labels or gold; optional published-reference-output cross-check only after our parser is frozen"
+}

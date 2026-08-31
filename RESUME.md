@@ -36,7 +36,18 @@ On the frozen hash holdout (folds 3–4, 88 folios) only 1 k=2 canonical chain (
 
 ## Active frontier
 
-`E007_p70_replication` — **status READY_TO_FREEZE_PLAN**. Independently reimplement and stress-test the P70 4-slot grammar (`prefix·gallows·core·suffix`) against independent/held-out objectives; the upstream "zero entropy residual" is mathematically trivial for any lossless chain-rule decomposition and is not evidence. Audit its `PLAN_DRAFT.md` and freeze an executable plan before any target reveal — a new cycle, not an E006 reanalysis.
+`E007_p70_replication` — **status PLAN_FROZEN** (see `experiments/E007_p70_replication/PLAN.md` + `experiment.json`).
+
+Upstream `Voynichdecomp` audited @ `4f8a1117…`. Frozen design, three separated arms:
+- **R1** (`EXTERNAL_REPLICATION`): reimplement the published closed-inventory longest-match parser (layer A: 8 prefixes, 9 gallows, 33 suffixes/7 families, core=residual, ch/sh as prefixes) and check approximate reproduction of P70 structural values on ZL3b. The 210-rule `p70_rules_canonical.json` (layer B) is **not** implemented; `enriched_records` is **never** gold/training.
+- **R2** (`EXTERNAL_MODEL_EVALUATION`): primary = prequential KT description-length (bits/surface-token), identical estimator + char-escape for P70 and competitors A0–A8; gate = beat A0 and every non-deferred competitor by ≥0.05 bits/token (or lowest in ≥4/5 folds), not a complexity/fallback artefact, stable across Currier A/B. Outcomes: STRUCTURAL_SUPPORT / REPRODUCED_BUT_NOT_VALIDATED / REPRODUCTION_FAILURE / SPECIFICATION_AMBIGUITY.
+- **R3** (`TRANSFER`): DEFERRED (needs a genuinely independent transcription with provenance/hash).
+
+Honesty anchors: zero chain-rule residual is a mathematical identity, not evidence; P70 is **non-prospective** (built on the whole VMS), so the folio split is only a common comparison surface, never "validated holdout". No E007 target computed. Next action: implement `p70.py`/`run.py`/`validate.py`, write `results.json` before `REPORT.md`.
+
+## Previously completed
+
+- `E006_canonical_sequence_holdout` — INCONCLUSIVE_UNDERPOWERED (1 qualifying holdout chain < floor 3; H008 unresolved; no tuning of the revealed holdout).
 
 ## After E006
 

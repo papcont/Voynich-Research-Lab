@@ -59,4 +59,14 @@ grammar/threshold tuning is permitted on this revealed holdout; a powered
 retest would require a separate preregistration.
 
 Next frontier: **E007** — independent P70 4-slot grammar replication
-(`READY_TO_FREEZE_PLAN`).
+(**PLAN_FROZEN**). Upstream `Voynichdecomp` audited at the pinned commit: the
+published spec is dual-layer — a compact closed-inventory longest-match parser
+(reconstructible; we reimplement it) plus a 210-rule section-weighted
+`p70_rules_canonical.json` (not reconstructible; not implemented, optional fixed
+input only). Their validator targets P70's own entropy profile (10.311 bits) and
+zero residual is a chain-rule identity — both rejected as evidence. P70 used
+ZL_ivtff_2b, we use ZL3b, so reproduction is approximate. Primary benchmark is a
+prequential KT description-length (bits/surface-token) with an identical
+estimator + char-escape for P70 and competitors A0–A8; the folio split is only a
+common comparison surface (P70 is **non-prospective** — built on the whole VMS).
+No E007 metric is computed yet. R3 (independent transcription) is DEFERRED.
