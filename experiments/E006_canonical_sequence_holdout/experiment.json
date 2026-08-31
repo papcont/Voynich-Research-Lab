@@ -2,6 +2,7 @@
   "experiment_id": "E006",
   "name": "canonical_sequence_holdout",
   "status": "PLAN_FROZEN",
+  "amendments": ["PREFLIGHT_AMENDMENT_001.md"],
   "question": "Do narrow attached/spaced final-chain variants share held-out context beyond matched nulls?",
   "inputs": [
     {
