@@ -7,8 +7,8 @@
 | E003 | HISTORICAL_EXPLORATORY | Same-hand A/B controls |
 | E004 | HISTORICAL_EXPLORATORY | Module compatibility grammar |
 | E005 | HISTORICAL_EXPLORATORY | Attached vs spaced final discovery |
-| **E006** | **PLAN_FROZEN** | Canonical final-chain holdout test |
-| E007 | QUEUED | Independent P70 grammar replication |
+| E006 | DONE — INCONCLUSIVE_UNDERPOWERED | Canonical final-chain holdout test |
+| **E007** | **READY_TO_FREEZE_PLAN** | Independent P70 grammar replication |
 | E008 | QUEUED | Mechanism tournament |
 | E009 | QUEUED | Deshuffling Matrix blind test |
 | E010 | QUEUED | External decode-claim stress tests |

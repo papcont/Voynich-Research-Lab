@@ -1,11 +1,12 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-08-31T13:10:00Z",
-  "status": "PLAN_FROZEN",
-  "active_experiment": "E006_canonical_sequence_holdout",
-  "next_action": "Implement E006 exactly as frozen in experiments/E006_canonical_sequence_holdout/PLAN.md: add run.py + validate.py using voynichlab, compute the holdout metric and nulls ONCE, write results.json before REPORT.md. Do not change any frozen scientific choice; if implementation forces one, write an amendment before target reveal.",
+  "updated_utc": "2026-08-31T13:55:00Z",
+  "status": "READY_TO_FREEZE_PLAN",
+  "active_experiment": "E007_p70_replication",
+  "next_action": "Audit experiments/E007_p70_replication/PLAN_DRAFT.md and freeze an executable, falsifiable PLAN.md before any target reveal: independently reimplement the P70 4-slot grammar (prefix.gallows.core.suffix), define held-out/independent objectives (MDL, holdout likelihood, transcription/section transfer), and explicitly discount the trivial zero-entropy-residual claim. Do NOT reanalyze or tune E006. Commit the freeze without computing E007 targets.",
   "blocked_reason": null,
-  "last_completed_experiment": "E005_final_attachment",
+  "last_completed_experiment": "E006_canonical_sequence_holdout",
+  "last_completed_result": "INCONCLUSIVE_UNDERPOWERED",
   "scientific_claim_ceiling": "Structural evidence only; no plaintext, language or semantic decipherment claim.",
   "auto_advance": true
 }

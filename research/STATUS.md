@@ -47,9 +47,16 @@ The stronger claim — same underlying unit sequence — has **not passed a cont
 
 ## Current frontier
 
-E006 tests variable attachment using context rather than visual similarity.
-**Plan is frozen** (`experiments/E006_canonical_sequence_holdout/PLAN.md`): a
-k=2 canonical grammar, deterministic folio-hash holdout (folds 3–4), and a
-mean fused/spaced Jensen-Shannon context divergence tested against three
-folio-clustered nulls with a preregistered p<0.05 gate. The holdout target
-metric has **not** been computed. Next cycle implements and reveals it once.
+E006 is **complete with an INCONCLUSIVE_UNDERPOWERED result** (first reveal
+2026-08-31, seed 20260831, `results.json` + independent `validate.py`). On the
+frozen hash holdout (folds 3–4, 88 folios) only **1** k=2 canonical chain
+(`ok|al|or`) had ≥2 fused AND ≥2 spaced occurrences, below the preregistered
+power floor of 3; the frozen design therefore computes no target JSD and H008
+stays **unresolved** (neither supported nor falsified). N2 would also have been
+degenerate (fused/spaced of the same chain never share a folio). The narrow k=2
+same-chain co-occurrence is simply too rare in ZL3b to power this test. No
+grammar/threshold tuning is permitted on this revealed holdout; a powered
+retest would require a separate preregistration.
+
+Next frontier: **E007** — independent P70 4-slot grammar replication
+(`READY_TO_FREEZE_PLAN`).

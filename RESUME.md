@@ -28,13 +28,15 @@ Retained structural observations:
 - Simply merging highly predictable token boundaries did not create compelling repeated multi-token units.
 - Section, hand, regime, locus and line effects must be separated before semantic claims.
 
+## Last completed experiment
+
+`E006_canonical_sequence_holdout` — **COMPLETED, INCONCLUSIVE_UNDERPOWERED** (first reveal 2026-08-31, seed 20260831).
+
+On the frozen hash holdout (folds 3–4, 88 folios) only 1 k=2 canonical chain (`ok|al|or`) met the ≥2-fused-and-≥2-spaced threshold, below the preregistered power floor of 3. The frozen design computes no target JSD below that floor, so **H008 is unresolved** (neither supported nor falsified); N2 would also have been degenerate. See `experiments/E006_canonical_sequence_holdout/results.json` and `REPORT.md`. The revealed holdout must not be tuned (no widening grammar, no lowering thresholds); a powered retest needs a fresh preregistration.
+
 ## Active frontier
 
-`E006_canonical_sequence_holdout` — **status PLAN_FROZEN**
-
-Question: if a narrow, predeclared set of attached and spaced final chains are surface realizations of the same unit sequence, does canonicalizing them improve **held-out distant contextual recurrence/context similarity** more than matched random normalizations?
-
-The executable plan is frozen in `experiments/E006_canonical_sequence_holdout/PLAN.md` and `experiment.json`. The holdout metric is **not yet computed**. Next action: implement `run.py`/`validate.py` exactly as frozen, compute the holdout metric and nulls once, write `results.json` before `REPORT.md`. Do not alter frozen scientific choices without a pre-reveal amendment.
+`E007_p70_replication` — **status READY_TO_FREEZE_PLAN**. Independently reimplement and stress-test the P70 4-slot grammar (`prefix·gallows·core·suffix`) against independent/held-out objectives; the upstream "zero entropy residual" is mathematically trivial for any lossless chain-rule decomposition and is not evidence. Audit its `PLAN_DRAFT.md` and freeze an executable plan before any target reveal — a new cycle, not an E006 reanalysis.
 
 ## After E006
 
