@@ -1,0 +1,11 @@
+id	claim	evidence_class	status	note	experiments
+H001	qo/o surface-family relation	EXPLORATORY	OPEN	Matched families exist; semantics unknown	E001,E002,E006
+H002	qo choice is primarily position-sensitive	EXPLORATORY	NARROWED	Position effect exists in selected data but previous-final state is critical	E001,E002
+H003	previous final y increases next qo in Biological B	EXTERNAL_SUPPORT	OPEN	Historical/modern support; independently quantify here	E002
+H004	Currier A/B is only scribal-hand style	EXPLORATORY	WEAKENED	Same LFD hand spans regimes	E003
+H005	visible tokens are compositional modules	EXPLORATORY	OPEN	Productive families warrant testing; semantics unknown	E004,E007
+H006	predictable spaces are generally non-word boundaries	EXPLORATORY	WEAKENED	Naive boundary merging did not improve repeated blocks	historical
+H007	specific final chains have variable attachment	EXPLORATORY	OPEN	Multiple attached/spaced candidate pairs	E005,E006
+H008	canonicalizing attachment improves distant context	UNTESTED	ACTIVE	Must beat matched nulls on held-out data	E006
+H009	P70 4-slot grammar is uniquely explanatory	UNTESTED	QUEUED	Needs independent objective/holdout	E007
+H010	Deshuffling Matrix recovers Latin under fixed rules	UNTESTED	QUEUED	Needs independent implementation/blind controls	E009

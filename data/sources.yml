@@ -1,0 +1,12 @@
+sources:
+  zl3b:
+    role: primary_transcription
+    transcription: Zandbergen-Landini ZL3b
+    format: IVTFF Eva- 2.0
+    version_date: 2025-05-13
+    url: https://raw.githubusercontent.com/matthewdgreen/cipher_benchmark/main/benchmark/unsolved/sources/voynich/transcriptions/ZL3b-n.txt
+    upstream_repository: matthewdgreen/cipher_benchmark
+    upstream_path: benchmark/unsolved/sources/voynich/transcriptions/ZL3b-n.txt
+    upstream_git_blob_sha1: 2a4533ab9bdfa85db9bad602d590978953055df1
+    local_path: data/raw/ZL3b-n.txt
+    redistribution: do_not_commit_by_default

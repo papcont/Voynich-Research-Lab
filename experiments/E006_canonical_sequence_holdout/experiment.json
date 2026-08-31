@@ -1,0 +1,21 @@
+{
+  "experiment_id": "E006",
+  "name": "canonical_sequence_holdout",
+  "status": "DRAFT",
+  "question": "Do narrow attached/spaced final-chain variants share held-out context beyond matched nulls?",
+  "inputs": [
+    {
+      "source": "data/raw/ZL3b-n.txt",
+      "identity": "upstream_git_blob_sha1:2a4533ab9bdfa85db9bad602d590978953055df1"
+    }
+  ],
+  "holdout": "MUST_BE_FIXED_IN_PLAN_BEFORE_REVEAL",
+  "metrics": [
+    "MUST_BE_FROZEN"
+  ],
+  "nulls": [
+    "MUST_BE_FROZEN"
+  ],
+  "seed": 20260831,
+  "claim_ceiling": "Variable structural attachment only; no morphology/semantics/plaintext claim."
+}

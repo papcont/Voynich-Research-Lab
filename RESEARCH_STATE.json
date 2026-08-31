@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "updated_utc": "2026-08-31T12:44:00Z",
+  "status": "READY_TO_FREEZE_PLAN",
+  "active_experiment": "E006_canonical_sequence_holdout",
+  "next_action": "Audit PLAN_DRAFT.md, freeze an executable PLAN.md without opening the designated holdout result, commit the plan freeze, then stop this cycle.",
+  "blocked_reason": null,
+  "last_completed_experiment": "E005_final_attachment",
+  "scientific_claim_ceiling": "Structural evidence only; no plaintext, language or semantic decipherment claim.",
+  "auto_advance": true
+}

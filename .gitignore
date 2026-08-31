@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+data/raw/
+data/local_manifest.json
+.external/
+runs/*.json
+runs/*.log
+.claude/worktrees/

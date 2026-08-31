@@ -1,0 +1,77 @@
+# Pinned external repositories. Conclusions are not accepted automatically.
+repos:
+  - name: LETSGO-Voynich
+    url: https://github.com/daito-dot/LETSGO-Voynich
+    pin: 2b81418dc611df328cb9aa5ea3af107dcb545fc0
+    category: [workflow_reference, structural_competitor]
+    priority: very_high
+    use: [falsification_protocol, deterministic_handoff, prospective_tests, generator_nulls]
+    caveat: A1 is an upstream hypothesis, not our source of truth.
+    license_note: README states MIT code and CC-BY-4.0 original research; verify file before copying.
+
+  - name: VManus
+    url: https://github.com/yodakohl/VManus
+    pin: 671ebfecc5095fe33e465a5b5a1f4de121d10360
+    category: [workflow_reference, structural_competitor]
+    priority: very_high
+    use: [experiment_manifests, sha_provenance, sealed_data_guards, preflight]
+    caveat: Borrow workflow patterns, not semantic assignments.
+    license_note: verify before copying implementation code.
+
+  - name: Voynichdecomp
+    url: https://github.com/digitalgoldfisj79/Voynichdecomp
+    pin: 4f8a11174189148f312205d088910361ee67bde6
+    category: [structural_competitor]
+    priority: high
+    use: [four_slot_grammar, suffix_families, independent_replication_target]
+    caveat: Published validator uses the proposed grammar's own entropy profile and a machine-specific path; independently reimplement and use external/held-out objectives.
+    license_note: verify before copying code or data.
+
+  - name: Voynich-Deshuffling-Matrix
+    url: https://github.com/Halkosuoja/Voynich-Deshuffling-Matrix
+    pin: 36b747b69d830ac77300b7eacecb6ec5a3f887cd
+    category: [cipher_competitor, semantic_claim]
+    priority: medium
+    use: [independent_implementation, blind_latin_output_test]
+    caveat: Mostly specifications/PDFs; readable Latin is not validation.
+    license_note: CC-BY-4.0 stated.
+
+  - name: voynich-nlp-analysis
+    url: https://github.com/ifexthy/voynich-nlp-analysis
+    pin: ed3c6353ebf37196074ceaacbc6f4bce9abbfa12
+    category: [low_priority_methodology]
+    priority: medium_low
+    use: [transition_matrix_baseline, clustering_baseline]
+    caveat: POS/SBERT semantics on undeciphered EVA can import unsupported semantics.
+
+  - name: manuscript-phoneme-decipher
+    url: https://github.com/okesipoke/manuscript-phoneme-decipher
+    pin: f50d92fde9ceb774a466029663fb7628229a5821
+    category: [semantic_claim]
+    priority: low
+    use: [adversarial_claim_stress_test]
+    caveat: README describes engine/lexicon/validation directories, but inspected root exposes only static/site files and README; reproducibility claims unverified.
+
+  - name: voynichmanuscriptdecoded.github.io
+    url: https://github.com/VoynichManuscriptDecoded/voynichmanuscriptdecoded.github.io
+    pin: e374aeb7336f6e742174c14825b821ea10450850
+    category: [semantic_claim]
+    priority: low
+    use: [external_full_decode_stress_test]
+    caveat: Static site claims a Medici/medical/fertility decode and embeds external sheets; no accepted reproducible decoding algorithm observed.
+
+  - name: MKUFT
+    url: https://github.com/mark45cdo-mkuft/MKUFT
+    pin: be5afd0c021907f52eb063c992a3874a47724389
+    category: [low_priority_methodology]
+    priority: very_low
+    use: [provenance_architecture_ideas]
+    caveat: Not a Voynich decipherment repository.
+
+  - name: voynich-website
+    url: https://github.com/VoynichLabs/voynich-website
+    pin: bcf5b7af093a48003c04aefe3d7f2c05812f5ca6
+    category: [unrelated_to_voynich_science]
+    priority: ignore
+    use: []
+    caveat: Inspected README describes an unrelated Astro showcase, not manuscript research.
