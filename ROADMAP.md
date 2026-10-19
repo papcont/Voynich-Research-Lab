@@ -16,4 +16,4 @@
 | E011 | DONE — H014 SUPPORTED_DEV, H015 FALSIFIED_DEV (development-stage) | Slot-targeted conditioning under a backoff KT scorecard; new strongest structural null M_Sfam |
 | E012 | DRAFT | Mechanism-family signature comparison on reference texts (stage B); human corpus decision needed |
 | E014 | DONE — H020 FALSIFIED (self-citation Δ_C +2.93 vs −0.46); H021 PARTIAL (edge-coupled overshoots Δ_S) | Corpus-free generator signatures; inventory growth identified as the stronger discriminator for E012 |
-| **E015** | **PLAN_FROZEN** | Signature v2 (adds TTR, hapax share, within-folio repetition, cross-folio sharing) vs G4, G5 edge+Pitman-Yor, G6 folio-horizon self-citation |
+| E015 | DONE — all three generators MISMATCH; H022/H023 FALSIFIED | Signature v2 discriminates every tested generator; within-folio repetition F is the key component |

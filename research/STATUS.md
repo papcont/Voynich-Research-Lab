@@ -47,6 +47,15 @@ The stronger claim — same underlying unit sequence — has **not passed a cont
 
 ## Current frontier
 
+**E015 complete.** Signature v2 (Δ_S, Δ_L, Δ_C + TTR, hapax share H1, within-folio
+repetition F, cross-folio sharing X) vs three generators on the ZL3b skeleton: G4
+edge-coupled, G5 edge-coupled + Pitman–Yor vocabulary, G6 folio-horizon self-citation —
+**all MISMATCH**; H022/H023 falsified. Robust pattern: every edge-coupled generator
+*overshoots* the edge gain (0.14–0.15 vs 0.088); every self-citation generator leaves a
+large local-copy signal the manuscript lacks (+1.6 to +2.9 vs −0.46); a vocabulary-growth
+process reproduces cross-folio sharing (X) but not within-folio reuse (F 0.17 vs 0.24).
+Simple family-G generators are excluded; F is the discriminator to carry into E012.
+
 **E014 complete.** Four non-semantic generators on the ZL3b folio/line skeleton vs the
 Voynich component signature (Δ_S +0.088, Δ_L −0.026, Δ_C −0.463): independent slots
 MISMATCH; token unigram PARTIAL; **self-citation MISMATCH** (Δ_C +2.93 bits/token — the

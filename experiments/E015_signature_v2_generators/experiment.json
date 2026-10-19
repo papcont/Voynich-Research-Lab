@@ -1,7 +1,7 @@
 {
   "experiment_id": "E015",
   "name": "signature_v2_generators",
-  "status": "PLAN_FROZEN",
+  "status": "COMPLETED",
   "evidence_class": "MECHANISM_DEMONSTRATION/DEVELOPMENT",
   "gate_level_claimable": "none",
   "hypotheses": {
@@ -58,5 +58,14 @@
     "predictions": "82047914ebf7cd84bf67dc602ccfe4dc5954ef0ca158f1e8a1d516d41471bf02"
   },
   "claim_ceiling": "Which generators reproduce which structural components; no meaning/language; no Gate level.",
-  "amendments": []
+  "amendments": [],
+  "result": "results.json",
+  "decisions": {
+    "G4_EDGE": "MISMATCH",
+    "G5_EDGE_PY": "MISMATCH",
+    "G6_FOLIO_SC": "MISMATCH",
+    "H022": "FALSIFIED",
+    "H023": "FALSIFIED"
+  },
+  "generated_texts": "runs/E015/*.json (git-ignored; reproducible from seeds)"
 }

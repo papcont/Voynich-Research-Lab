@@ -30,16 +30,16 @@ Retained structural observations:
 
 ## Last completed experiment
 
-`E014_generator_signatures` — **COMPLETED (development-stage).** Generators on the ZL3b skeleton vs the Voynich signature (Δ_S +0.088, Δ_L −0.026, Δ_C −0.463): G1 independent slots MISMATCH; G2 unigram PARTIAL; **G3 self-citation MISMATCH (Δ_C +2.93)** → H020 FALSIFIED; **G4 edge-coupled PARTIAL** (Δ_S 0.144 overshoot; L, C match) → H021 PARTIAL. Inventory growth (TTR/hapax) discriminates far more strongly than the three components; add it to E012. Validator pass. See `REPORT.md`.
+`E015_signature_v2_generators` — **COMPLETED (development-stage).** Signature v2 vs G4 edge-coupled, G5 edge + Pitman–Yor (d 0.7, θ 10), G6 folio-horizon self-citation (0.5, 0.6): all MISMATCH → H022, H023 FALSIFIED. Edge-coupled generators overshoot Δ_S (0.14 vs 0.088); self-citation leaves Δ_C +1.6; the growth process matches cross-folio sharing X but not within-folio repetition F (0.17 vs 0.24). Validator pass. See `REPORT.md`.
 
-Before: `E013` (compression +2.20 on labels; Gate registration FAIL; H019 SUPPORTED_DEV), `E010`, `E011`, `E008`, `E007`, `E006`.
+Before: `E014` (H020 FALSIFIED, H021 PARTIAL), `E013`, `E010`, `E011`, `E008`, `E007`, `E006`.
 
 ## Active frontier — BLOCKED on two human decisions
 
 1. **Confirmation surface.** Under the folio rule ZL3b has no independent lockbox for any claim. Options: (a) register data from outside ZL3b (a transliteration with independent readings — IT2a/GC if reachable — or newly transcribed material); (b) amend A001 with an explicit SEMI_INDEPENDENT tier (registration flag, not FAIL) for candidates demonstrably not developed on the overlapping folios; (c) accept that all ZL3b results stay development-stage.
 2. **E012 corpora/licences** (reference-text signature comparison): PerseusDL canonical-latinLit (CC-BY-SA 4.0), Dante; network use; generator/cipher set.
 
-Development-stage work that needs no decision: a y→qo-specific prefix test (H003) under the backoff scorecard; an A6-vs-P70 label-text follow-up; an E014 follow-up adding inventory-growth/vocabulary-sharing components and a hapax-matched edge-coupled generator (E012 stage A2).
+Development-stage work that needs no decision: E016 within-folio vocabulary locality (F) with folio-shuffle and section-matched nulls; a y→qo-specific prefix test (H003); an A6-vs-P70 label-text follow-up.
 
 Gate v2 is in force (`research/protocol_amendments/A001_GATE_V2.md`, `research/gate/gate_v2.json`, `src/voynichlab/gate.py`, `tests/test_gate.py`, `scripts/gate_report.py`, `research/holdout_registry.json`). Confirmation surfaces: none inside ZL3b under the folio rule (A001 errata 1–2). IT2a/GC hashes unregistered (voynich.nu unreachable 2026-10-19).
 
