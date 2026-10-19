@@ -37,7 +37,7 @@ Before: `E017`, `E016`, `E015`, `E014`, `E013`, `E010`, `E011`, `E008`, `E007`, 
 ## Active frontier — BLOCKED on two human decisions
 
 1. **Confirmation surface.** Under the folio rule ZL3b has no independent lockbox for any claim. Options: (a) register data from outside ZL3b (a transliteration with independent readings — IT2a/GC if reachable — or newly transcribed material); (b) amend A001 with an explicit SEMI_INDEPENDENT tier (registration flag, not FAIL) for candidates demonstrably not developed on the overlapping folios; (c) accept that all ZL3b results stay development-stage.
-2. **E012 corpora/licences** (reference-text signature comparison): PerseusDL canonical-latinLit (CC-BY-SA 4.0), Dante; network use; generator/cipher set.
+2. **E012 corpora** — now a concrete proposal (`experiments/E012_reference_signature/PLAN_DRAFT.md` v2): texts already in the pinned `cipher_benchmark` clone, no network: Copiale German (open), Gutenberg it/en/de/fr (open), Borg 17th-c. Latin recipes plus its real ciphertext (linked_only). Only question: local analysis use of the linked_only Borg material.
 
 Development-stage work that needs no decision: an A6-vs-P70 label-text follow-up (small). Everything else of value now needs one of the two decisions (corpora for E012; a confirmation surface or collation data).
 

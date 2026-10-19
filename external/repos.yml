@@ -152,3 +152,13 @@ literature:
     priority: medium
     use: [E008_family_G_candidate]
     caveat: "Not peer reviewed; arxiv.org unreachable from the 2026-10-19 session, so contents not inspected."
+
+  - name: cipher_benchmark
+    url: https://github.com/matthewdgreen/cipher_benchmark
+    pin: 729aad62d12483c549e64a2541d4f9255538c8cf
+    category: [data_source, reference_corpora]
+    priority: high
+    use: [zl3b_source, e012_reference_texts, real_historical_ciphertexts_with_known_plaintext]
+    caveat: "Source of our ZL3b file (already pinned by blob). Also holds natural-language plaintexts and canonical ciphertext transcriptions with a per-record rights_class: Copiale (German, open), Gutenberg it/en/de/fr samples (open), Borg (Latin, linked_only: research plaintext, third-party image rights). Read-only clone at /home/user/matthewdgreen/cipher_benchmark (outside the lab repo); nothing copied; use for E012 awaits the human decision in experiments/E012_reference_signature/PLAN_DRAFT.md."
+    license_note: "Per-record rights_class in benchmark/manifest/records.jsonl; benchmark docs section 5."
+
