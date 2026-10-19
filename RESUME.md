@@ -30,17 +30,18 @@ Retained structural observations:
 
 ## Last completed experiment
 
-`E010_external_claim_stress_tests` — **COMPLETED**: R1 REPRODUCED (epilectrik boundary coupling 0.2548/0.2134 vs published 0.256/0.215; class coverage 71.3% vs 69.5%); H016 (glyph units) −0.0007, H017 (two units) +0.0012, H018 (49-class table) −3.085 bits/token → all FALSIFIED_DEV on Currier B under the E011 scorecard. Validator pass. See `REPORT.md`.
+`E013_nonrunning_lockbox_claim` — **COMPLETED; Gate v2 registration FAIL; H019 SUPPORTED_DEV.** P70 vs whole-token on the never-coded label/circular/radial tokens: +2.20 bits/token (CI 0.99–3.50) from scratch with model bits charged — but the gate correctly refused registration because every lockbox folio carries a SELECTION role via its running text (folio = dependency unit). Registry corrected (`LOCKBOX_NONRUNNING_V1` → SEMI_INDEPENDENT; A001 erratum 2). On labels A6 (no suffix) and A1 beat P70 from scratch; with running-text counts P70 is best. Validator pass. See `REPORT.md`, `GATE_REPORT_P70.md`.
 
-Before that: `E011` (H014 SUPPORTED_DEV +0.088; H015 FALSIFIED_DEV; null M_Sfam registered), `E008` (all components NOT_INFORMATIVE under the no-backoff scorecard), `E007` (REPRODUCED_BUT_NOT_VALIDATED), `E006` (INCONCLUSIVE_UNDERPOWERED).
+Before: `E010` (coupling REPRODUCED; H016–H018 FALSIFIED_DEV), `E011` (H014 SUPPORTED_DEV, H015 FALSIFIED_DEV), `E008`, `E007`, `E006`.
 
-## Active frontier
+## Active frontier — BLOCKED on two human decisions
 
-`E013` — **READY_TO_FREEZE_PLAN**: first Gate v2 lockbox claim. Candidate = P70 layer-A four-slot model (plain KT, frozen since E007); null = whole-token KT (to be registered for the non-running pool); lockbox = `LOCKBOX_NONRUNNING_V1` (710 label/circular/radial tokens on 39 folios, INDEPENDENT — never coded by any experiment); development = running-text pool for margin calibration (P70 beat whole-token by 1.87 bits/token prequentially in E007; provisional margin 0.5); E007 competitors A5/A6/A7/A8 reported, with a preregistered stricter rule that P70 must also beat each of them. Claim record + `scripts/gate_report.py`; expected level if it passes: `STRUCTURAL_MODEL_VALIDATED` (level 1 only). Freeze PLAN.md, register sha256, then run once.
+1. **Confirmation surface.** Under the folio rule ZL3b has no independent lockbox for any claim. Options: (a) register data from outside ZL3b (a transliteration with independent readings — IT2a/GC if reachable — or newly transcribed material); (b) amend A001 with an explicit SEMI_INDEPENDENT tier (registration flag, not FAIL) for candidates demonstrably not developed on the overlapping folios; (c) accept that all ZL3b results stay development-stage.
+2. **E012 corpora/licences** (reference-text signature comparison): PerseusDL canonical-latinLit (CC-BY-SA 4.0), Dante; network use; generator/cipher set.
 
-`E012_reference_signature` (stage B) remains a DRAFT **pending your decision** on corpora/licences, network use and the generator/cipher set.
+Development-stage work that needs no decision: a y→qo-specific prefix test (H003) under the backoff scorecard; an A6-vs-P70 label-text follow-up; stage-A of E012 generators that need no corpus (slot-grammar and self-citation generators seeded from ZL3b).
 
-Gate v2 is in force (`research/protocol_amendments/A001_GATE_V2.md`, `research/gate/gate_v2.json`, `src/voynichlab/gate.py`, `tests/test_gate.py`, `scripts/gate_report.py`, `research/holdout_registry.json`). Confirmation surfaces: `LOCKBOX_NONRUNNING_V1` (710 label/circular/radial tokens, INDEPENDENT) only; running-text confirmation needs data registered from outside ZL3b. IT2a/GC hashes unregistered (voynich.nu unreachable 2026-10-19).
+Gate v2 is in force (`research/protocol_amendments/A001_GATE_V2.md`, `research/gate/gate_v2.json`, `src/voynichlab/gate.py`, `tests/test_gate.py`, `scripts/gate_report.py`, `research/holdout_registry.json`). Confirmation surfaces: none inside ZL3b under the folio rule (A001 errata 1–2). IT2a/GC hashes unregistered (voynich.nu unreachable 2026-10-19).
 
 ## External check (2026-10-19)
 

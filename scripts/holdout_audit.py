@@ -80,14 +80,19 @@ def main() -> int:
     # Lockbox 2: non-running loci (labels, circular, radial) — never used by any committed experiment
     nr = sorted(f for f in other_tokens if other_tokens[f] > 0)
     registry["lockboxes"]["LOCKBOX_NONRUNNING_V1"] = {
-        "independence": "INDEPENDENT",
-        "description": "Label/circular/radial loci (locus type not P*). No committed experiment coded them. Small, structurally different from running text; suitable for transfer-style confirmation only.",
-        "folios": nr, "n_folios": len(nr), "n_tokens": sum(other_tokens[f] for f in nr), "sha256": sha_list(nr)}
-    registry["statement"] = ("NO running-text lockbox exists in ZL3b: every running-text folio was used for selection or error analysis "
-                             "by E006, E007, E008 or the E008 post-reveal exploratory analysis. Running-text claims can only be developed "
-                             "here (internal cross-fitting, development-stage labels). Gate v2 confirmation requires data outside ZL3b "
-                             "running text: LOCKBOX_NONRUNNING_V1 (labels/circular/radial, 710 tokens, transfer-style only), or new sources "
-                             "registered by a human (e.g. a future transliteration release with independent readings).")
+        "independence": "SEMI_INDEPENDENT",
+        "description": "Label/circular/radial loci (locus type not P*). No committed experiment coded these TOKENS, but they lie on "
+                       "folios whose running text carries SELECTION roles, and the dependency unit is the physical folio. "
+                       "Classified INDEPENDENT in the first registry versions; corrected 2026-10-20 after the E013 gate run "
+                       "flagged the folio overlap. Usable for development-stage transfer tests only.",
+        "folios": nr, "n_folios": len(nr), "n_tokens": sum(other_tokens[f] for f in nr), "sha256": sha_list(nr),
+        "folios_with_selection_role": sorted(set(nr) & sel)}
+    registry["statement"] = ("NO independent lockbox exists in ZL3b under the folio-as-dependency-unit rule: every running-text folio "
+                             "carries a SELECTION role (E006/E007/E008 development folds or the E008 exploratory analysis), and the "
+                             "label/circular/radial tokens lie on those same folios. All ZL3b claims are development-stage until a human "
+                             "registers a confirmation surface from outside (new transliteration with independent readings, newly "
+                             "transcribed material) or amends the protocol with an explicit semi-independent tier for candidates that "
+                             "were not developed on these folios.")
     OUT.write_text(json.dumps(registry, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({k: {kk: vv for kk, vv in v.items() if kk != "folios"} for k, v in registry["lockboxes"].items()}, indent=1))
     print("selection folios:", len(sel), "never-selection:", len(never_sel), "->", OUT.relative_to(ROOT))

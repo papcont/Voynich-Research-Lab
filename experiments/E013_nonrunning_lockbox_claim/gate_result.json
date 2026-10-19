@@ -1,0 +1,55 @@
+{
+  "gate_version": "2.0.0",
+  "claim_id": "E013_P70_nonrunning_transfer",
+  "registration": {
+    "state": "FAIL",
+    "reasons": [
+      "lockbox overlaps SELECTION folios: ['f101v', 'f102r2', 'f11v', 'f17r', 'f2r']\u2026"
+    ],
+    "numbers": {}
+  },
+  "levels": {
+    "STRUCTURAL_MODEL_VALIDATED": {
+      "state": "FAIL",
+      "reasons": [
+        "registration invalid",
+        "lockbox overlaps SELECTION folios: ['f101v', 'f102r2', 'f11v', 'f17r', 'f2r']\u2026"
+      ],
+      "numbers": {}
+    },
+    "DECODING_MECHANISM_SUPPORTED": {
+      "state": "FAIL",
+      "reasons": [
+        "registration invalid",
+        "lockbox overlaps SELECTION folios: ['f101v', 'f102r2', 'f11v', 'f17r', 'f2r']\u2026"
+      ],
+      "numbers": {}
+    },
+    "LANGUAGE_IDENTIFICATION_SUPPORTED": {
+      "state": "FAIL",
+      "reasons": [
+        "registration invalid",
+        "lockbox overlaps SELECTION folios: ['f101v', 'f102r2', 'f11v', 'f17r', 'f2r']\u2026"
+      ],
+      "numbers": {}
+    },
+    "SEMANTIC_DECODING_SUPPORTED": {
+      "state": "FAIL",
+      "reasons": [
+        "registration invalid",
+        "lockbox overlaps SELECTION folios: ['f101v', 'f102r2', 'f11v', 'f17r', 'f2r']\u2026"
+      ],
+      "numbers": {}
+    },
+    "DECIPHERMENT_CONFIRMED": {
+      "state": "FAIL",
+      "reasons": [
+        "registration invalid",
+        "lockbox overlaps SELECTION folios: ['f101v', 'f102r2', 'f11v', 'f17r', 'f2r']\u2026"
+      ],
+      "numbers": {}
+    }
+  },
+  "highest_pass": null,
+  "flags": []
+}

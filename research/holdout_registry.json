@@ -2708,8 +2708,8 @@
       "never_selection_before_E008_exploratory": []
     },
     "LOCKBOX_NONRUNNING_V1": {
-      "independence": "INDEPENDENT",
-      "description": "Label/circular/radial loci (locus type not P*). No committed experiment coded them. Small, structurally different from running text; suitable for transfer-style confirmation only.",
+      "independence": "SEMI_INDEPENDENT",
+      "description": "Label/circular/radial loci (locus type not P*). No committed experiment coded these TOKENS, but they lie on folios whose running text carries SELECTION roles, and the dependency unit is the physical folio. Classified INDEPENDENT in the first registry versions; corrected 2026-10-20 after the E013 gate run flagged the folio overlap. Usable for development-stage transfer tests only.",
       "folios": [
         "f101v",
         "f102r2",
@@ -2753,8 +2753,42 @@
       ],
       "n_folios": 39,
       "n_tokens": 710,
-      "sha256": "6c7ae53325d917a2982d504d5ea47c55ff485ed130a6d8f1a27173eb590aa2a6"
+      "sha256": "6c7ae53325d917a2982d504d5ea47c55ff485ed130a6d8f1a27173eb590aa2a6",
+      "folios_with_selection_role": [
+        "f101v",
+        "f102r2",
+        "f11v",
+        "f17r",
+        "f2r",
+        "f49v",
+        "f66r",
+        "f67r1",
+        "f67r2",
+        "f67v2",
+        "f68r1",
+        "f68r2",
+        "f68v2",
+        "f68v3",
+        "f69r",
+        "f75v",
+        "f76r",
+        "f77r",
+        "f77v",
+        "f80r",
+        "f81v",
+        "f82r",
+        "f82v",
+        "f83r",
+        "f83v",
+        "f88r",
+        "f88v",
+        "f89r1",
+        "f89r2",
+        "f89v1",
+        "f89v2",
+        "fRos"
+      ]
     }
   },
-  "statement": "NO running-text lockbox exists in ZL3b: every running-text folio was used for selection or error analysis by E006, E007, E008 or the E008 post-reveal exploratory analysis. Running-text claims can only be developed here (internal cross-fitting, development-stage labels). Gate v2 confirmation requires data outside ZL3b running text: LOCKBOX_NONRUNNING_V1 (labels/circular/radial, 710 tokens, transfer-style only), or new sources registered by a human (e.g. a future transliteration release with independent readings)."
+  "statement": "NO independent lockbox exists in ZL3b under the folio-as-dependency-unit rule: every running-text folio carries a SELECTION role (E006/E007/E008 development folds or the E008 exploratory analysis), and the label/circular/radial tokens lie on those same folios. All ZL3b claims are development-stage until a human registers a confirmation surface from outside (new transliteration with independent readings, newly transcribed material) or amends the protocol with an explicit semi-independent tier for candidates that were not developed on these folios."
 }

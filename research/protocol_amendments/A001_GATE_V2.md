@@ -82,10 +82,15 @@ and in what role (`SELECTION` = model/parameter/threshold selection or error ana
   cross-fitted, folio-level estimates and development-stage labels; they cannot reach any
   Gate v2 level without new data.
 - `LOCKBOX_NONRUNNING_V1` — label/circular/radial loci (39 folios, 710 tokens), sha256
-  `6c7ae533…`, `INDEPENDENT` but small and structurally different (transfer-style only).
-- Confirmation surfaces for running-text claims must be registered by a human from
-  outside ZL3b running text (e.g. a future transliteration release with independent
-  readings, or newly transcribed material).
+  `6c7ae533…`. **Erratum 2 (2026-10-20, E013):** first listed `INDEPENDENT`; the gate's
+  registration check correctly flagged that these tokens lie on folios whose running text
+  carries `SELECTION` roles, and the dependency unit is the folio. Reclassified
+  `SEMI_INDEPENDENT`; the E013 claim therefore fails registration and is development-stage.
+- **Consequence:** under the folio rule ZL3b offers *no* independent confirmation lockbox for
+  any claim. Confirmation surfaces must be registered by a human from outside (a future
+  transliteration release with independent readings, newly transcribed material), or the
+  protocol must be amended with an explicit semi-independent tier for candidates that were
+  not developed on these folios (a human decision; not taken here).
 
 A claim names its `lockbox_id`; overlap with any `SELECTION` folio is a registration
 `FAIL`; a `SEMI_INDEPENDENT` lockbox is flagged in every report. Splits, inputs,

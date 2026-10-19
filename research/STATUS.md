@@ -47,6 +47,15 @@ The stronger claim — same underlying unit sequence — has **not passed a cont
 
 ## Current frontier
 
+**E013 complete — the first Gate v2 claim was stopped at registration, correctly.** P70 vs
+whole-token on the 710 label/circular/radial tokens (never coded before): +2.20 bits/token
+from scratch with model bits charged (CI 0.99–3.50, 30/39 folios), but the gate found that
+every lockbox folio carries a SELECTION role through its running text; the registry had
+mislabelled the pool INDEPENDENT (corrected: SEMI_INDEPENDENT, A001 erratum 2). H019 is
+SUPPORTED_DEV only. Also: on labels the suffix slot is dead weight — A6 (no suffix) 26.39
+and A1 27.48 beat P70 28.40 total bits/token from scratch; with running-text counts P70 is
+best (21.35). **Under the folio rule, ZL3b offers no independent lockbox for any claim.**
+
 **E010 complete.** epilectrik's boundary glyph coupling reproduces on our pipeline to within
 0.002 bits (0.2548 all / 0.2134 definite vs 0.256 / 0.215) and their class table covers
 71.3% of B tokens (published 69.5%). Under the E011 scorecard on Currier B their refinements
@@ -62,10 +71,9 @@ running-text development pool: M_Sfam 13.813 / M_S 13.829 vs P70 13.967.
 Earlier: E008 stage A ALL_COMPONENTS_NOT_INFORMATIVE (no-backoff scorecard; see REPORT);
 E007 REPRODUCED_BUT_NOT_VALIDATED; E006 INCONCLUSIVE_UNDERPOWERED.
 
-Next frontier: **E013** — the first Gate v2 lockbox claim: P70 four-slot structural model vs
-the whole-token null on `LOCKBOX_NONRUNNING_V1` (labels/circular/radial, 710 tokens, 39
-folios, INDEPENDENT; never coded by any experiment), margin calibrated on running text.
-**E012** (reference-text signature comparison) still waits for the human corpus decision.
+Two human decisions are pending: (1) a confirmation surface or a protocol tier for
+semi-independent lockboxes (A001 erratum 2); (2) E012 corpora/licences. Development-stage
+work can continue meanwhile (see RESEARCH_STATE.json).
 
 ## External landscape check (2026-10-19)
 

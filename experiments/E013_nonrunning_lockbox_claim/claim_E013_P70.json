@@ -1,0 +1,314 @@
+{
+ "claim_id": "E013_P70_nonrunning_transfer",
+ "registered_utc": "2026-10-20T03:00:00Z",
+ "freeze_commit": "15f72da",
+ "lockbox_id": "LOCKBOX_NONRUNNING_V1",
+ "lockbox_folios": [
+  "f101v",
+  "f102r2",
+  "f116v",
+  "f11v",
+  "f17r",
+  "f2r",
+  "f49v",
+  "f57v",
+  "f65r",
+  "f66r",
+  "f67r1",
+  "f67r2",
+  "f67v1",
+  "f67v2",
+  "f68r1",
+  "f68r2",
+  "f68r3",
+  "f68v1",
+  "f68v2",
+  "f68v3",
+  "f69r",
+  "f70v2",
+  "f75v",
+  "f76r",
+  "f77r",
+  "f77v",
+  "f80r",
+  "f81v",
+  "f82r",
+  "f82v",
+  "f83r",
+  "f83v",
+  "f88r",
+  "f88v",
+  "f89r1",
+  "f89r2",
+  "f89v1",
+  "f89v2",
+  "fRos"
+ ],
+ "retraction_condition": "gate FAIL -> H019 retracted; P70 recorded as not transferring to non-running text; no second attempt on this lockbox",
+ "post_reveal_changes": false,
+ "sha256": {
+  "inputs": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+  "split": "6c7ae53325d917a2982d504d5ea47c55ff485ed130a6d8f1a27173eb590aa2a6",
+  "config": "490215708c53b1387b80dc2154df8c6b614baf4156f70ece90cf83529f10bae2",
+  "predictions": "9071fdb77cbb0224c74cfe1662e3d29a7def73657c9a8954763dfbb437ac82f7"
+ },
+ "compression": {
+  "folios": [
+   {
+    "folio": "f101v",
+    "n_tokens": 16,
+    "candidate_data_bits": 566.0281113213728,
+    "null_total_bits": 495.9808029454981
+   },
+   {
+    "folio": "f102r2",
+    "n_tokens": 2,
+    "candidate_data_bits": 104.12402331241285,
+    "null_total_bits": 90.37968007368245
+   },
+   {
+    "folio": "f116v",
+    "n_tokens": 2,
+    "candidate_data_bits": 64.71472848728492,
+    "null_total_bits": 59.95764926062705
+   },
+   {
+    "folio": "f11v",
+    "n_tokens": 1,
+    "candidate_data_bits": 19.438759370786073,
+    "null_total_bits": 19.109098056603393
+   },
+   {
+    "folio": "f17r",
+    "n_tokens": 2,
+    "candidate_data_bits": 65.33532075379878,
+    "null_total_bits": 69.16903258799012
+   },
+   {
+    "folio": "f2r",
+    "n_tokens": 4,
+    "candidate_data_bits": 105.41818128968538,
+    "null_total_bits": 99.54584582750151
+   },
+   {
+    "folio": "f49v",
+    "n_tokens": 20,
+    "candidate_data_bits": 219.82674877067285,
+    "null_total_bits": 190.09381657945968
+   },
+   {
+    "folio": "f57v",
+    "n_tokens": 6,
+    "candidate_data_bits": 253.84801192470118,
+    "null_total_bits": 257.90852760794377
+   },
+   {
+    "folio": "f65r",
+    "n_tokens": 3,
+    "candidate_data_bits": 84.30815535623285,
+    "null_total_bits": 87.63220713297407
+   },
+   {
+    "folio": "f66r",
+    "n_tokens": 49,
+    "candidate_data_bits": 844.5843234842685,
+    "null_total_bits": 827.5067472387229
+   },
+   {
+    "folio": "f67r1",
+    "n_tokens": 17,
+    "candidate_data_bits": 463.1251386506999,
+    "null_total_bits": 527.819601617386
+   },
+   {
+    "folio": "f67r2",
+    "n_tokens": 60,
+    "candidate_data_bits": 1703.5773472347432,
+    "null_total_bits": 1863.076012013538
+   },
+   {
+    "folio": "f67v1",
+    "n_tokens": 71,
+    "candidate_data_bits": 2326.8001699653055,
+    "null_total_bits": 2500.3179244130474
+   },
+   {
+    "folio": "f67v2",
+    "n_tokens": 24,
+    "candidate_data_bits": 818.4486519612362,
+    "null_total_bits": 895.4753916854148
+   },
+   {
+    "folio": "f68r1",
+    "n_tokens": 28,
+    "candidate_data_bits": 935.996296401004,
+    "null_total_bits": 1078.2785490640417
+   },
+   {
+    "folio": "f68r2",
+    "n_tokens": 23,
+    "candidate_data_bits": 879.4450222300009,
+    "null_total_bits": 970.2171648496455
+   },
+   {
+    "folio": "f68r3",
+    "n_tokens": 55,
+    "candidate_data_bits": 1411.0934465193268,
+    "null_total_bits": 1720.4731763623406
+   },
+   {
+    "folio": "f68v1",
+    "n_tokens": 17,
+    "candidate_data_bits": 440.23083098508596,
+    "null_total_bits": 512.8262347763857
+   },
+   {
+    "folio": "f68v2",
+    "n_tokens": 25,
+    "candidate_data_bits": 774.8467572608608,
+    "null_total_bits": 872.9374998951968
+   },
+   {
+    "folio": "f68v3",
+    "n_tokens": 46,
+    "candidate_data_bits": 1302.4300911228152,
+    "null_total_bits": 1446.5429653119322
+   },
+   {
+    "folio": "f69r",
+    "n_tokens": 39,
+    "candidate_data_bits": 803.1987883380614,
+    "null_total_bits": 936.3379827424702
+   },
+   {
+    "folio": "f70v2",
+    "n_tokens": 1,
+    "candidate_data_bits": 24.017383831513644,
+    "null_total_bits": 41.21115478342673
+   },
+   {
+    "folio": "f75v",
+    "n_tokens": 36,
+    "candidate_data_bits": 702.9908403223445,
+    "null_total_bits": 875.2400259899542
+   },
+   {
+    "folio": "f76r",
+    "n_tokens": 9,
+    "candidate_data_bits": 79.69448758905897,
+    "null_total_bits": 74.22864297808529
+   },
+   {
+    "folio": "f77r",
+    "n_tokens": 11,
+    "candidate_data_bits": 290.07134461795926,
+    "null_total_bits": 324.065250809407
+   },
+   {
+    "folio": "f77v",
+    "n_tokens": 9,
+    "candidate_data_bits": 172.4285739713958,
+    "null_total_bits": 188.62872271213124
+   },
+   {
+    "folio": "f80r",
+    "n_tokens": 10,
+    "candidate_data_bits": 301.740472870259,
+    "null_total_bits": 353.5759193801637
+   },
+   {
+    "folio": "f81v",
+    "n_tokens": 2,
+    "candidate_data_bits": 52.728572017762296,
+    "null_total_bits": 74.01541844463908
+   },
+   {
+    "folio": "f82r",
+    "n_tokens": 10,
+    "candidate_data_bits": 270.38059197898514,
+    "null_total_bits": 335.08553191368844
+   },
+   {
+    "folio": "f82v",
+    "n_tokens": 13,
+    "candidate_data_bits": 343.41635253885283,
+    "null_total_bits": 424.79220413248134
+   },
+   {
+    "folio": "f83r",
+    "n_tokens": 4,
+    "candidate_data_bits": 178.8375291569541,
+    "null_total_bits": 187.8142295280185
+   },
+   {
+    "folio": "f83v",
+    "n_tokens": 4,
+    "candidate_data_bits": 115.75814154120147,
+    "null_total_bits": 141.60931430532875
+   },
+   {
+    "folio": "f88r",
+    "n_tokens": 16,
+    "candidate_data_bits": 361.8614656344507,
+    "null_total_bits": 429.67269261395745
+   },
+   {
+    "folio": "f88v",
+    "n_tokens": 12,
+    "candidate_data_bits": 398.3738300705485,
+    "null_total_bits": 460.0055150684778
+   },
+   {
+    "folio": "f89r1",
+    "n_tokens": 13,
+    "candidate_data_bits": 356.71397710098853,
+    "null_total_bits": 446.8755053567506
+   },
+   {
+    "folio": "f89r2",
+    "n_tokens": 21,
+    "candidate_data_bits": 719.8212110429866,
+    "null_total_bits": 772.2337592841781
+   },
+   {
+    "folio": "f89v1",
+    "n_tokens": 8,
+    "candidate_data_bits": 305.7663122858905,
+    "null_total_bits": 344.5812579272373
+   },
+   {
+    "folio": "f89v2",
+    "n_tokens": 11,
+    "candidate_data_bits": 365.1567350627454,
+    "null_total_bits": 438.93598354725214
+   },
+   {
+    "folio": "fRos",
+    "n_tokens": 10,
+    "candidate_data_bits": 254.45367454782235,
+    "null_total_bits": 266.95899502506256
+   }
+  ],
+  "candidate_model_bits": {
+   "mechanism_code_bits": 681.4168831079292,
+   "dictionary_bits": 0,
+   "key_bits": 0,
+   "exception_bits": 0,
+   "residual_bits": 0,
+   "transmission_bits": 0
+  },
+  "reconstruction_sha256": "be8b753b8a42319bf349940d1ef0bb3e23dbf0d6bd8295e891bf6db2a29bbd53",
+  "lockbox_text_sha256": "be8b753b8a42319bf349940d1ef0bb3e23dbf0d6bd8295e891bf6db2a29bbd53",
+  "margin": {
+   "bits_per_token": 0.5,
+   "calibration_source": "development",
+   "justification": "about one quarter of the running-text P70-A0 effect (1.87 global prequential / 1.69 dev->holdout, E007)"
+  },
+  "controls": {
+   "folio_internal_permutation": {
+    "candidate_total_bits_per_token": 28.398165913569986,
+    "null_total_bits_per_token": 30.564405779705478
+   }
+  }
+ }
+}

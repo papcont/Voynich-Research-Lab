@@ -1,8 +1,8 @@
 {
   "experiment_id": "E013",
   "name": "nonrunning_lockbox_claim",
-  "status": "PLAN_FROZEN",
-  "evidence_class": "FROZEN_HOLDOUT (Gate v2 lockbox, INDEPENDENT)",
+  "status": "COMPLETED",
+  "evidence_class": "DEVELOPMENT_TRANSFER (registration failed; folio-level dependence)",
   "hypothesis": "H019",
   "gate_level_target": "STRUCTURAL_MODEL_VALIDATED",
   "lockbox_id": "LOCKBOX_NONRUNNING_V1",
@@ -36,7 +36,7 @@
     "justification": "about one quarter of the running-text P70-A0 effect (1.87 global prequential / 1.69 dev->holdout, E007)"
   },
   "ci": "folio-level percentile bootstrap, 10000, seed 20261019, 2.5/97.5%",
-  "decision": "Gate v2 compression_test; STRICT_PASS additionally requires P70 strictly lowest among all competitors",
+  "decision": "H019 SUPPORTED_DEV (development-stage; no Gate level)",
   "retraction_condition": "gate FAIL -> H019 retracted; P70 recorded as not transferring to non-running text; no second attempt on this lockbox",
   "sha256": {
     "inputs": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
@@ -46,5 +46,8 @@
   },
   "registered_utc": "2026-10-20T03:00:00Z",
   "claim_ceiling": "Structural model on non-running text; level 1 only.",
-  "amendments": []
+  "amendments": [],
+  "result": "results.json",
+  "gate_result": "registration FAIL (lockbox folios carry SELECTION roles via running text; registry label corrected to SEMI_INDEPENDENT)",
+  "compression_statistics": "delta 2.196 bits/token, CI 0.993-3.496, 30/39 folios (would PASS the compression test); STRICT_PASS false (A6 26.39, A1 27.48 < P70 28.40 total bits/token)"
 }

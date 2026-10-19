@@ -1,0 +1,114 @@
+{
+  "experiment": "E013",
+  "hypothesis": "H019",
+  "evidence_class": "FROZEN_HOLDOUT (Gate v2 lockbox, INDEPENDENT)",
+  "gate_level_target": "STRUCTURAL_MODEL_VALIDATED",
+  "lockbox_id": "LOCKBOX_NONRUNNING_V1",
+  "lockbox_sha256": "6c7ae53325d917a2982d504d5ea47c55ff485ed130a6d8f1a27173eb590aa2a6",
+  "frozen_plan_commit": "15f72da",
+  "run_head_commit": "15f72da5102a9dbb3ffa6d8f6cb4979a4b6f3071",
+  "first_reveal_timestamp": "2026-10-19T21:12:55Z",
+  "software": {
+    "python": "3.13.16",
+    "numpy": "2.5.3"
+  },
+  "source_identity": {
+    "zl3b_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "lockbox_text_sha256": "be8b753b8a42319bf349940d1ef0bb3e23dbf0d6bd8295e891bf6db2a29bbd53"
+  },
+  "population": {
+    "n_tokens": 710,
+    "n_folios": 39,
+    "sigma_size": 20,
+    "sigma": "acdefghiklmnopqrstxy",
+    "n_types": 529,
+    "a8_profile": {
+      "lengths_in_pool": 14,
+      "global_fractions": [
+        0.23802715798289167,
+        0.10028115092420889,
+        0.21790393013100437,
+        0.4437877609618951
+      ],
+      "dev_tokens": 33611
+    }
+  },
+  "primary_arm_pure_prequential": {
+    "P70": {
+      "data_bits_per_token": 27.438070987214193,
+      "model_bits": 681.4168831079292,
+      "total_bits_per_token": 28.3978130760986
+    },
+    "A0": {
+      "data_bits_per_token": 30.563543709637525,
+      "model_bits": 1,
+      "total_bits_per_token": 30.56495216034175
+    },
+    "A1": {
+      "data_bits_per_token": 27.367002965355745,
+      "model_bits": 77.66939618723893,
+      "total_bits_per_token": 27.47639648111242
+    },
+    "A2": {
+      "data_bits_per_token": 30.33586647006696,
+      "model_bits": 499.331868774,
+      "total_bits_per_token": 31.039150792283863
+    },
+    "A3": {
+      "data_bits_per_token": 29.764069433449627,
+      "model_bits": 3,
+      "total_bits_per_token": 29.768294785562304
+    },
+    "A5": {
+      "data_bits_per_token": 28.17906257074545,
+      "model_bits": 679.4168831079292,
+      "total_bits_per_token": 29.135987758221408
+    },
+    "A6": {
+      "data_bits_per_token": 26.128502070116223,
+      "model_bits": 183.0850143339292,
+      "total_bits_per_token": 26.386368287487954
+    },
+    "A7": {
+      "data_bits_per_token": 27.981384198393155,
+      "model_bits": 681.4168831079292,
+      "total_bits_per_token": 28.941126287277562
+    },
+    "A8": {
+      "data_bits_per_token": 30.328880490318877,
+      "model_bits": 54,
+      "total_bits_per_token": 30.404936828347047
+    }
+  },
+  "gate_statistics": {
+    "margin": 0.5,
+    "mean_delta_bits_per_token": 2.1964604211862797,
+    "ci_lower": 0.9931416828163754,
+    "ci_upper": 3.496215653569943,
+    "n_folios": 39,
+    "folio_wins": 30,
+    "state": "PASS",
+    "lowest_total_model": "A6",
+    "STRICT_PASS": false
+  },
+  "secondary_arm_transfer_bits_per_token": {
+    "P70": 21.349976372678423,
+    "A0": 24.158033590962088,
+    "A1": 22.705617647714707,
+    "A2": 22.726921677912223,
+    "A3": 22.626497615587656,
+    "A5": 21.862718226878116,
+    "A6": 21.9088744920803,
+    "A7": 21.515002408632373,
+    "A8": 22.004228957022853
+  },
+  "control_within_folio_permutation_total_bits_per_token": {
+    "P70": 28.398165913569986,
+    "A0": 30.564405779705478
+  },
+  "sensitivity_natural_order_data_bits_per_token": {
+    "P70": 27.43190304899756,
+    "A0": 30.551246263191175
+  },
+  "claim_ceiling": "Structural model on non-running text; Gate v2 level 1 only."
+}

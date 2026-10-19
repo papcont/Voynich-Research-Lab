@@ -12,6 +12,6 @@
 | E008 | DONE — ALL_COMPONENTS_NOT_INFORMATIVE (stage A) | S/L/C predictive components on the E007 scorecard; stage B (reference corpora) deferred |
 | E009 | QUEUED — provenance blocker (upstream unreachable) | Deshuffling Matrix blind test |
 | E010 | DONE — R1 REPRODUCED; H016/H017/H018 FALSIFIED_DEV | epilectrik Currier-B claims: boundary coupling reproduces exactly; glyph units, two-unit routing and the 49-class table add nothing at codelength level |
-| **E013** | **PLAN_FROZEN** | Gate v2 level-1 claim: P70 slot model vs whole-token null on the independent non-running lockbox (labels/circular/radial) |
+| E013 | DONE — compression +2.20 bits/token but Gate registration FAIL (folio overlap); H019 SUPPORTED_DEV | P70 vs whole-token on label/circular/radial text; A6 (no suffix) better from scratch |
 | E011 | DONE — H014 SUPPORTED_DEV, H015 FALSIFIED_DEV (development-stage) | Slot-targeted conditioning under a backoff KT scorecard; new strongest structural null M_Sfam |
 | E012 | DRAFT | Mechanism-family signature comparison on reference texts (stage B); human corpus decision needed |
