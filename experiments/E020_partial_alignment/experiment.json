@@ -1,0 +1,62 @@
+{
+  "experiment_id": "E020",
+  "name": "partial_alignment",
+  "status": "PLAN_FROZEN",
+  "evidence_class": "MECHANISM_DEMONSTRATION/DEVELOPMENT",
+  "gate_level_claimable": "none",
+  "hypotheses": {
+    "H030a": "coupling level transfers to the held text at p*",
+    "H030b": "the other six components follow (>=4 of 6 within tolerance)",
+    "H030c": "selectivity (top-1 previous-character share) reproduced"
+  },
+  "calibration": {
+    "text": "N_DEU",
+    "grid": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "target_delta_S": 0.178,
+    "rule": "min |delta_S' - 0.178|, ties -> larger p"
+  },
+  "prediction_text": "N_ITA",
+  "sources": {
+    "N_DEU": {
+      "source": "copiale",
+      "sha256": "1f93e9902ac068f244e0cceb76a170f3d1cf7c58d556846719ee6a52ae76ef3a",
+      "n_files": 101,
+      "rights_class": "open"
+    },
+    "N_ITA": {
+      "source": "it_ss_synth",
+      "sha256": "1cc3c7d4a88327c84ed917914d59dce22f1fe2f795bf4de52aa20fc9e3da540b",
+      "n_files": 30,
+      "rights_class": "open"
+    }
+  },
+  "seeds": {
+    "calibration_base": 20261100,
+    "prediction": 20261120
+  },
+  "pre_result_predictions": {
+    "p_star": "0.5-0.7",
+    "H030a": "SUPPORTED or PARTIAL",
+    "H030b": "PARTIAL",
+    "H030c": "FALSIFIED"
+  },
+  "sha256": {
+    "inputs": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "config": "0f90521140e9c5bf028674a5b62f7790339c7cba69e1a67610aaae0eb1355452",
+    "predictions": "52af9518c78df24841747d2e2f0072e080abe99eb32a5fc1b68c32caf8b4ee42"
+  },
+  "claim_ceiling": "Which boundary processes reproduce which structural components; no decipherment; no Gate level.",
+  "amendments": []
+}

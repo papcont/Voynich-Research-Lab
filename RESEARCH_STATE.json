@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-20T13:10:00Z",
-  "status": "BLOCKED",
-  "active_experiment": "E019_cipher_transforms",
-  "next_action": "Await the two human decisions. Decision-free follow-up available: E019-B (verbose stream with a fraction p of word-aligned boundaries; p calibrated on delta_S' to the manuscript's 0.178 on one source, then all other components and the E018 y->qo selectivity tested as predictions on the other source).",
+  "updated_utc": "2026-10-20T13:40:00Z",
+  "status": "PLAN_FROZEN",
+  "active_experiment": "E020_partial_alignment",
+  "next_action": "Implement frozen E020: run.py (MIX(p) transform on verbose streams; calibration grid on N_DEU recorded first; predictions on N_ITA; top-1 selectivity for Voynich and MIX; decisions), validate.py, results.json before REPORT.md; ledger H030a-c; STATUS/RESUME/state. Human decisions remain pending.",
   "blocked_reason": null,
   "last_completed_experiment": "E019_cipher_transforms",
   "last_completed_result": "H029a_PARTIAL;H029b_FALSIFIED",

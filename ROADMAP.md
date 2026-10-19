@@ -21,3 +21,4 @@
 | E017 | DONE — H025b SUPPORTED_DEV (+0.013); H026 FALSIFIED_DEV | Weak codex-order vocabulary locality; leaf structure adds nothing |
 | E018 | DONE — H003a/H003b SUPPORTED_DEV (R 6.1 in Biological B; 72% of the edge gain) | y → qo edge transition quantified |
 | E019 | DONE — H029a PARTIAL (stream re-cut: coupling right sign, 2.5× too strong); H029b FALSIFIED | Cipher/encoding transforms of open prose under Signature-G; boundary placement identified as the lever |
+| **E020** | **PLAN_FROZEN** | Partly word-aligned boundaries on a verbose stream: calibrate p on Copiale, predict on Italian; selectivity test |
