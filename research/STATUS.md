@@ -47,38 +47,22 @@ The stronger claim — same underlying unit sequence — has **not passed a cont
 
 ## Current frontier
 
-**E007 complete — REPRODUCED_BUT_NOT_VALIDATED** (first reveal 2026-10-19;
-`results.json` + independent `validate.py` pass; amendment 002 committed before
-reveal). Independent P70 layer-A parser on ZL3b (33,611 running-text strict
-tokens): R1 reproduces published values approximately (empty core 55.3% vs
-52.7%; total chain-rule entropy 10.11 vs 10.311 bits). R2 prequential KT
-bits/token: P70 15.03, best alternatives A7 (ch/sh not prefix) 15.21 and A5 (no
-gallows) 15.25, matched random 4-slot A8 15.96, whole token A0 16.91; P70 wins
-5/5 cross-fitted folds against every competitor and is lowest in Currier A and
-B. The frozen gate fails only in major section P (A6 16.996 < P70 17.069), so
-H009 is **not supported under the frozen gate**. Exploratory post-reveal check:
-under natural folio order and order-free cross-fitted costs P70 is lowest in all
-major sections — the miss looks like a prequential-order artefact, but cannot
-relabel E007. Non-prospective (P70 built on the whole VMS). Structural only.
+**E011 complete (development-stage).** Under a backoff universal coder, conditioning the
+P70 prefix slot on the previous token's final glyph lowers out-of-fold description length by
+**0.088 bits/token** (folio-mean, CI 0.073–0.102; Currier A +0.035, B +0.166; feature-permuted
+null −0.004; token-permutation control removes the gain) → **H014 SUPPORTED_DEV**. Line
+position (prefix+suffix) raises it (−0.026, CI −0.042..−0.011) → **H015 FALSIFIED_DEV**.
+All-slot conditioning (E008 shape) loses 0.69 even with backoff: slot targeting matters.
+New strongest structural null for the running-text development pool: **M_Sfam 13.813 /
+M_S 13.829** bits/token vs plain P70 13.967 (`research/gate/registered_nulls.json`).
+No Gate v2 level is claimable (every ZL3b running-text folio has a SELECTION role).
 
-Previous: E006 INCONCLUSIVE_UNDERPOWERED (H008 unresolved; no tuning).
+Earlier: E008 stage A ALL_COMPONENTS_NOT_INFORMATIVE (no-backoff scorecard; see REPORT);
+E007 REPRODUCED_BUT_NOT_VALIDATED; E006 INCONCLUSIVE_UNDERPOWERED.
 
-**E008 stage A complete — ALL_COMPONENTS_NOT_INFORMATIVE** (first reveal
-2026-10-19; `validate.py` pass). On the frozen no-backoff KT scorecard, adding
-edge state S, line position L or local copy/modify C to the P70 base *costs*
-1.95 / 0.36 / 0.25 bits/token on the holdout (B1 = 14.42). S and L still beat
-the within-folio shuffle by 0.89 / 0.33 (information exists, fragmentation
-dominates); C equals the shuffle (no locality-specific copying at W ≤ 5).
-H011–H013 falsified as predictive components under this scorecard; H003 (prefix
-given previous final) is untested by E008. Lesson: codelength tests of
-conditioning hypotheses need a backoff coder and slot-targeted conditioning
-(E011 draft).
-
-Gate v2 (protocol amendment A001, 2026-10-19) is in force for all new claims; E006–E008
-are not reinterpreted. Holdout audit (with erratum): every ZL3b running-text folio carries a SELECTION role
-(E006/E007/E008 development folds or the E008 exploratory analysis) → **no running-text
-lockbox exists**; running-text work is development-stage until new data are registered.
-Next frontier: **E011** (PLAN_FROZEN) — slot-targeted conditioning under a backoff scorecard.
+Next frontier: **E012** (draft) — apply the identical scorecard to reference texts (natural
+language, verbose cipher of it, substitution control, self-citation and slot-grammar
+generators) and compare component signatures. Needs a human decision on corpora/licenses.
 
 ## External landscape check (2026-10-19)
 

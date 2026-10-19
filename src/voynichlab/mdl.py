@@ -110,3 +110,75 @@ def demo() -> None:
 
 if __name__ == "__main__":
     demo()
+
+
+class BackoffKTCoder:
+    """KT coder with one level of PPM-style backoff and exclusion (E011 §2, frozen).
+
+    A slot value is coded in a *child* context (conditioned on a feature); if it is
+    unseen there, the child's escape mass is spent and the value is coded in the
+    *parent* context (unconditioned) with the child's seen values excluded; if it
+    is unseen in the parent too, the parent's escape mass plus the char code pay
+    for it. With child_key=None the coder is the plain KT + char escape of KTCoder.
+    Seen mass + escape mass sum to one at every level, so the code is prefix-free.
+    """
+
+    def __init__(self, sigma_size: int):
+        if sigma_size < 1:
+            raise ValueError("sigma_size must be >= 1")
+        self.sigma_size = sigma_size
+        self._ctx: dict[object, dict] = {}
+
+    def _get(self, key):
+        st = self._ctx.get(key)
+        return (st["n"], st["counts"]) if st else (0, {})
+
+    def _state(self, key) -> dict:
+        st = self._ctx.get(key)
+        if st is None:
+            st = {"n": 0, "counts": {}}
+            self._ctx[key] = st
+        return st
+
+    def _parent_cost(self, parent_key, value, excluded) -> float:
+        n0, cnt0 = self._get(parent_key)
+        if excluded:
+            n0 = sum(c for k, c in cnt0.items() if k not in excluded)
+            m0 = sum(1 for k in cnt0 if k not in excluded)
+        else:
+            m0 = len(cnt0)
+        denom = n0 + 0.5 * (m0 + 1)
+        if value in cnt0 and value not in excluded:
+            return -math.log2((cnt0[value] + 0.5) / denom)
+        return -math.log2(0.5 / denom) + charcost(value, self.sigma_size)
+
+    def cost(self, child_key, parent_key, value) -> float:
+        """Codelength in bits WITHOUT updating state."""
+        if child_key is None:
+            return self._parent_cost(parent_key, value, ())
+        n1, cnt1 = self._get(child_key)
+        denom = n1 + 0.5 * (len(cnt1) + 1)
+        if value in cnt1:
+            return -math.log2((cnt1[value] + 0.5) / denom)
+        return -math.log2(0.5 / denom) + self._parent_cost(parent_key, value, cnt1)
+
+    def prob_mass(self, child_key, parent_key, candidates) -> float:
+        """Total probability of `candidates` plus the residual escape (for tests)."""
+        total = 0.0
+        for v in candidates:
+            total += 2.0 ** (-self.cost(child_key, parent_key, v))
+        return total
+
+    def update(self, child_key, parent_key, value) -> None:
+        if child_key is not None:
+            st = self._state(child_key)
+            st["counts"][value] = st["counts"].get(value, 0) + 1
+            st["n"] += 1
+        st = self._state(parent_key)
+        st["counts"][value] = st["counts"].get(value, 0) + 1
+        st["n"] += 1
+
+    def encode(self, child_key, parent_key, value) -> float:
+        bits = self.cost(child_key, parent_key, value)
+        self.update(child_key, parent_key, value)
+        return bits
