@@ -10,3 +10,21 @@ sources:
     upstream_git_blob_sha1: 2a4533ab9bdfa85db9bad602d590978953055df1
     local_path: data/raw/ZL3b-n.txt
     redistribution: do_not_commit_by_default
+  it2a:
+    role: secondary_transliteration_for_gate_v2_robustness
+    transcription: Takahashi IT (IVTFF release 2a, voynich.nu)
+    format: IVTFF Eva- 2.0
+    url: https://www.voynich.nu/data/IT_ivtff_2a.txt
+    sha256: UNVERIFIED_FETCH_BLOCKED_2026-10-19   # record on first successful fetch; Gate v2 refuses unregistered hashes
+    local_path: data/raw/IT_ivtff_2a.txt
+    redistribution: do_not_commit_by_default
+    note: voynich.nu was unreachable from the 2026-10-19 cloud environment (connection failure); not present in matthewdgreen/cipher_benchmark (checked 2026-10-19, ZL3b only).
+  gc:
+    role: optional_transliteration_for_gate_v2_robustness
+    transcription: Glen Claston v101 as IVTFF (voynich.nu, GC release 0d)
+    format: IVTFF v101 alphabet (not EVA; alignment by locus only)
+    url: https://www.voynich.nu/data/GC_ivtff_0d.txt
+    sha256: UNVERIFIED_FETCH_BLOCKED_2026-10-19
+    local_path: data/raw/GC_ivtff_0d.txt
+    redistribution: do_not_commit_by_default
+    note: different glyph alphabet; Gate v2 compares aligned loci and documents glyph-interpretation differences explicitly.

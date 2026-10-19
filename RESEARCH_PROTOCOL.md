@@ -38,6 +38,17 @@ Each experiment specifies:
 
 ## Decipherment promotion gate
 
+**Superseded for claims registered after 2026-10-19 by Amendment A001 (gate v2.0.0):**
+`research/protocol_amendments/A001_GATE_V2.md`, machine-readable
+`research/gate/gate_v2.json`, implementation `src/voynichlab/gate.py`. v2 defines five
+independent evidence levels (`STRUCTURAL_MODEL_VALIDATED`, `DECODING_MECHANISM_SUPPORTED`,
+`LANGUAGE_IDENTIFICATION_SUPPORTED`, `SEMANTIC_DECODING_SUPPORTED`, `DECIPHERMENT_CONFIRMED`)
+with states `PASS` / `FAIL` / `INCONCLUSIVE` / `NOT_TESTED`. Results revealed before the
+amendment (E006–E008) are not reinterpreted. The original v1 wording is kept below for the
+record.
+
+### v1 (historical wording)
+
 Do not accept "decoded/translated/deciphered" until there is:
 
 1. a fixed executable mapping/mechanism;
@@ -51,3 +62,9 @@ Do not accept "decoded/translated/deciphered" until there is:
 ## External repositories
 
 Classify external repos as workflow references, structural/cipher competitors, semantic claims, methodology references, or unrelated. Their own conclusions are never accepted automatically.
+
+## Amendments
+
+| id | version | date | scope |
+|---|---|---|---|
+| A001 | gate_v2.0.0 | 2026-10-19 | decipherment promotion gate, holdout registry, negative controls, transliteration robustness, falsification |

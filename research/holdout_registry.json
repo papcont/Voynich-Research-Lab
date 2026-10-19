@@ -1,0 +1,2346 @@
+{
+  "schema": 1,
+  "generated_by": "scripts/holdout_audit.py",
+  "source_blob": "2a4533ab9bdfa85db9bad602d590978953055df1",
+  "roles": {
+    "SELECTION": "used for model/parameter/threshold selection or error analysis",
+    "EVALUATION": "target metric computed and revealed on it",
+    "UNTOUCHED": "no committed experiment used it"
+  },
+  "experiments": {
+    "E006": "split folds.folio_fold (sha256(folio) % 5); dev {0,1,2} = SELECTION (grammar/threshold development), holdout {3,4} = EVALUATION (revealed)",
+    "E007": "split efold (sha256('E007:'+folio) % 5); global prequential + 5-fold cross-fitted scores on ALL folios = EVALUATION; dev {0,1,2} also SELECTION (A8 slot-length profile); dev->holdout arm revealed",
+    "E008": "same split; dev {0,1,2} = SELECTION (W chosen on development); holdout {3,4} = EVALUATION",
+    "E001-E005": "historical exploratory analyses (not reproducible from this repo); conservatively assumed to have touched any running-text token"
+  },
+  "folios": {
+    "f100r": {
+      "running_text_tokens": 84,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f100v": {
+      "running_text_tokens": 77,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f101r": {
+      "running_text_tokens": 216,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f101v": {
+      "running_text_tokens": 177,
+      "non_running_tokens": 16,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f102r1": {
+      "running_text_tokens": 101,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f102r2": {
+      "running_text_tokens": 132,
+      "non_running_tokens": 2,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f102v1": {
+      "running_text_tokens": 110,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f102v2": {
+      "running_text_tokens": 159,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f103r": {
+      "running_text_tokens": 512,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f103v": {
+      "running_text_tokens": 440,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f104r": {
+      "running_text_tokens": 442,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f104v": {
+      "running_text_tokens": 462,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f105r": {
+      "running_text_tokens": 370,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f105v": {
+      "running_text_tokens": 390,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f106r": {
+      "running_text_tokens": 424,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f106v": {
+      "running_text_tokens": 437,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f107r": {
+      "running_text_tokens": 476,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f107v": {
+      "running_text_tokens": 457,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f108r": {
+      "running_text_tokens": 484,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f108v": {
+      "running_text_tokens": 569,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f10r": {
+      "running_text_tokens": 88,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f10v": {
+      "running_text_tokens": 56,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f111r": {
+      "running_text_tokens": 610,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f111v": {
+      "running_text_tokens": 554,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f112r": {
+      "running_text_tokens": 388,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f112v": {
+      "running_text_tokens": 407,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f113r": {
+      "running_text_tokens": 518,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f113v": {
+      "running_text_tokens": 489,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f114r": {
+      "running_text_tokens": 444,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f114v": {
+      "running_text_tokens": 367,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f115r": {
+      "running_text_tokens": 452,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f115v": {
+      "running_text_tokens": 400,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f116r": {
+      "running_text_tokens": 535,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f11r": {
+      "running_text_tokens": 56,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f11v": {
+      "running_text_tokens": 47,
+      "non_running_tokens": 1,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f13r": {
+      "running_text_tokens": 73,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f13v": {
+      "running_text_tokens": 66,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f14r": {
+      "running_text_tokens": 74,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f14v": {
+      "running_text_tokens": 73,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f15r": {
+      "running_text_tokens": 92,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f15v": {
+      "running_text_tokens": 67,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f16r": {
+      "running_text_tokens": 81,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f16v": {
+      "running_text_tokens": 72,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f17r": {
+      "running_text_tokens": 74,
+      "non_running_tokens": 2,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f17v": {
+      "running_text_tokens": 130,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f18r": {
+      "running_text_tokens": 80,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f18v": {
+      "running_text_tokens": 67,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f19r": {
+      "running_text_tokens": 74,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f19v": {
+      "running_text_tokens": 73,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f1r": {
+      "running_text_tokens": 201,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f1v": {
+      "running_text_tokens": 91,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f20r": {
+      "running_text_tokens": 86,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f20v": {
+      "running_text_tokens": 81,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f21r": {
+      "running_text_tokens": 103,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f21v": {
+      "running_text_tokens": 58,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f22r": {
+      "running_text_tokens": 105,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f22v": {
+      "running_text_tokens": 74,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f23r": {
+      "running_text_tokens": 104,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f23v": {
+      "running_text_tokens": 92,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f24r": {
+      "running_text_tokens": 106,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f24v": {
+      "running_text_tokens": 77,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f25r": {
+      "running_text_tokens": 45,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f25v": {
+      "running_text_tokens": 57,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f26r": {
+      "running_text_tokens": 88,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f26v": {
+      "running_text_tokens": 90,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f27r": {
+      "running_text_tokens": 88,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f27v": {
+      "running_text_tokens": 57,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f28r": {
+      "running_text_tokens": 67,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f28v": {
+      "running_text_tokens": 66,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f29r": {
+      "running_text_tokens": 63,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f29v": {
+      "running_text_tokens": 90,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f2r": {
+      "running_text_tokens": 97,
+      "non_running_tokens": 4,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f2v": {
+      "running_text_tokens": 60,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f30r": {
+      "running_text_tokens": 97,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f30v": {
+      "running_text_tokens": 60,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f31r": {
+      "running_text_tokens": 97,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f31v": {
+      "running_text_tokens": 106,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f32r": {
+      "running_text_tokens": 74,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f32v": {
+      "running_text_tokens": 86,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f33r": {
+      "running_text_tokens": 70,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f33v": {
+      "running_text_tokens": 111,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f34r": {
+      "running_text_tokens": 143,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f34v": {
+      "running_text_tokens": 113,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f35r": {
+      "running_text_tokens": 91,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f35v": {
+      "running_text_tokens": 89,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f36r": {
+      "running_text_tokens": 60,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f36v": {
+      "running_text_tokens": 73,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f37r": {
+      "running_text_tokens": 76,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f37v": {
+      "running_text_tokens": 84,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f38r": {
+      "running_text_tokens": 43,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f38v": {
+      "running_text_tokens": 66,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f39r": {
+      "running_text_tokens": 148,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f39v": {
+      "running_text_tokens": 141,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f3r": {
+      "running_text_tokens": 114,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f3v": {
+      "running_text_tokens": 84,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f40r": {
+      "running_text_tokens": 99,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f40v": {
+      "running_text_tokens": 101,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f41r": {
+      "running_text_tokens": 85,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f41v": {
+      "running_text_tokens": 62,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f42r": {
+      "running_text_tokens": 130,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f42v": {
+      "running_text_tokens": 109,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f43r": {
+      "running_text_tokens": 147,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f43v": {
+      "running_text_tokens": 143,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f44r": {
+      "running_text_tokens": 70,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f44v": {
+      "running_text_tokens": 99,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f45r": {
+      "running_text_tokens": 85,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f45v": {
+      "running_text_tokens": 79,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f46r": {
+      "running_text_tokens": 152,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f46v": {
+      "running_text_tokens": 105,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f47r": {
+      "running_text_tokens": 71,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f47v": {
+      "running_text_tokens": 81,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f48r": {
+      "running_text_tokens": 87,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f48v": {
+      "running_text_tokens": 127,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f49r": {
+      "running_text_tokens": 104,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f49v": {
+      "running_text_tokens": 137,
+      "non_running_tokens": 20,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f4r": {
+      "running_text_tokens": 62,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f4v": {
+      "running_text_tokens": 81,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f50r": {
+      "running_text_tokens": 88,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f50v": {
+      "running_text_tokens": 94,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f51r": {
+      "running_text_tokens": 79,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f51v": {
+      "running_text_tokens": 75,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f52r": {
+      "running_text_tokens": 64,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f52v": {
+      "running_text_tokens": 71,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f53r": {
+      "running_text_tokens": 55,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f53v": {
+      "running_text_tokens": 70,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f54r": {
+      "running_text_tokens": 101,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f54v": {
+      "running_text_tokens": 90,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f55r": {
+      "running_text_tokens": 115,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f55v": {
+      "running_text_tokens": 97,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f56r": {
+      "running_text_tokens": 98,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f56v": {
+      "running_text_tokens": 88,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f57r": {
+      "running_text_tokens": 78,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f58r": {
+      "running_text_tokens": 365,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f58v": {
+      "running_text_tokens": 360,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f5r": {
+      "running_text_tokens": 53,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f5v": {
+      "running_text_tokens": 46,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f65v": {
+      "running_text_tokens": 39,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f66r": {
+      "running_text_tokens": 287,
+      "non_running_tokens": 49,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f66v": {
+      "running_text_tokens": 106,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f67r1": {
+      "running_text_tokens": 38,
+      "non_running_tokens": 17,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f67r2": {
+      "running_text_tokens": 122,
+      "non_running_tokens": 60,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f67v2": {
+      "running_text_tokens": 30,
+      "non_running_tokens": 24,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f68r1": {
+      "running_text_tokens": 31,
+      "non_running_tokens": 28,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f68r2": {
+      "running_text_tokens": 36,
+      "non_running_tokens": 23,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f68v2": {
+      "running_text_tokens": 44,
+      "non_running_tokens": 25,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f68v3": {
+      "running_text_tokens": 53,
+      "non_running_tokens": 46,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f69r": {
+      "running_text_tokens": 35,
+      "non_running_tokens": 39,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f6r": {
+      "running_text_tokens": 82,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f6v": {
+      "running_text_tokens": 109,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f70r2": {
+      "running_text_tokens": 95,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f75r": {
+      "running_text_tokens": 413,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f75v": {
+      "running_text_tokens": 321,
+      "non_running_tokens": 36,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f76r": {
+      "running_text_tokens": 549,
+      "non_running_tokens": 9,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f76v": {
+      "running_text_tokens": 394,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f77r": {
+      "running_text_tokens": 314,
+      "non_running_tokens": 11,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f77v": {
+      "running_text_tokens": 313,
+      "non_running_tokens": 9,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f78r": {
+      "running_text_tokens": 279,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f78v": {
+      "running_text_tokens": 291,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f79r": {
+      "running_text_tokens": 370,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f79v": {
+      "running_text_tokens": 352,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f7r": {
+      "running_text_tokens": 66,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f7v": {
+      "running_text_tokens": 76,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f80r": {
+      "running_text_tokens": 427,
+      "non_running_tokens": 10,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f80v": {
+      "running_text_tokens": 369,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f81r": {
+      "running_text_tokens": 209,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f81v": {
+      "running_text_tokens": 244,
+      "non_running_tokens": 2,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f82r": {
+      "running_text_tokens": 272,
+      "non_running_tokens": 10,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f82v": {
+      "running_text_tokens": 303,
+      "non_running_tokens": 13,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f83r": {
+      "running_text_tokens": 331,
+      "non_running_tokens": 4,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f83v": {
+      "running_text_tokens": 253,
+      "non_running_tokens": 4,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f84r": {
+      "running_text_tokens": 348,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f84v": {
+      "running_text_tokens": 337,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f85r1": {
+      "running_text_tokens": 338,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f86v3": {
+      "running_text_tokens": 58,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f86v4": {
+      "running_text_tokens": 47,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f86v5": {
+      "running_text_tokens": 389,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f86v6": {
+      "running_text_tokens": 480,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f87r": {
+      "running_text_tokens": 97,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f87v": {
+      "running_text_tokens": 88,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f88r": {
+      "running_text_tokens": 130,
+      "non_running_tokens": 16,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f88v": {
+      "running_text_tokens": 125,
+      "non_running_tokens": 12,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f89r1": {
+      "running_text_tokens": 120,
+      "non_running_tokens": 13,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f89r2": {
+      "running_text_tokens": 208,
+      "non_running_tokens": 21,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f89v1": {
+      "running_text_tokens": 142,
+      "non_running_tokens": 8,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f89v2": {
+      "running_text_tokens": 161,
+      "non_running_tokens": 11,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f8r": {
+      "running_text_tokens": 138,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f8v": {
+      "running_text_tokens": 114,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f90r1": {
+      "running_text_tokens": 67,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f90r2": {
+      "running_text_tokens": 46,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f90v1": {
+      "running_text_tokens": 89,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": false
+    },
+    "f90v2": {
+      "running_text_tokens": 60,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f93r": {
+      "running_text_tokens": 149,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f93v": {
+      "running_text_tokens": 84,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f94r": {
+      "running_text_tokens": 77,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f94v": {
+      "running_text_tokens": 96,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f95r1": {
+      "running_text_tokens": 101,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f95r2": {
+      "running_text_tokens": 79,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "EVALUATION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f95v1": {
+      "running_text_tokens": 116,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f95v2": {
+      "running_text_tokens": 59,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f96r": {
+      "running_text_tokens": 81,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f96v": {
+      "running_text_tokens": 53,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "f99r": {
+      "running_text_tokens": 155,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f99v": {
+      "running_text_tokens": 143,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f9r": {
+      "running_text_tokens": 80,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    },
+    "f9v": {
+      "running_text_tokens": 83,
+      "non_running_tokens": 0,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "EVALUATION",
+        "E008": "EVALUATION"
+      },
+      "ever_selection": true
+    },
+    "fRos": {
+      "running_text_tokens": 19,
+      "non_running_tokens": 10,
+      "roles": {
+        "E006": "SELECTION",
+        "E007": "SELECTION+EVALUATION",
+        "E008": "SELECTION"
+      },
+      "ever_selection": true
+    }
+  },
+  "selection_folios": [
+    "f100r",
+    "f100v",
+    "f101r",
+    "f101v",
+    "f102r1",
+    "f102r2",
+    "f102v1",
+    "f102v2",
+    "f103r",
+    "f103v",
+    "f104r",
+    "f104v",
+    "f105r",
+    "f105v",
+    "f106v",
+    "f107v",
+    "f108r",
+    "f108v",
+    "f10r",
+    "f10v",
+    "f111r",
+    "f111v",
+    "f112r",
+    "f112v",
+    "f113v",
+    "f115r",
+    "f115v",
+    "f116r",
+    "f11r",
+    "f11v",
+    "f13r",
+    "f13v",
+    "f14r",
+    "f15r",
+    "f15v",
+    "f16r",
+    "f16v",
+    "f17v",
+    "f18r",
+    "f19r",
+    "f1r",
+    "f1v",
+    "f20r",
+    "f20v",
+    "f21r",
+    "f21v",
+    "f23v",
+    "f24r",
+    "f24v",
+    "f25r",
+    "f25v",
+    "f26r",
+    "f26v",
+    "f27r",
+    "f27v",
+    "f28r",
+    "f29v",
+    "f2r",
+    "f2v",
+    "f30r",
+    "f31r",
+    "f31v",
+    "f32r",
+    "f33r",
+    "f33v",
+    "f34v",
+    "f35r",
+    "f36r",
+    "f36v",
+    "f38r",
+    "f38v",
+    "f39r",
+    "f39v",
+    "f3r",
+    "f3v",
+    "f40r",
+    "f40v",
+    "f41r",
+    "f41v",
+    "f42r",
+    "f42v",
+    "f43r",
+    "f44v",
+    "f46r",
+    "f46v",
+    "f47r",
+    "f47v",
+    "f48r",
+    "f48v",
+    "f49r",
+    "f49v",
+    "f4r",
+    "f4v",
+    "f50r",
+    "f50v",
+    "f51v",
+    "f52r",
+    "f52v",
+    "f53r",
+    "f53v",
+    "f54r",
+    "f55r",
+    "f56r",
+    "f56v",
+    "f57r",
+    "f58r",
+    "f58v",
+    "f5r",
+    "f5v",
+    "f65v",
+    "f66r",
+    "f66v",
+    "f67r1",
+    "f67r2",
+    "f67v2",
+    "f68r1",
+    "f68r2",
+    "f68v2",
+    "f69r",
+    "f6r",
+    "f6v",
+    "f75r",
+    "f75v",
+    "f76r",
+    "f76v",
+    "f77r",
+    "f77v",
+    "f78v",
+    "f79r",
+    "f79v",
+    "f7r",
+    "f80r",
+    "f80v",
+    "f81r",
+    "f82r",
+    "f83r",
+    "f84r",
+    "f84v",
+    "f85r1",
+    "f86v3",
+    "f86v4",
+    "f86v5",
+    "f87r",
+    "f87v",
+    "f88r",
+    "f88v",
+    "f89r2",
+    "f89v1",
+    "f8r",
+    "f8v",
+    "f90r1",
+    "f90r2",
+    "f90v2",
+    "f93r",
+    "f93v",
+    "f94r",
+    "f94v",
+    "f95r1",
+    "f95r2",
+    "f95v1",
+    "f95v2",
+    "f96r",
+    "f96v",
+    "f99r",
+    "f99v",
+    "f9r",
+    "f9v",
+    "fRos"
+  ],
+  "lockboxes": {
+    "LOCKBOX_RUNNING_SEMI_V1": {
+      "independence": "SEMI_INDEPENDENT",
+      "description": "All running-text folios never used for selection by any committed experiment (E006 dev folds, E007/E008 dev folds excluded). Their P70/A0/S/L/C scores were revealed in E006-E008, so they are not fully independent. From 2026-10-19 excluded from all development.",
+      "folios": [
+        "f106r",
+        "f107r",
+        "f113r",
+        "f114r",
+        "f114v",
+        "f14v",
+        "f17r",
+        "f18v",
+        "f19v",
+        "f22r",
+        "f22v",
+        "f23r",
+        "f28v",
+        "f29r",
+        "f30v",
+        "f32v",
+        "f34r",
+        "f35v",
+        "f37r",
+        "f37v",
+        "f43v",
+        "f44r",
+        "f45r",
+        "f45v",
+        "f51r",
+        "f54v",
+        "f55v",
+        "f68v3",
+        "f70r2",
+        "f78r",
+        "f7v",
+        "f81v",
+        "f82v",
+        "f83v",
+        "f86v6",
+        "f89r1",
+        "f89v2",
+        "f90v1"
+      ],
+      "n_folios": 38,
+      "n_tokens": 6262,
+      "sha256": "696b20cfbcc61d568720a04c89bf5588b3c159ed308a33df7b1370ed434e1447"
+    },
+    "LOCKBOX_NONRUNNING_V1": {
+      "independence": "INDEPENDENT",
+      "description": "Label/circular/radial loci (locus type not P*). No committed experiment coded them. Small, structurally different from running text; suitable for transfer-style confirmation only.",
+      "folios": [
+        "f101v",
+        "f102r2",
+        "f116v",
+        "f11v",
+        "f17r",
+        "f2r",
+        "f49v",
+        "f57v",
+        "f65r",
+        "f66r",
+        "f67r1",
+        "f67r2",
+        "f67v1",
+        "f67v2",
+        "f68r1",
+        "f68r2",
+        "f68r3",
+        "f68v1",
+        "f68v2",
+        "f68v3",
+        "f69r",
+        "f70v2",
+        "f75v",
+        "f76r",
+        "f77r",
+        "f77v",
+        "f80r",
+        "f81v",
+        "f82r",
+        "f82v",
+        "f83r",
+        "f83v",
+        "f88r",
+        "f88v",
+        "f89r1",
+        "f89r2",
+        "f89v1",
+        "f89v2",
+        "fRos"
+      ],
+      "n_folios": 39,
+      "n_tokens": 710,
+      "sha256": "6c7ae53325d917a2982d504d5ea47c55ff485ed130a6d8f1a27173eb590aa2a6"
+    }
+  },
+  "statement": "No fully independent RUNNING-TEXT data remain in ZL3b: every running-text folio has had a revealed target metric in E007 (global and cross-fitted scores). Confirmation of a running-text claim can only use LOCKBOX_RUNNING_SEMI_V1 (flagged SEMI_INDEPENDENT) or data outside ZL3b running text (LOCKBOX_NONRUNNING_V1, other transliterations' uncertain-reading sets, future sources)."
+}

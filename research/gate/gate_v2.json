@@ -1,0 +1,63 @@
+{
+  "gate_version": "2.0.0",
+  "effective_from_utc": "2026-10-19T22:30:00Z",
+  "non_retroactive": "Applies to claims registered after effective_from_utc. E006, E007 and E008 results keep their original labels and are not reinterpreted.",
+  "states": ["PASS", "FAIL", "INCONCLUSIVE", "NOT_TESTED"],
+  "levels": [
+    "STRUCTURAL_MODEL_VALIDATED",
+    "DECODING_MECHANISM_SUPPORTED",
+    "LANGUAGE_IDENTIFICATION_SUPPORTED",
+    "SEMANTIC_DECODING_SUPPORTED",
+    "DECIPHERMENT_CONFIRMED"
+  ],
+  "level_rule": "Levels are independent states. A level can only be PASS if every lower level is PASS. A compression PASS never implies a language or semantic PASS: those levels stay NOT_TESTED until their own evidence blocks are supplied.",
+  "registration": {
+    "required_fields": ["claim_id", "registered_utc", "freeze_commit", "lockbox_id",
+      "retraction_condition", "sha256"],
+    "sha256_required_for": ["split", "inputs", "config", "predictions"],
+    "rule": "All hashes must be registered in a commit that precedes the first final evaluation. Missing retraction condition or missing hash => FAIL at registration."
+  },
+  "holdout_protection": {
+    "registry": "research/holdout_registry.json",
+    "rule": "A folio that any prior experiment used for model selection, threshold determination or error analysis (role SELECTION) can never be part of a confirmation lockbox. Folios used only for evaluation are SEMI_INDEPENDENT and are flagged as such. Fully untouched data are INDEPENDENT. The claim record must name a lockbox_id from the registry; overlap with SELECTION folios => FAIL."
+  },
+  "compression": {
+    "metric": "description length of the OBSERVED Voynich text in bits per token (not perplexity of a produced plaintext)",
+    "null_model": "the strongest frozen null registered for the lockbox (currently P70 layer A; its historical values 15.03 global / 14.42 dev->holdout are references, not thresholds)",
+    "model_bits_components": ["mechanism_code_bits", "dictionary_bits", "key_bits", "exception_bits", "residual_bits", "transmission_bits"],
+    "model_bits_rule": "All components must be present (numbers >= 0). total_candidate_bits = data_bits + sum(components). Comparison uses total bits per token for the candidate and data+model bits for the null.",
+    "reconstruction_rule": "The candidate must reconstruct the observed lockbox text exactly; sha256 of the reconstruction must equal sha256 of the lockbox text. Otherwise the level is NOT_TESTED.",
+    "dependency_unit": "folio",
+    "ci": {"method": "percentile bootstrap of the folio-level mean paired difference", "resamples": 10000, "seed": 20261019, "lower_quantile": 0.025},
+    "margin_bits_per_token": {"provisional_default": 0.5, "rule": "Must be calibrated and justified on development data only; the claim record states margin, calibration source and justification. A margin calibrated on lockbox data => FAIL."},
+    "min_folios": 20,
+    "decision": {
+      "PASS": "n_folios >= min_folios AND mean_delta >= margin AND ci_lower > 0 AND specificity PASS",
+      "FAIL": "n_folios >= min_folios AND ci_upper < margin (candidate clearly below margin) OR specificity FAIL",
+      "INCONCLUSIVE": "otherwise (underpowered or imprecise)"
+    },
+    "specificity": {
+      "required_controls": ["folio_internal_permutation", "matched_synthetic", "nonsemantic_generator"],
+      "rule": "The unchanged candidate is evaluated on each control text against the same null. If its gain on any control is >= (real gain - margin), specificity FAILs: the candidate gains for reasons unrelated to the manuscript's content."
+    }
+  },
+  "language": {
+    "rule": "Mechanism level PASS required. A fixed language model per candidate language, trained on independent corpora (hashes registered), applied through the fixed mechanism; the target language must beat every alternative language (>= 3 alternatives from different families) on the lockbox by the registered margin with ci_lower > 0; and the same pipeline must NOT prefer the target language on the nonsemantic_generator control.",
+    "min_alternatives": 3
+  },
+  "semantic": {
+    "pre_registration": "Text-derived statements are hashed before any illustration of the tested pages is inspected (predictions sha256 in registration).",
+    "test": "Each prediction family is scored against matched wrong pages (controlled permutations within similar sections). Permutation p-value per family; Holm correction across families; target alpha 0.01 after correction.",
+    "min_effect_rule": "The pre-registered minimum effect over controls must be met in addition to p <= 0.01.",
+    "separate_reports": ["semantic_plausibility", "independent_rater_agreement", "verifiable_text_statements"],
+    "error_rate_rule": "No true word error rate may be claimed (no known Voynich plaintext). Error rates are measured on synthetic positive controls only and reported as such.",
+    "coverage_report": ["coverage_percent", "undetermined_word_percent", "evidence_quality_tier"]
+  },
+  "confirmation": {
+    "rule": "Levels 1-4 PASS AND independent replication (different implementer, registered hash) AND transliteration robustness (ZL3b plus IT2a and, where available, GC/v101; aligned loci only; separate results for clear and uncertain passages; same direction with ci_lower > 0 on clear passages) AND retraction condition evaluated and not triggered.",
+    "transliterations": {"primary": "ZL3b", "required": ["IT2a"], "optional": ["GC/v101"]}
+  },
+  "falsification": {
+    "rule": "Every registered claim carries a retraction_condition. No post-hoc exceptions, no scoring-method change, no retuning after the final lockbox is opened. A claim record with post_reveal_changes = true => FAIL."
+  }
+}

@@ -1,0 +1,293 @@
+{
+ "claim_id": "example_genuine_mechanism",
+ "registered_utc": "2026-10-19T00:00:00Z",
+ "freeze_commit": "deadbeef",
+ "lockbox_id": "LB_OK",
+ "retraction_condition": "ci_lower <= 0 on the lockbox",
+ "post_reveal_changes": false,
+ "sha256": {
+  "split": "ad1a64057f9ab34fecfe3f4ee78660bb0316dbda9370581ffbeb1e8bddf3d598",
+  "inputs": "32381523e63197c929b67f793a8098bed0ae3a6fa902634fdbcc6fa4567f3346",
+  "config": "b79606fb3afea5bd1609ed40b622142f1c98125abcfe89a76a661b0e8e343910",
+  "predictions": "174824b02c8aa83d8316308abc2373adfc42a3c656c6c74525615f6bc706f296"
+ },
+ "compression": {
+  "folios": [
+   {
+    "folio": "f0",
+    "n_tokens": 120,
+    "candidate_data_bits": 249.67670240098835,
+    "null_total_bits": 497.387566685817
+   },
+   {
+    "folio": "f1",
+    "n_tokens": 120,
+    "candidate_data_bits": 244.44637943632387,
+    "null_total_bits": 405.7885626915753
+   },
+   {
+    "folio": "f2",
+    "n_tokens": 120,
+    "candidate_data_bits": 243.1126981202861,
+    "null_total_bits": 397.79210870636376
+   },
+   {
+    "folio": "f3",
+    "n_tokens": 120,
+    "candidate_data_bits": 235.62425693435813,
+    "null_total_bits": 383.8200788263819
+   },
+   {
+    "folio": "f4",
+    "n_tokens": 120,
+    "candidate_data_bits": 247.24132609042758,
+    "null_total_bits": 388.39681329325055
+   },
+   {
+    "folio": "f5",
+    "n_tokens": 120,
+    "candidate_data_bits": 231.93031677898563,
+    "null_total_bits": 407.86499893162335
+   },
+   {
+    "folio": "f6",
+    "n_tokens": 120,
+    "candidate_data_bits": 248.13110236259672,
+    "null_total_bits": 408.894969168858
+   },
+   {
+    "folio": "f7",
+    "n_tokens": 120,
+    "candidate_data_bits": 260.0860224639236,
+    "null_total_bits": 395.0845382169675
+   },
+   {
+    "folio": "f8",
+    "n_tokens": 120,
+    "candidate_data_bits": 231.86473337291338,
+    "null_total_bits": 398.16192674046926
+   },
+   {
+    "folio": "f9",
+    "n_tokens": 120,
+    "candidate_data_bits": 238.38214195877538,
+    "null_total_bits": 387.3410651705689
+   },
+   {
+    "folio": "f10",
+    "n_tokens": 120,
+    "candidate_data_bits": 252.03937181114287,
+    "null_total_bits": 381.916909576447
+   },
+   {
+    "folio": "f11",
+    "n_tokens": 120,
+    "candidate_data_bits": 230.79274278364582,
+    "null_total_bits": 373.7423144690636
+   },
+   {
+    "folio": "f12",
+    "n_tokens": 120,
+    "candidate_data_bits": 252.67069773070548,
+    "null_total_bits": 408.088833398199
+   },
+   {
+    "folio": "f13",
+    "n_tokens": 120,
+    "candidate_data_bits": 235.88785324950518,
+    "null_total_bits": 422.29498731171316
+   },
+   {
+    "folio": "f14",
+    "n_tokens": 120,
+    "candidate_data_bits": 241.45470335585512,
+    "null_total_bits": 390.85236163628315
+   },
+   {
+    "folio": "f15",
+    "n_tokens": 120,
+    "candidate_data_bits": 229.6214363592983,
+    "null_total_bits": 395.0180748671961
+   },
+   {
+    "folio": "f16",
+    "n_tokens": 120,
+    "candidate_data_bits": 235.60410166268363,
+    "null_total_bits": 395.1257058122829
+   },
+   {
+    "folio": "f17",
+    "n_tokens": 120,
+    "candidate_data_bits": 256.6475862825717,
+    "null_total_bits": 401.76148773578245
+   },
+   {
+    "folio": "f18",
+    "n_tokens": 120,
+    "candidate_data_bits": 228.6507629145598,
+    "null_total_bits": 404.27685818507666
+   },
+   {
+    "folio": "f19",
+    "n_tokens": 120,
+    "candidate_data_bits": 252.97709967686464,
+    "null_total_bits": 390.33565659894265
+   },
+   {
+    "folio": "f20",
+    "n_tokens": 120,
+    "candidate_data_bits": 252.0928906256537,
+    "null_total_bits": 394.8387956934808
+   },
+   {
+    "folio": "f21",
+    "n_tokens": 120,
+    "candidate_data_bits": 255.1970034738088,
+    "null_total_bits": 400.40843187680406
+   },
+   {
+    "folio": "f22",
+    "n_tokens": 120,
+    "candidate_data_bits": 241.9934911016736,
+    "null_total_bits": 399.27992571949665
+   },
+   {
+    "folio": "f23",
+    "n_tokens": 120,
+    "candidate_data_bits": 253.96691070222383,
+    "null_total_bits": 394.1034121393234
+   },
+   {
+    "folio": "f24",
+    "n_tokens": 120,
+    "candidate_data_bits": 248.51186265415984,
+    "null_total_bits": 408.21891738984846
+   },
+   {
+    "folio": "f25",
+    "n_tokens": 120,
+    "candidate_data_bits": 255.60376591968094,
+    "null_total_bits": 420.9650118115635
+   },
+   {
+    "folio": "f26",
+    "n_tokens": 120,
+    "candidate_data_bits": 265.583861785631,
+    "null_total_bits": 411.0535050396127
+   },
+   {
+    "folio": "f27",
+    "n_tokens": 120,
+    "candidate_data_bits": 232.6494962628913,
+    "null_total_bits": 392.2476489896483
+   },
+   {
+    "folio": "f28",
+    "n_tokens": 120,
+    "candidate_data_bits": 241.77463306750684,
+    "null_total_bits": 402.6898217489738
+   },
+   {
+    "folio": "f29",
+    "n_tokens": 120,
+    "candidate_data_bits": 242.39159990562797,
+    "null_total_bits": 377.2595226699368
+   },
+   {
+    "folio": "f30",
+    "n_tokens": 120,
+    "candidate_data_bits": 234.55762999956087,
+    "null_total_bits": 387.0048882891989
+   },
+   {
+    "folio": "f31",
+    "n_tokens": 120,
+    "candidate_data_bits": 251.90689203997857,
+    "null_total_bits": 385.5014893878582
+   },
+   {
+    "folio": "f32",
+    "n_tokens": 120,
+    "candidate_data_bits": 240.95935895663533,
+    "null_total_bits": 387.78813413459045
+   },
+   {
+    "folio": "f33",
+    "n_tokens": 120,
+    "candidate_data_bits": 238.14258402391627,
+    "null_total_bits": 390.9901175969482
+   },
+   {
+    "folio": "f34",
+    "n_tokens": 120,
+    "candidate_data_bits": 255.4667307175199,
+    "null_total_bits": 385.5801387656168
+   },
+   {
+    "folio": "f35",
+    "n_tokens": 120,
+    "candidate_data_bits": 232.78318509624816,
+    "null_total_bits": 401.0931311075366
+   },
+   {
+    "folio": "f36",
+    "n_tokens": 120,
+    "candidate_data_bits": 231.9938648178506,
+    "null_total_bits": 380.6833064215183
+   },
+   {
+    "folio": "f37",
+    "n_tokens": 120,
+    "candidate_data_bits": 229.56307609315272,
+    "null_total_bits": 414.51771021624927
+   },
+   {
+    "folio": "f38",
+    "n_tokens": 120,
+    "candidate_data_bits": 240.64941498009392,
+    "null_total_bits": 391.53256718401855
+   },
+   {
+    "folio": "f39",
+    "n_tokens": 120,
+    "candidate_data_bits": 262.55456976848103,
+    "null_total_bits": 409.9620094086477
+   }
+  ],
+  "candidate_model_bits": {
+   "mechanism_code_bits": 200,
+   "dictionary_bits": 500,
+   "key_bits": 64,
+   "exception_bits": 0,
+   "residual_bits": 0,
+   "transmission_bits": 32
+  },
+  "reconstruction_sha256": "a7446c5151f77844edeb72f4481caa22e24728f14413575e1021728f89d81f9b",
+  "lockbox_text_sha256": "a7446c5151f77844edeb72f4481caa22e24728f14413575e1021728f89d81f9b",
+  "margin": {
+   "bits_per_token": 0.5,
+   "calibration_source": "development",
+   "justification": "half the development-fold gain of the strongest null over whole-token coding"
+  },
+  "controls": {
+   "folio_internal_permutation": {
+    "candidate_total_bits_per_token": 8.412006489875466,
+    "null_total_bits_per_token": 3.325088096979931
+   },
+   "matched_synthetic": {
+    "candidate_total_bits_per_token": 8.412006489875466,
+    "null_total_bits_per_token": 3.325088096979931
+   },
+   "nonsemantic_generator": {
+    "candidate_total_bits_per_token": 8.412006489875466,
+    "null_total_bits_per_token": 3.325088096979931
+   }
+  }
+ },
+ "mechanism": {
+  "produces_plaintext": true,
+  "deterministic": true,
+  "plaintext_sha256": "a116c9ed46d6207734a43317d30fd88f52ac8634c37d904bbf4e41d865f90475",
+  "output_freedom_bits_per_token": 0.0
+ }
+}

@@ -34,8 +34,9 @@ Retained structural observations:
 
 ## Active frontier
 
-1. **Gate v2** — human-approved protocol amendment (evidence levels, fair MDL test with folio-level CI, negative controls, holdout registry/lockbox, transliteration robustness, independent semantics, mandatory falsification, machine-checkable spec + tests). Must not reinterpret E006–E008.
-2. Then freeze **E011** (`experiments/E011_targeted_context_scorecard/PLAN_DRAFT.md`): hypothesis-shaped conditioning with a backoff scorecard.
+Gate v2 is in force (`research/protocol_amendments/A001_GATE_V2.md`, `research/gate/gate_v2.json`, `src/voynichlab/gate.py`, `tests/test_gate.py`, `scripts/gate_report.py`, `research/holdout_registry.json`). Lockboxes: `LOCKBOX_RUNNING_SEMI_V1` (38 folios, 6,262 tokens, SEMI_INDEPENDENT, excluded from all development from 2026-10-19) and `LOCKBOX_NONRUNNING_V1` (710 label/circular/radial tokens, INDEPENDENT). No fully independent running-text data remain in ZL3b. IT2a/GC hashes unregistered (voynich.nu unreachable 2026-10-19).
+
+Next: freeze **E011** (`experiments/E011_targeted_context_scorecard/PLAN_DRAFT.md`): hypothesis-shaped conditioning with a backoff scorecard, developed only on SELECTION folios, evaluated per Gate v2 on the lockbox.
 
 ## External check (2026-10-19)
 
