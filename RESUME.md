@@ -32,9 +32,9 @@ Retained structural observations:
 
 ## Last completed experiment
 
-`E020_partial_alignment` — **COMPLETED (development-stage).** Calibration on Copiale: p* = 0.8 (80% of word boundaries kept on a verbose stream) gives Δ_S′ 0.200; prediction on Italian 0.162 vs Voynich 0.178 → **H030a SUPPORTED** (one parameter, cross-language transfer). Other components: 2 of 6 within tolerance → **H030b PARTIAL**. H030c's top-1 rule is confounded by alphabet size → retired (exploratory normalised concentration recorded). Validator pass. See `REPORT.md`.
+`E021_selective_boundaries` — **COMPLETED (development-stage).** Selectivity S1 (single-contrast share of boundary MI): Voynich 0.233 on `y → q` (full 0.284) vs 0.06–0.14 for prose, stream cuts, E020 mixture → H031 PARTIAL. Marker-pair process: coupling 0.44 and S1 0.98 at the lowest grid value → H032 FALSIFIED (too strong, too deterministic). Letter-conditioned cuts never reach the level → H033 FALSIFIED. The manuscript's coupling is one probabilistic dominant transition plus a diffuse remainder. Validator pass. See `REPORT.md`.
 
-Before: `E019`, `E012`, `E018`, `E017`, `E016`, `E015`, `E014`, `E013`, `E010`, `E011`, `E008`, `E007`, `E006`.
+Before: `E020`, `E019`, `E012`, `E018`, `E017`, `E016`, `E015`, `E014`, `E013`, `E010`, `E011`, `E008`, `E007`, `E006`; synthesis `research/SYNTHESIS_2026-10-20.md` (E021 not yet folded in).
 
 ## Active frontier — BLOCKED on two human decisions
 

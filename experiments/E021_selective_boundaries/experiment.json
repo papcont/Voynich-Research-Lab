@@ -1,7 +1,7 @@
 {
   "experiment_id": "E021",
   "name": "selective_boundaries",
-  "status": "PLAN_FROZEN",
+  "status": "COMPLETED",
   "evidence_class": "MECHANISM_DEMONSTRATION/DEVELOPMENT",
   "gate_level_claimable": "none",
   "hypotheses": {
@@ -44,5 +44,12 @@
     "predictions": "506bc124f00ff241a3942a41739e10b51fd6fbf0ec8a3d0345a643f6db54ebc0"
   },
   "claim_ceiling": "Which boundary processes reproduce which structural properties; Y/Q are abstract symbols; no decipherment; no Gate level.",
-  "amendments": []
+  "amendments": [],
+  "result": "results.json",
+  "decisions": {
+    "H031": "PARTIAL",
+    "H032": "FALSIFIED",
+    "H033": "FALSIFIED"
+  },
+  "prepared_texts": "runs/E021/*.json (git-ignored)"
 }

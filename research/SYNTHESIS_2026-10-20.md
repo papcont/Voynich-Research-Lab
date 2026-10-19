@@ -46,6 +46,15 @@ some underlying unit, and the deviation is governed by a rule, not by chance. Th
 whatever produces `…y → qo…` — is the most mechanism-laden unexplained fact in the
 inventory.
 
+### Addendum (E021, same day)
+A selectivity measure robust to alphabet size (share of the boundary mutual information in one
+binary contrast) puts the manuscript at 0.23 on `y → q…` against 0.06–0.14 for prose, stream
+cuts and the E020 mixture; an explicit `Y`/`Q` marker pair gives 0.98 and a coupling 2.4× too
+strong even at 10% of boundaries. The manuscript's coupling is therefore **one probabilistic
+dominant transition plus a diffuse remainder** — neither random boundary noise nor a marker
+convention. That is the quantitative target any mechanism must hit (with the vocabulary, line
+and copy components).
+
 ## 4. Why no Gate v2 level has been reached (and cannot be, on ZL3b)
 
 Gate v2 (A001) requires a confirmation lockbox the candidate's development never touched.

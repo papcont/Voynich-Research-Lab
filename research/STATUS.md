@@ -49,6 +49,17 @@ The stronger claim — same underlying unit sequence — has **not passed a cont
 
 ## Current frontier
 
+**E021 complete — the coupling is one probabilistic transition plus a diffuse remainder.**
+With an alphabet-robust selectivity measure (share of the boundary mutual information in
+one binary contrast), the manuscript scores **0.23** (0.28 full size) on `y → q…`, against
+0.06–0.14 for prose, stream cuts and the E020 mixture (H031 PARTIAL). An explicit `Y`/`Q`
+marker pair overshoots on both axes even at the lowest grid value (coupling 0.44 vs 0.18;
+S1 0.98 vs 0.23) → **H032 FALSIFIED**: "`y`/`qo` are a boundary-marker pair" is excluded in
+its simple form. Letter-conditioned cuts never reach the coupling level → **H033
+FALSIFIED**. Registered mechanism target at matched size: Δ_S′ ≈ 0.18, S1 ≈ 0.23 with one
+dominant *probabilistic* transition, TTR ≈ 0.39, H1 ≈ 0.70, positive line effect, no
+local-copy gain.
+
 **E020 complete.** A verbose stream in which **80% of word boundaries are kept and 20%
 are placed at random** reproduces the manuscript's cross-boundary coupling level in both
 Copiale (0.200, calibration) and Italian (0.162, out-of-sample; target 0.178) → **H030a
