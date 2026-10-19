@@ -1,0 +1,50 @@
+{
+  "experiment_id": "E013",
+  "name": "nonrunning_lockbox_claim",
+  "status": "PLAN_FROZEN",
+  "evidence_class": "FROZEN_HOLDOUT (Gate v2 lockbox, INDEPENDENT)",
+  "hypothesis": "H019",
+  "gate_level_target": "STRUCTURAL_MODEL_VALIDATED",
+  "lockbox_id": "LOCKBOX_NONRUNNING_V1",
+  "lockbox_sha256": "6c7ae53325d917a2982d504d5ea47c55ff485ed130a6d8f1a27173eb590aa2a6",
+  "lockbox_n_folios": 39,
+  "lockbox_n_tokens": 710,
+  "inputs": [
+    {
+      "source": "data/raw/ZL3b-n.txt",
+      "identity": "upstream_git_blob_sha1:2a4533ab9bdfa85db9bad602d590978953055df1",
+      "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+    }
+  ],
+  "candidate": "P70 layer-A (p,g,c,s), plain KT + char escape (E007)",
+  "null": "A0 whole-token KT (registered for the pool in the freeze commit)",
+  "competitors": [
+    "A1",
+    "A2",
+    "A3",
+    "A5",
+    "A6",
+    "A7",
+    "A8"
+  ],
+  "A8_profile": "running-text development pool (206 folios), seed 20260907",
+  "primary_arm": "pure prequential MDL on the lockbox from empty counts, frozen lexicographic order",
+  "secondary_arm": "counts trained on running-text pool, frozen, lockbox coded (reported)",
+  "margin": {
+    "bits_per_token": 0.5,
+    "calibration_source": "development",
+    "justification": "about one quarter of the running-text P70-A0 effect (1.87 global prequential / 1.69 dev->holdout, E007)"
+  },
+  "ci": "folio-level percentile bootstrap, 10000, seed 20261019, 2.5/97.5%",
+  "decision": "Gate v2 compression_test; STRICT_PASS additionally requires P70 strictly lowest among all competitors",
+  "retraction_condition": "gate FAIL -> H019 retracted; P70 recorded as not transferring to non-running text; no second attempt on this lockbox",
+  "sha256": {
+    "inputs": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "split": "6c7ae53325d917a2982d504d5ea47c55ff485ed130a6d8f1a27173eb590aa2a6",
+    "config": "490215708c53b1387b80dc2154df8c6b614baf4156f70ece90cf83529f10bae2",
+    "predictions": "9071fdb77cbb0224c74cfe1662e3d29a7def73657c9a8954763dfbb437ac82f7"
+  },
+  "registered_utc": "2026-10-20T03:00:00Z",
+  "claim_ceiling": "Structural model on non-running text; level 1 only.",
+  "amendments": []
+}

@@ -4,16 +4,35 @@
   "pools": {
     "DEVELOPMENT_POOL_RUNNING_V1": {
       "null_id": "E011_M_Sfam",
-      "definition": "P70 layer-A slots coded with mdl.BackoffKTCoder; prefix slot conditioned on the previous same-line token's P70 suffix string (BOL/UNC at line start / after an uncertain token); other slots plain KT. Spec: experiments/E011_targeted_context_scorecard/PLAN.md §2-3, model M_Sfam.",
+      "definition": "P70 layer-A slots coded with mdl.BackoffKTCoder; prefix slot conditioned on the previous same-line token's P70 suffix string (BOL/UNC at line start / after an uncertain token); other slots plain KT. Spec: experiments/E011_targeted_context_scorecard/PLAN.md \u00a72-3, model M_Sfam.",
       "reference_out_of_fold_bits_per_token": 13.813,
-      "runner_up": {"null_id": "E011_M_S", "reference_out_of_fold_bits_per_token": 13.829},
-      "superseded": {"null_id": "E007_P70_plain_KT", "reference_out_of_fold_bits_per_token": 13.967, "note": "E007 global prequential 15.03 / dev->holdout 14.42 were on different protocols"},
+      "runner_up": {
+        "null_id": "E011_M_S",
+        "reference_out_of_fold_bits_per_token": 13.829
+      },
+      "superseded": {
+        "null_id": "E007_P70_plain_KT",
+        "reference_out_of_fold_bits_per_token": 13.967,
+        "note": "E007 global prequential 15.03 / dev->holdout 14.42 were on different protocols"
+      },
       "registered_utc": "2026-10-20T00:30:00Z",
       "source_commit": "E011 results (see experiments/E011_targeted_context_scorecard/results.json)"
     },
     "LOCKBOX_NONRUNNING_V1": {
-      "null_id": null,
-      "note": "No null fitted yet; labels/circular/radial text has no line structure, so M_S/M_Sfam do not transfer. A claim here must first register a null (P70 plain KT is the default candidate)."
+      "null_id": "A0_whole_token_KT",
+      "definition": "whole-token prequential KT with char escape (E007 A0), empty counts, lexicographic folio order",
+      "registered_utc": "2026-10-20T03:00:00Z",
+      "registered_before_first_evaluation": true,
+      "competitors_reported": [
+        "A1",
+        "A2",
+        "A3",
+        "A5",
+        "A6",
+        "A7",
+        "A8"
+      ],
+      "note": "Registered in the E013 freeze commit before any lockbox token was coded. Will be superseded by the strongest model that passes on this pool."
     }
   }
 }

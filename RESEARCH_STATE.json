@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-20T02:40:00Z",
-  "status": "READY_TO_FREEZE_PLAN",
+  "updated_utc": "2026-10-20T03:05:00Z",
+  "status": "PLAN_FROZEN",
   "active_experiment": "E013_nonrunning_lockbox_claim",
-  "next_action": "Create experiments/E013_nonrunning_lockbox_claim/PLAN.md and freeze: Gate v2 level-1 claim for the P70 layer-A four-slot model (plain KT) against the whole-token KT null on LOCKBOX_NONRUNNING_V1 (research/holdout_registry.json; INDEPENDENT; never coded). Register the null for that pool in research/gate/registered_nulls.json BEFORE the run; margin calibrated on the running-text development pool with written justification; E007 competitors A5/A6/A7/A8 (frozen definitions) must also be beaten (stricter than the gate); folio bootstrap CI; claim record -> scripts/gate_report.py; sha256 registration; retraction condition. Commit the freeze without computing any lockbox number.",
+  "next_action": "Implement frozen E013: run.py (lockbox tokens, frozen order, models P70/A0/A1/A2/A3/A5/A6/A7/A8 exactly as E007 with A8 profile from the running-text pool; primary pure-prequential arm, secondary transfer arm, permutation control; folio rows; claim_E013_P70.json; results.json first), scripts/gate_report.py -> GATE_REPORT_P70.md, validate.py independent, REPORT.md, ledger H019, registered_nulls update if PASS, STATUS/RESUME/state. One run only.",
   "blocked_reason": null,
   "last_completed_experiment": "E010_external_claim_stress_tests",
   "last_completed_result": "R1_REPRODUCED;H016_H017_H018_FALSIFIED_DEV",
