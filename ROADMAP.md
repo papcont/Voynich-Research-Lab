@@ -20,3 +20,4 @@
 | E016 | DONE — H024 SUPPORTED_DEV (+0.035 folio-local reuse); H025 FALSIFIED_DEV as frozen (null unsuitable; order-null exploratory positive) | Within-folio vocabulary locality and codex-order adjacency |
 | E017 | DONE — H025b SUPPORTED_DEV (+0.013); H026 FALSIFIED_DEV | Weak codex-order vocabulary locality; leaf structure adds nothing |
 | E018 | DONE — H003a/H003b SUPPORTED_DEV (R 6.1 in Biological B; 72% of the edge gain) | y → qo edge transition quantified |
+| **E019** | **PLAN_FROZEN** | Cipher/encoding transforms of open prose (homophonic, verbose, stream re-cut) under Signature-G |
