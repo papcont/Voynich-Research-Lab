@@ -15,3 +15,4 @@
 | E013 | DONE — compression +2.20 bits/token but Gate registration FAIL (folio overlap); H019 SUPPORTED_DEV | P70 vs whole-token on label/circular/radial text; A6 (no suffix) better from scratch |
 | E011 | DONE — H014 SUPPORTED_DEV, H015 FALSIFIED_DEV (development-stage) | Slot-targeted conditioning under a backoff KT scorecard; new strongest structural null M_Sfam |
 | E012 | DRAFT | Mechanism-family signature comparison on reference texts (stage B); human corpus decision needed |
+| **E014** | **PLAN_FROZEN** | Corpus-free generator signatures (E012 stage A): do G1 independent slots, G2 unigram, G3 self-citation, G4 edge-coupled reproduce the Voynich (Δ_S, Δ_L, Δ_C) signature? |

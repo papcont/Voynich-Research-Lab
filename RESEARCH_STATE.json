@@ -1,16 +1,17 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-20T03:40:00Z",
-  "status": "BLOCKED",
-  "active_experiment": "E012_reference_signature",
-  "next_action": "Await human decisions; then either freeze E012 (corpora confirmed) or freeze a development-stage experiment that needs no decision (y->qo prefix test under the backoff scorecard; A6-vs-P70 label follow-up; corpus-free generators for E012 stage A).",
-  "blocked_reason": "(1) Confirmation surface: under the folio-as-dependency-unit rule (A001 \u00a74, errata 1-2) ZL3b contains no independent lockbox; the human must register an outside surface (IT2a/GC independent readings if reachable, newly transcribed material) or amend A001 with an explicit SEMI_INDEPENDENT tier, or accept development-stage-only status for all ZL3b results. (2) E012 reference corpora/licences and network use (see experiments/E012_reference_signature/PLAN_DRAFT.md). CLAUDE.md stop conditions: materially different designs / licensing.",
+  "updated_utc": "2026-10-20T04:10:00Z",
+  "status": "PLAN_FROZEN",
+  "active_experiment": "E014_generator_signatures",
+  "next_action": "Implement frozen E014: run.py (skeleton from ZL3b lines; generators G1-G4 with frozen seeds; G3 grid calibration on TTR+hapax recorded before signatures; components delta_S/delta_L via E011 code, delta_C via E008 code, folio bootstrap CIs; Voynich reference re-measured (EXPLORATORY); decisions), validate.py, results.json before REPORT.md; ledger H020/H021; STATUS/RESUME/state. Human decisions (confirmation surface; E012 corpora) remain pending in pending_human_decisions.",
+  "blocked_reason": null,
   "last_completed_experiment": "E013_nonrunning_lockbox_claim",
   "last_completed_result": "GATE_REGISTRATION_FAIL;H019_SUPPORTED_DEV",
   "scientific_claim_ceiling": "Structural evidence only; no plaintext, language or semantic decipherment claim.",
   "auto_advance": true,
   "gate_version": "2.0.0",
   "pending_human_decisions": {
-    "E012_reference_signature": "corpora/licences (proposal PerseusDL canonical-latinLit CC-BY-SA 4.0; Dante), network use for those sources, generator/cipher set \u2014 see experiments/E012_reference_signature/PLAN_DRAFT.md"
+    "confirmation_surface": "register outside data or amend A001 with a SEMI_INDEPENDENT tier or accept development-stage-only (A001 errata 1-2)",
+    "E012_reference_signature": "corpora/licences, network, generator/cipher set"
   }
 }

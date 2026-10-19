@@ -1,0 +1,51 @@
+{
+  "experiment_id": "E014",
+  "name": "generator_signatures",
+  "status": "PLAN_FROZEN",
+  "evidence_class": "MECHANISM_DEMONSTRATION/DEVELOPMENT",
+  "gate_level_claimable": "none",
+  "hypotheses": {
+    "H020": "G3 self-citation reproduces the Voynich component signature",
+    "H021": "G4 edge-coupled slot generator reproduces it"
+  },
+  "inputs": [
+    {
+      "source": "data/raw/ZL3b-n.txt",
+      "identity": "upstream_git_blob_sha1:2a4533ab9bdfa85db9bad602d590978953055df1",
+      "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+    }
+  ],
+  "components": {
+    "delta_S": "E011 M0-M_S backoff, 5-fold cross-fit, folio-mean",
+    "delta_L": "E011 M0-M_L",
+    "delta_C": "E008 B1-(B1+C) plain KT, W=5"
+  },
+  "generators": {
+    "G1_IND": "independent P70 slot marginals",
+    "G2_UNI": "token unigram",
+    "G3_SC": "self-citation, window 20, grid p_copy x p_edit calibrated on TTR+hapax (seed 0)",
+    "G4_EDGE": "prefix | previous final char, token | prefix"
+  },
+  "seeds": [
+    20261030,
+    20261031,
+    20261032,
+    20261033,
+    20261034
+  ],
+  "decision": "MATCH iff all |d_X|<=0.05; MISMATCH iff any >0.10; else PARTIAL",
+  "pre_result_predictions": {
+    "G1": "MISMATCH",
+    "G2": "MISMATCH",
+    "G3": "MISMATCH (C and S)",
+    "G4": "MATCH or PARTIAL"
+  },
+  "sha256": {
+    "inputs": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "split": "3e55ac4dc2c7858a2d0750fd4ce00825f251a563103db8e07956ddad73b5b001",
+    "config": "0d5e06070cedffab5b625af0ffd61156cbc64090b102a89a1ff6ca871a62d686",
+    "predictions": "feae11a198883fb9906acf88307872a5dd8788a0bd585784e0cd1cf2893ea23e"
+  },
+  "claim_ceiling": "Which simple generators reproduce which structural components; no meaning/language; no Gate level.",
+  "amendments": []
+}
