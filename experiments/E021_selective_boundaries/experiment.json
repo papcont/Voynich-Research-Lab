@@ -1,0 +1,48 @@
+{
+  "experiment_id": "E021",
+  "name": "selective_boundaries",
+  "status": "PLAN_FROZEN",
+  "evidence_class": "MECHANISM_DEMONSTRATION/DEVELOPMENT",
+  "gate_level_claimable": "none",
+  "hypotheses": {
+    "H031": "manuscript S1 exceeds prose, stream cuts and MIX by >=0.10",
+    "H032": "marker-pair process reproduces delta_S' and S1 on the held text",
+    "H033": "letter-conditioned cuts reproduce delta_S' and S1"
+  },
+  "measure": "S1 = max over (a*,b*) of I(1[a=a*];1[b=b*]) / I(a;b) over within-line boundaries, BOL excluded",
+  "sources": {
+    "N_DEU": {
+      "source": "copiale",
+      "sha256": "1f93e9902ac068f244e0cceb76a170f3d1cf7c58d556846719ee6a52ae76ef3a",
+      "n_files": 101,
+      "rights_class": "open"
+    },
+    "N_ITA": {
+      "source": "it_ss_synth",
+      "sha256": "1cc3c7d4a88327c84ed917914d59dce22f1fe2f795bf4de52aa20fc9e3da540b",
+      "n_files": 30,
+      "rights_class": "open"
+    }
+  },
+  "calibration_text": "N_DEU",
+  "prediction_text": "N_ITA",
+  "target_delta_S": 0.178,
+  "seeds": {
+    "SEL_L_base": 20261130,
+    "SEL_M_base": 20261150,
+    "pred_L": 20261170,
+    "pred_M": 20261171
+  },
+  "pre_result_predictions": {
+    "H031": "SUPPORTED (S1 V 0.3-0.5, others <=0.15)",
+    "H032": "SUPPORTED (r* 0.3-0.5)",
+    "H033": "PARTIAL or FALSIFIED"
+  },
+  "sha256": {
+    "inputs": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "config": "05c4aeeb1b43e42a764a99e8c9cd070956e4421aa713cc94b17b37b31a6e0cff",
+    "predictions": "506bc124f00ff241a3942a41739e10b51fd6fbf0ec8a3d0345a643f6db54ebc0"
+  },
+  "claim_ceiling": "Which boundary processes reproduce which structural properties; Y/Q are abstract symbols; no decipherment; no Gate level.",
+  "amendments": []
+}

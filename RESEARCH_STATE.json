@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-20T14:10:00Z",
-  "status": "BLOCKED",
-  "active_experiment": "E020_partial_alignment",
-  "next_action": "Await the two human decisions. Decision-free successor available: E021 selective boundary rules on a verbose stream (boundaries conditioned on letter classes) tested with a transition-level selectivity measure at equal alphabet size; Borg real cipher on approval.",
+  "updated_utc": "2026-10-20T15:00:00Z",
+  "status": "PLAN_FROZEN",
+  "active_experiment": "E021_selective_boundaries",
+  "next_action": "Implement frozen E021: run.py (S1 measure; texts from runs/E012, E019, E020 and new SEL_L/SEL_M processes; calibration on N_DEU recorded first; predictions on N_ITA; decisions), validate.py, results.json before REPORT.md; ledger H031-H033; STATUS/RESUME/state. Human decisions remain pending.",
   "blocked_reason": null,
   "last_completed_experiment": "E020_partial_alignment",
   "last_completed_result": "H030a_SUPPORTED;H030b_PARTIAL;H030c_RULE_RETIRED",

@@ -22,3 +22,4 @@
 | E018 | DONE — H003a/H003b SUPPORTED_DEV (R 6.1 in Biological B; 72% of the edge gain) | y → qo edge transition quantified |
 | E019 | DONE — H029a PARTIAL (stream re-cut: coupling right sign, 2.5× too strong); H029b FALSIFIED | Cipher/encoding transforms of open prose under Signature-G; boundary placement identified as the lever |
 | E020 | DONE — H030a SUPPORTED (p*=0.8 transfers the coupling across languages); H030b PARTIAL; H030c rule retired | Partly word-aligned boundaries on a verbose stream |
+| **E021** | **PLAN_FROZEN** | Selectivity measure S1 and selective boundary processes (letter-conditioned cuts; marker pairs), calibration-then-prediction |
