@@ -17,3 +17,4 @@
 | E012 | DRAFT | Mechanism-family signature comparison on reference texts (stage B); human corpus decision needed |
 | E014 | DONE — H020 FALSIFIED (self-citation Δ_C +2.93 vs −0.46); H021 PARTIAL (edge-coupled overshoots Δ_S) | Corpus-free generator signatures; inventory growth identified as the stronger discriminator for E012 |
 | E015 | DONE — all three generators MISMATCH; H022/H023 FALSIFIED | Signature v2 discriminates every tested generator; within-folio repetition F is the key component |
+| **E016** | **PLAN_FROZEN** | Within-folio vocabulary locality (F) and codex-order adjacency (J) vs stratified permutation nulls |

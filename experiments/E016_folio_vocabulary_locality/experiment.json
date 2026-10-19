@@ -1,0 +1,40 @@
+{
+  "experiment_id": "E016",
+  "name": "folio_vocabulary_locality",
+  "status": "PLAN_FROZEN",
+  "evidence_class": "DEVELOPMENT",
+  "gate_level_claimable": "none",
+  "hypotheses": {
+    "H024": "within-folio vocabulary reuse exceeds stratified-permutation null by >=0.02",
+    "H025": "adjacent folios in codex order share vocabulary beyond same-stratum folios"
+  },
+  "inputs": [
+    {
+      "source": "data/raw/ZL3b-n.txt",
+      "identity": "upstream_git_blob_sha1:2a4533ab9bdfa85db9bad602d590978953055df1",
+      "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+    }
+  ],
+  "statistics": {
+    "F": "mean over folios of 1 - types/tokens",
+    "J_adj": "mean Jaccard of consecutive folios (>=20 tokens)",
+    "null_N1": "stratified folio permutation (L,I strata, min 3 folios), 1000 perms, seed 20261050",
+    "null_N2": "unstratified permutation (reported)",
+    "ci": "folio bootstrap 10000 seed 20261019"
+  },
+  "decision": {
+    "H024": "SUPPORTED_DEV iff dF>=0.02 and CI lower>0 and p<=0.01; FALSIFIED_DEV iff CI upper<0.02",
+    "H025": "SUPPORTED_DEV iff dJ>=0.01 and p<=0.01 and adjacent>non-adjacent same-stratum; FALSIFIED_DEV iff perm q97.5 >= J_obs"
+  },
+  "pre_result_predictions": {
+    "H024": "SUPPORTED_DEV, dF 0.03-0.07, both Currier languages",
+    "H025": "small or INCONCLUSIVE_DEV"
+  },
+  "sha256": {
+    "inputs": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "config": "fa9a05a93d91aafcd381b14523349d8b654e5fcdb61fa3ee8c1eb1f08600abe1",
+    "predictions": "459f167fa7bccfc08fe3e3c501ab4f032e6da3970c363519d622bd1368c7891b"
+  },
+  "claim_ceiling": "Structural statement about vocabulary distribution across folios; no meaning/authorship/quire claims.",
+  "amendments": []
+}

@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-20T06:40:00Z",
-  "status": "BLOCKED",
-  "active_experiment": "E012_reference_signature",
-  "next_action": "Await the two human decisions. Decision-free development-stage options: (a) E016 within-folio vocabulary locality: preregister F (and a per-folio type-reuse codelength) against folio-permutation and section/Currier-matched nulls, folio-level CIs; (b) y->qo-specific prefix test (H003); (c) A6-vs-P70 label follow-up.",
+  "updated_utc": "2026-10-20T07:05:00Z",
+  "status": "PLAN_FROZEN",
+  "active_experiment": "E016_folio_vocabulary_locality",
+  "next_action": "Implement frozen E016: run.py (strata, F and J_adj, N1 stratified and N2 unstratified permutations 1000x, folio bootstrap, decisions), validate.py, results.json before REPORT.md; ledger H024/H025; STATUS/RESUME/state. Human decisions remain pending.",
   "blocked_reason": null,
   "last_completed_experiment": "E015_signature_v2_generators",
   "last_completed_result": "ALL_GENERATORS_MISMATCH;H022_H023_FALSIFIED",
