@@ -246,7 +246,8 @@ def signature(lines: dict, n_perm: int = 1000, seed_F: int = 20261050, seed_J: i
         if "delta_S" in components:
             out["delta_S"] = folio_mean_delta(toks, p0, _crossfit_backoff(toks, {0: ("S",)}, sigma))
         if "delta_L" in components:
-            out["delta_L"] = folio_mean_delta(toks, p0, _crossfit_backoff(toks, {0: ("L",), 3: ("L",)}, sigma))
+            last = len(slot_fn("abcd")) - 1  # P70 -> suffix slot 3; A3 -> last-character slot 2
+            out["delta_L"] = folio_mean_delta(toks, p0, _crossfit_backoff(toks, {0: ("L",), last: ("L",)}, sigma))
     if "delta_C" in components:
         out["delta_C"] = folio_mean_delta(toks, _crossfit_copy(toks, sigma, False), _crossfit_copy(toks, sigma, True))
     tk = _per_folio_tokens(lines)

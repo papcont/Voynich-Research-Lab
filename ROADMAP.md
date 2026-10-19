@@ -14,7 +14,7 @@
 | E010 | DONE — R1 REPRODUCED; H016/H017/H018 FALSIFIED_DEV | epilectrik Currier-B claims: boundary coupling reproduces exactly; glyph units, two-unit routing and the 49-class table add nothing at codelength level |
 | E013 | DONE — compression +2.20 bits/token but Gate registration FAIL (folio overlap); H019 SUPPORTED_DEV | P70 vs whole-token on label/circular/radial text; A6 (no suffix) better from scratch |
 | E011 | DONE — H014 SUPPORTED_DEV, H015 FALSIFIED_DEV (development-stage) | Slot-targeted conditioning under a backoff KT scorecard; new strongest structural null M_Sfam |
-| **E012** | **PLAN_FROZEN (stage B-open)** | Signature-G comparison: Voynich vs Copiale German, Gutenberg it/en/de/fr, substitution controls, G4; Borg (linked_only) pending approval |
+| E012 | DONE (stage B-open) — H027 FALSIFIED (all texts MISMATCH on edge coupling / line position, not vocabulary); H028 SUPPORTED | Signature-G vs Copiale, Gutenberg it/en/de/fr, substitution controls, G4; E012-B (Borg) pending approval |
 | E014 | DONE — H020 FALSIFIED (self-citation Δ_C +2.93 vs −0.46); H021 PARTIAL (edge-coupled overshoots Δ_S) | Corpus-free generator signatures; inventory growth identified as the stronger discriminator for E012 |
 | E015 | DONE — all three generators MISMATCH; H022/H023 FALSIFIED | Signature v2 discriminates every tested generator; within-folio repetition F is the key component |
 | E016 | DONE — H024 SUPPORTED_DEV (+0.035 folio-local reuse); H025 FALSIFIED_DEV as frozen (null unsuitable; order-null exploratory positive) | Within-folio vocabulary locality and codex-order adjacency |

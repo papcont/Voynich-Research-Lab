@@ -30,14 +30,14 @@ Retained structural observations:
 
 ## Last completed experiment
 
-`E018_y_qo_edge_test` — **COMPLETED (development-stage).** H003a SUPPORTED_DEV: qo after y-final tokens 6.1× enriched in Biological B (3.7× other B, 2.2× A; all p < 0.001 vs within-folio permutation). H003b SUPPORTED_DEV: the y/not-y feature captures 72% of the Currier-B edge-state gain (0.124 of 0.171 bits/token). Validator pass. See `REPORT.md`.
+`E012_reference_signature` stage B-open — **COMPLETED (development-stage).** Signature-G (A3 slots), size-matched at 3,660 tokens: Voynich vs Copiale German (real lines), Gutenberg it/en/de/fr (re-segmented), substitution controls, G4. **All MISMATCH → H027 FALSIFIED**; discriminators are edge coupling (+0.178 vs ≤ +0.01) and line position (+0.061 vs −0.038 Copiale), *not* vocabulary (TTR/H1 comparable). H028 (substitution invariance) SUPPORTED exactly. Predictions on Δ_C and TTR were wrong (recorded). Validator pass. See `REPORT.md`.
 
-Before: `E017`, `E016`, `E015`, `E014`, `E013`, `E010`, `E011`, `E008`, `E007`, `E006`; shared module `voynichlab.signature`.
+Before: `E018`, `E017`, `E016`, `E015`, `E014`, `E013`, `E010`, `E011`, `E008`, `E007`, `E006`.
 
 ## Active frontier — BLOCKED on two human decisions
 
 1. **Confirmation surface.** Under the folio rule ZL3b has no independent lockbox for any claim. Options: (a) register data from outside ZL3b (a transliteration with independent readings — IT2a/GC if reachable — or newly transcribed material); (b) amend A001 with an explicit SEMI_INDEPENDENT tier (registration flag, not FAIL) for candidates demonstrably not developed on the overlapping folios; (c) accept that all ZL3b results stay development-stage.
-2. **E012 corpora** — now a concrete proposal (`experiments/E012_reference_signature/PLAN_DRAFT.md` v2): texts already in the pinned `cipher_benchmark` clone, no network: Copiale German (open), Gutenberg it/en/de/fr (open), Borg 17th-c. Latin recipes plus its real ciphertext (linked_only). Only question: local analysis use of the linked_only Borg material.
+2. **E012-B (Borg)** — the open-rights texts are done; only the `linked_only` Borg material (17th-c. Latin pharmaceutical recipes + its real simple-substitution ciphertext, in the pinned `cipher_benchmark` clone) awaits your approval for local analysis use. It is the closest available analogue to the manuscript's subject matter and the only real historical cipher with known plaintext in hand.
 
 Development-stage work that needs no decision: an A6-vs-P70 label-text follow-up (small). Everything else of value now needs one of the two decisions (corpora for E012; a confirmation surface or collation data).
 

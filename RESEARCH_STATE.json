@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-20T11:00:00Z",
-  "status": "PLAN_FROZEN",
+  "updated_utc": "2026-10-20T12:10:00Z",
+  "status": "BLOCKED",
   "active_experiment": "E012_reference_signature",
-  "next_action": "Implement frozen E012 stage B-open: run.py (load open-rights texts from the pinned cipher_benchmark clone with the frozen normalization, units, re-segmentation and size matching; substitution controls; Voynich and G4 under Signature-G; distances and decisions), validate.py, results.json before REPORT.md; ledger H027/H028; STATUS/RESUME/state. Borg extension only after human approval.",
+  "next_action": "Await the two human decisions: (1) confirmation surface / SEMI_INDEPENDENT tier; (2) approval of local analysis use of the linked_only Borg material for E012-B (Latin recipes + real ciphertext; verbose-cipher transforms of the open texts can be registered alongside). Decision-free: A6-vs-P70 label follow-up (low priority).",
   "blocked_reason": null,
-  "last_completed_experiment": "E018_y_qo_edge_test",
-  "last_completed_result": "H003a_SUPPORTED_DEV;H003b_SUPPORTED_DEV",
+  "last_completed_experiment": "E012_reference_signature",
+  "last_completed_result": "H027_FALSIFIED(all texts MISMATCH on edge coupling/line position);H028_SUPPORTED",
   "scientific_claim_ceiling": "Structural evidence only; no plaintext, language or semantic decipherment claim.",
   "auto_advance": true,
   "gate_version": "2.0.0",
   "pending_human_decisions": {
     "confirmation_surface": "register outside data or amend A001 with a SEMI_INDEPENDENT tier or accept development-stage-only (A001 errata 1-2)",
-    "E012_reference_signature": "Only the linked_only Borg material (Latin recipes + real ciphertext) awaits approval for local analysis use (extension E012-B). The open-rights texts are frozen in E012 stage B-open."
+    "E012_reference_signature": "E012-B: approve local analysis use of linked_only Borg plaintext + ciphertext (never committed); otherwise E012-B runs only verbose-cipher transforms of the open texts."
   }
 }

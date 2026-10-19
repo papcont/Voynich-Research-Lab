@@ -47,6 +47,18 @@ The stronger claim — same underlying unit sequence — has **not passed a cont
 
 ## Current frontier
 
+**E012 stage B-open complete — first comparison with natural language.** Under a
+script-agnostic signature (first/middle/last-character slots) at matched size (3,660
+tokens), **no natural text matches the manuscript** (H027 FALSIFIED): the manuscript's
+cross-boundary coupling (first character | previous last character, **+0.178** bits/token)
+is an order of magnitude outside German, English, French and Italian prose (−0.07 to
++0.01), and its line-position effect (+0.061) is absent in Copiale's real manuscript lines
+(−0.038). **Vocabulary statistics do not separate it from prose** at matched size (TTR
+0.39 vs 0.25–0.45; hapax 0.70 vs 0.58–0.75) — the earlier inventory contrasts were against
+generators, not language. Natural prose also gains nothing from the local-copy model, so
+Δ_C is not a language/manuscript discriminator either. Substitution invariance exact
+(H028). Nearest text: Copiale. Two of four predictions were wrong in detail (recorded).
+
 **E018 complete.** The historical y → qo observation is quantified: after a `y`-final
 token the next prefix is `qo` **6.1×** as often in Biological-section B (40.1% vs 6.6%,
 permutation p < 0.001), 3.7× in other B sections, 2.2× in Currier A → **H003a
@@ -56,7 +68,7 @@ component of the structural inventory is therefore mostly one graded, population
 transition with the Biological section as its extreme.
 
 Retained structural components after E006–E016 (all development-stage, all validated):
-four-slot token form (E007/E013); edge state → next prefix, mostly y → qo, graded Bio-B > B > A (E011/E010/E018);
+four-slot token form (E007/E013); edge state → next prefix, mostly y → qo, graded Bio-B > B > A, absent in natural prose at letter level (E011/E010/E018/E012);
 no local copying, self-citation excluded at every horizon (E008/E014/E015); line-position
 not predictive, text line-homogeneous (E011/E015); folio-local vocabulary (E016); weak
 codex-order locality, leaf not a unit (E017);
