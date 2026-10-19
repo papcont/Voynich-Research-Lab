@@ -1,7 +1,7 @@
 {
   "experiment_id": "E019",
   "name": "cipher_transforms",
-  "status": "PLAN_FROZEN",
+  "status": "COMPLETED",
   "evidence_class": "MECHANISM_DEMONSTRATION/DEVELOPMENT",
   "gate_level_claimable": "none",
   "hypotheses": {
@@ -44,5 +44,12 @@
     "predictions": "a68322a7ca2abe86cd672e6ce38a41ea6f19294946deffbe0bdf05751f820fa9"
   },
   "claim_ceiling": "Which encodings of prose reproduce which structural components; no decipherment; no Gate level.",
-  "amendments": []
+  "amendments": [],
+  "result": "results.json",
+  "decisions": {
+    "all_transforms": "MISMATCH",
+    "H029a": "PARTIAL",
+    "H029b": "FALSIFIED"
+  },
+  "prepared_texts": "runs/E019/*.json (git-ignored; reproducible)"
 }

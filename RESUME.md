@@ -30,9 +30,9 @@ Retained structural observations:
 
 ## Last completed experiment
 
-`E012_reference_signature` stage B-open — **COMPLETED (development-stage).** Signature-G (A3 slots), size-matched at 3,660 tokens: Voynich vs Copiale German (real lines), Gutenberg it/en/de/fr (re-segmented), substitution controls, G4. **All MISMATCH → H027 FALSIFIED**; discriminators are edge coupling (+0.178 vs ≤ +0.01) and line position (+0.061 vs −0.038 Copiale), *not* vocabulary (TTR/H1 comparable). H028 (substitution invariance) SUPPORTED exactly. Predictions on Δ_C and TTR were wrong (recorded). Validator pass. See `REPORT.md`.
+`E019_cipher_transforms` — **COMPLETED (development-stage).** Transforms of Copiale and Italian prose under Signature-G: homophonic Δ_S′ −0.16/−0.20; verbose ≈ 0; **stream re-cut +0.43/+0.46** (vs Voynich +0.178) with a line effect +0.05 (vs +0.061) and TTR 0.81–0.84; verbose+stream +0.42/+0.55 with TTR 0.58. All MISMATCH → H029b FALSIFIED; H029a PARTIAL. The manuscript's coupling lies between word-aligned and arbitrary boundaries → E019-B (partial alignment, calibration-then-prediction). Validator pass. See `REPORT.md`.
 
-Before: `E018`, `E017`, `E016`, `E015`, `E014`, `E013`, `E010`, `E011`, `E008`, `E007`, `E006`.
+Before: `E012` (no natural text matches; edge coupling/line position discriminate, vocabulary does not), `E018`, `E017`, `E016`, `E015`, `E014`, `E013`, `E010`, `E011`, `E008`, `E007`, `E006`.
 
 ## Active frontier — BLOCKED on two human decisions
 

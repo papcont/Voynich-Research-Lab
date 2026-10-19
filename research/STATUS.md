@@ -47,6 +47,17 @@ The stronger claim — same underlying unit sequence — has **not passed a cont
 
 ## Current frontier
 
+**E019 complete — boundary placement is the lever.** Encodings of open-rights prose that
+keep word boundaries (homophonic, verbose, monoalphabetic) never produce the manuscript's
+cross-boundary coupling (≤ +0.01; homophony −0.16/−0.20); cutting a continuous letter
+stream into Voynich-length tokens produces 2.5× too much (+0.43/+0.46 vs +0.178) and, as a
+side effect, a line-position effect of the manuscript's size (+0.05 vs +0.06). Vocabulary
+explodes under stream cuts unless the stream is verbose (TTR 0.58, H1 0.73 vs 0.39/0.70).
+H029a PARTIAL, H029b FALSIFIED. Registered follow-up (E019-B): partly word-aligned
+boundaries on a verbose stream, alignment fraction calibrated on Δ_S′, the other six
+components tested as predictions; Borg's real cipher when approved. Not reproduced by any
+transform: the manuscript's selectivity (one dominant `…y → qo…` transition, E018).
+
 **E012 stage B-open complete — first comparison with natural language.** Under a
 script-agnostic signature (first/middle/last-character slots) at matched size (3,660
 tokens), **no natural text matches the manuscript** (H027 FALSIFIED): the manuscript's
