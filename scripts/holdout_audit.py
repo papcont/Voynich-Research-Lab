@@ -51,13 +51,15 @@ def main() -> int:
                     "E006": "split folds.folio_fold (sha256(folio) % 5); dev {0,1,2} = SELECTION (grammar/threshold development), holdout {3,4} = EVALUATION (revealed)",
                     "E007": "split efold (sha256('E007:'+folio) % 5); global prequential + 5-fold cross-fitted scores on ALL folios = EVALUATION; dev {0,1,2} also SELECTION (A8 slot-length profile); dev->holdout arm revealed",
                     "E008": "same split; dev {0,1,2} = SELECTION (W chosen on development); holdout {3,4} = EVALUATION",
+                    "E008_exploratory": "post-reveal exploratory backoff-coder analysis (exploratory.py) trained on dev {0,1,2} and scored on holdout {3,4}; its result motivated the E011 design => error analysis = SELECTION for ALL running-text folios (recorded 2026-10-19)",
                     "E001-E005": "historical exploratory analyses (not reproducible from this repo); conservatively assumed to have touched any running-text token"},
                 "folios": {}, "selection_folios": [], "lockboxes": {}}
     sel = set()
     for f in folios:
         roles = {"E006": "SELECTION" if folio_fold(f) in (0, 1, 2) else "EVALUATION",
                  "E007": "SELECTION+EVALUATION" if efold(f) in (0, 1, 2) else "EVALUATION",
-                 "E008": "SELECTION" if efold(f) in (0, 1, 2) else "EVALUATION"}
+                 "E008": "SELECTION" if efold(f) in (0, 1, 2) else "EVALUATION",
+                 "E008_exploratory": "SELECTION"}
         is_sel = any("SELECTION" in r for r in roles.values())
         if is_sel:
             sel.add(f)
@@ -66,26 +68,26 @@ def main() -> int:
     registry["selection_folios"] = sorted(sel)
     never_sel = sorted(f for f in folios if f not in sel)
 
-    # Lockbox 1: SEMI_INDEPENDENT running-text folios = ALL folios never used for selection.
-    # (Only 38 of 206 escape both the E006 and the E007/E008 development folds; splitting
-    # them further would push any claim below the Gate v2 power floor of 20 folios.)
-    registry["lockboxes"]["LOCKBOX_RUNNING_SEMI_V1"] = {
-        "independence": "SEMI_INDEPENDENT",
-        "description": "All running-text folios never used for selection by any committed experiment (E006 dev folds, "
-                       "E007/E008 dev folds excluded). Their P70/A0/S/L/C scores were revealed in E006-E008, so they are "
-                       "not fully independent. From 2026-10-19 excluded from all development.",
-        "folios": never_sel, "n_folios": len(never_sel), "n_tokens": sum(run_tokens[f] for f in never_sel),
-        "sha256": sha_list(never_sel)}
+    # Running text: after the E008 exploratory analysis every running-text folio has a SELECTION
+    # role, so NO running-text lockbox exists in ZL3b. The whole running text is a development pool.
+    registry["lockboxes"]["DEVELOPMENT_POOL_RUNNING_V1"] = {
+        "independence": "DEVELOPMENT_ONLY",
+        "description": "All 206 running-text folios. Every one carries a SELECTION role (E006/E007/E008 development folds, "
+                       "or the E008 post-reveal exploratory backoff analysis on the E007 holdout folds). Usable for development "
+                       "and internally cross-fitted development-stage estimates; NEVER as a Gate v2 confirmation lockbox.",
+        "folios": folios, "n_folios": len(folios), "n_tokens": sum(run_tokens[f] for f in folios), "sha256": sha_list(folios),
+        "never_selection_before_E008_exploratory": never_sel}
     # Lockbox 2: non-running loci (labels, circular, radial) — never used by any committed experiment
     nr = sorted(f for f in other_tokens if other_tokens[f] > 0)
     registry["lockboxes"]["LOCKBOX_NONRUNNING_V1"] = {
         "independence": "INDEPENDENT",
         "description": "Label/circular/radial loci (locus type not P*). No committed experiment coded them. Small, structurally different from running text; suitable for transfer-style confirmation only.",
         "folios": nr, "n_folios": len(nr), "n_tokens": sum(other_tokens[f] for f in nr), "sha256": sha_list(nr)}
-    registry["statement"] = ("No fully independent RUNNING-TEXT data remain in ZL3b: every running-text folio has had a revealed "
-                             "target metric in E007 (global and cross-fitted scores). Confirmation of a running-text claim can only use "
-                             "LOCKBOX_RUNNING_SEMI_V1 (flagged SEMI_INDEPENDENT) or data outside ZL3b running text "
-                             "(LOCKBOX_NONRUNNING_V1, other transliterations' uncertain-reading sets, future sources).")
+    registry["statement"] = ("NO running-text lockbox exists in ZL3b: every running-text folio was used for selection or error analysis "
+                             "by E006, E007, E008 or the E008 post-reveal exploratory analysis. Running-text claims can only be developed "
+                             "here (internal cross-fitting, development-stage labels). Gate v2 confirmation requires data outside ZL3b "
+                             "running text: LOCKBOX_NONRUNNING_V1 (labels/circular/radial, 710 tokens, transfer-style only), or new sources "
+                             "registered by a human (e.g. a future transliteration release with independent readings).")
     OUT.write_text(json.dumps(registry, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({k: {kk: vv for kk, vv in v.items() if kk != "folios"} for k, v in registry["lockboxes"].items()}, indent=1))
     print("selection folios:", len(sel), "never-selection:", len(never_sel), "->", OUT.relative_to(ROOT))

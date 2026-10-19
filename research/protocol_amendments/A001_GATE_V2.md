@@ -71,12 +71,21 @@ and in what role (`SELECTION` = model/parameter/threshold selection or error ana
 
 - 168 of 206 running-text folios were development (`SELECTION`) folios in E006 and/or
   E007/E008 (two different hash splits, each 60% development).
-- **No fully independent running-text data remain in ZL3b**: E007 revealed global and
-  cross-fitted scores on every folio.
-- `LOCKBOX_RUNNING_SEMI_V1` — the 38 never-selection running-text folios (6,262 tokens),
-  sha256 `696b20cf…`, flagged `SEMI_INDEPENDENT`; from now on excluded from all development.
+- **Erratum (same day, before any use):** the E008 post-reveal *exploratory* backoff-coder
+  analysis (`experiments/E008_mechanism_competition/exploratory.py`) was trained on the
+  E007 development folds and scored on the E007 holdout folds — which contain all 38
+  remaining folios — and its result motivated the E011 design. Under §4's strict rule that
+  is error analysis = `SELECTION`. Consequently **no running-text lockbox exists in ZL3b.**
+  The first registry version (commit `ac3ebc7`) listed a 38-folio `LOCKBOX_RUNNING_SEMI_V1`;
+  it is withdrawn and replaced by `DEVELOPMENT_POOL_RUNNING_V1` (all 206 folios,
+  `DEVELOPMENT_ONLY`). Running-text hypotheses can be *developed* here with internally
+  cross-fitted, folio-level estimates and development-stage labels; they cannot reach any
+  Gate v2 level without new data.
 - `LOCKBOX_NONRUNNING_V1` — label/circular/radial loci (39 folios, 710 tokens), sha256
   `6c7ae533…`, `INDEPENDENT` but small and structurally different (transfer-style only).
+- Confirmation surfaces for running-text claims must be registered by a human from
+  outside ZL3b running text (e.g. a future transliteration release with independent
+  readings, or newly transcribed material).
 
 A claim names its `lockbox_id`; overlap with any `SELECTION` folio is a registration
 `FAIL`; a `SEMI_INDEPENDENT` lockbox is flagged in every report. Splits, inputs,
@@ -123,9 +132,10 @@ fail at the right level.
 
 ## Known limitations and open methodological risks
 
-1. The only running-text lockbox is semi-independent (its baseline scores are public).
-   A genuinely blind confirmation needs data outside ZL3b running text or a newly released
-   transliteration version.
+1. There is no running-text lockbox in ZL3b at all (see §4 erratum). A genuinely blind
+   confirmation of any running-text claim needs data outside ZL3b running text or a newly
+   released transliteration with independent readings; until then every running-text
+   result is development-stage.
 2. The 0.5 bits/token margin is provisional and must be re-justified per claim on
    development data; the gate checks the provenance of the justification, not its quality.
 3. Specificity controls can be gamed by weak controls; the registry of accepted generator
