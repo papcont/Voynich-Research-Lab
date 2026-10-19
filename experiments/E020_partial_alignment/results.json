@@ -1,0 +1,96 @@
+{
+  "experiment": "E020",
+  "evidence_class": "MECHANISM_DEMONSTRATION/DEVELOPMENT",
+  "gate_level_claimable": "none",
+  "frozen_plan_commit": "ed983a0",
+  "run_head_commit": "ed983a0f483144444144081cfa26de751f21672a",
+  "first_run_timestamp": "2026-10-19T22:29:49Z",
+  "software": {
+    "python": "3.13.16",
+    "numpy": "2.5.3"
+  },
+  "calibration": {
+    "text": "N_DEU",
+    "target": 0.178,
+    "grid_delta_S": {
+      "0.0": 0.48750780648172704,
+      "0.1": 0.46414720966073,
+      "0.2": 0.4538031961136414,
+      "0.3": 0.41841579613922025,
+      "0.4": 0.37671502038441496,
+      "0.5": 0.35317217865943556,
+      "0.6": 0.3260509964306717,
+      "0.7": 0.27689892007904676,
+      "0.8": 0.19994881317731927,
+      "0.9": 0.1284777733403597,
+      "1.0": 0.008069431548738177
+    },
+    "p_star": 0.8
+  },
+  "voynich_reference": {
+    "delta_S": 0.17773389741837037,
+    "delta_L": 0.06098378926798875,
+    "delta_C": -0.2826912094258349,
+    "TTR": 0.39316939890710384,
+    "H1": 0.7032661570535094,
+    "F_excess": 0.018943143900967463,
+    "dJ_order": 0.015146558640478508,
+    "n_tokens": 3660,
+    "n_units": 14
+  },
+  "prediction_text": "N_ITA",
+  "MIX_signature": {
+    "delta_S": 0.16238367523961256,
+    "delta_L": -0.013669018922641394,
+    "delta_C": -0.11205995185138574,
+    "TTR": 0.6013661202185793,
+    "H1": 0.8337119491140391,
+    "F_excess": 0.012208060185185146,
+    "dJ_order": 0.005364418579671598,
+    "n_tokens": 3660,
+    "n_units": 30
+  },
+  "distance": {
+    "abs_diff": {
+      "delta_S": 0.01535022217875781,
+      "delta_L": 0.07465280819063015,
+      "delta_C": 0.1706312575744492,
+      "TTR": 0.20819672131147543,
+      "H1": 0.13044579206052975,
+      "F_excess": 0.0067350837157823164,
+      "dJ_order": 0.00978214006080691
+    },
+    "normalised_L1": 22.970672616306466,
+    "state": "MISMATCH"
+  },
+  "components_within_tolerance": {
+    "delta_L": false,
+    "delta_C": false,
+    "TTR": false,
+    "H1": false,
+    "F_excess": true,
+    "dJ_order": true
+  },
+  "n_within": 2,
+  "selectivity": {
+    "voynich": {
+      "top_class": "BOL",
+      "top1_share": 0.3772716526260986,
+      "total_gain_bits": 778.3415199422394,
+      "n_classes": 21
+    },
+    "mix": {
+      "top_class": "B",
+      "top1_share": 0.5985896324656885,
+      "total_gain_bits": 628.0505587051391,
+      "n_classes": 11
+    },
+    "difference": 0.22131797983958995
+  },
+  "hypothesis_outcomes": {
+    "H030a": "SUPPORTED",
+    "H030b": "PARTIAL",
+    "H030c": "SUPPORTED"
+  },
+  "claim_ceiling": "Which boundary processes reproduce which structural components; no decipherment; no Gate level."
+}

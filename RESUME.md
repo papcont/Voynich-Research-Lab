@@ -30,9 +30,9 @@ Retained structural observations:
 
 ## Last completed experiment
 
-`E019_cipher_transforms` — **COMPLETED (development-stage).** Transforms of Copiale and Italian prose under Signature-G: homophonic Δ_S′ −0.16/−0.20; verbose ≈ 0; **stream re-cut +0.43/+0.46** (vs Voynich +0.178) with a line effect +0.05 (vs +0.061) and TTR 0.81–0.84; verbose+stream +0.42/+0.55 with TTR 0.58. All MISMATCH → H029b FALSIFIED; H029a PARTIAL. The manuscript's coupling lies between word-aligned and arbitrary boundaries → E019-B (partial alignment, calibration-then-prediction). Validator pass. See `REPORT.md`.
+`E020_partial_alignment` — **COMPLETED (development-stage).** Calibration on Copiale: p* = 0.8 (80% of word boundaries kept on a verbose stream) gives Δ_S′ 0.200; prediction on Italian 0.162 vs Voynich 0.178 → **H030a SUPPORTED** (one parameter, cross-language transfer). Other components: 2 of 6 within tolerance → **H030b PARTIAL**. H030c's top-1 rule is confounded by alphabet size → retired (exploratory normalised concentration recorded). Validator pass. See `REPORT.md`.
 
-Before: `E012` (no natural text matches; edge coupling/line position discriminate, vocabulary does not), `E018`, `E017`, `E016`, `E015`, `E014`, `E013`, `E010`, `E011`, `E008`, `E007`, `E006`.
+Before: `E019`, `E012`, `E018`, `E017`, `E016`, `E015`, `E014`, `E013`, `E010`, `E011`, `E008`, `E007`, `E006`.
 
 ## Active frontier — BLOCKED on two human decisions
 

@@ -47,6 +47,16 @@ The stronger claim — same underlying unit sequence — has **not passed a cont
 
 ## Current frontier
 
+**E020 complete.** A verbose stream in which **80% of word boundaries are kept and 20%
+are placed at random** reproduces the manuscript's cross-boundary coupling level in both
+Copiale (0.200, calibration) and Italian (0.162, out-of-sample; target 0.178) → **H030a
+SUPPORTED** with one calibrated parameter. It does *not* reproduce line position, local
+copying or vocabulary (2 of 6 components; **H030b PARTIAL**), and the frozen selectivity
+rule turned out to measure alphabet structure rather than transition selectivity
+(**H030c retired**). So "mostly-but-not-entirely word-aligned boundaries" is an adequate
+account of one component only; the manuscript's one-transition selectivity (E018) remains
+unreproduced by any process tested.
+
 **E019 complete — boundary placement is the lever.** Encodings of open-rights prose that
 keep word boundaries (homophonic, verbose, monoalphabetic) never produce the manuscript's
 cross-boundary coupling (≤ +0.01; homophony −0.16/−0.20); cutting a continuous letter
