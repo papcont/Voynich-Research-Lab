@@ -8,6 +8,7 @@ repos:
     use: [falsification_protocol, deterministic_handoff, prospective_tests, generator_nulls]
     caveat: A1 is an upstream hypothesis, not our source of truth.
     license_note: README states MIT code and CC-BY-4.0 original research; verify file before copying.
+    upstream_check: {checked_utc: 2026-10-19, head: 28424e5f024aa80817af9c986da22065e5143c1a, note: "active through 2026-09-10 (issues #184-#221: reversible-capacity S0, H/P page-inventory association, Bacon biliteral preflight); not audited"}
 
   - name: VManus
     url: https://github.com/yodakohl/VManus
@@ -17,6 +18,7 @@ repos:
     use: [experiment_manifests, sha_provenance, sealed_data_guards, preflight]
     caveat: Borrow workflow patterns, not semantic assignments.
     license_note: verify before copying implementation code.
+    upstream_check: {checked_utc: 2026-10-19, head: d8d18d876a054ab449d425bc36daebe3130dae43, note: "very active (daily commits to 2026-10-19; D-minim / TEY context tests); not audited"}
 
   - name: Voynichdecomp
     url: https://github.com/digitalgoldfisj79/Voynichdecomp
@@ -26,6 +28,7 @@ repos:
     use: [four_slot_grammar, suffix_families, independent_replication_target]
     caveat: Published validator uses the proposed grammar's own entropy profile and a machine-specific path; independently reimplement and use external/held-out objectives.
     license_note: verify before copying code or data.
+    upstream_check: {checked_utc: 2026-10-19, head: b4f4995b48faa3d2af8f57fddc882caeb2b6d744, note: "upstream moved past our pin (Super Grammar v03 claims register, bifolium/ordering tests, PREREG 1-38 with retractions R1-R6). E007 stays frozen on the pin above; any Super Grammar test needs its own preregistration. Upstream PR #35 review flags SG65 type-vs-hapax percentage comparison as invalid; not audited by us"}
 
   - name: Voynich-Deshuffling-Matrix
     url: https://github.com/Halkosuoja/Voynich-Deshuffling-Matrix
@@ -35,6 +38,7 @@ repos:
     use: [independent_implementation, blind_latin_output_test]
     caveat: Mostly specifications/PDFs; readable Latin is not validation.
     license_note: CC-BY-4.0 stated.
+    upstream_check: {checked_utc: 2026-10-19, head: null, note: "UNAVAILABLE: github.com returns HTTP 404 and git ls-remote requires authentication (deleted, renamed or private). No local copy of the pinned specification exists in this repo; pin 36b747b... is currently unverifiable. E009 cannot be frozen without a human provenance decision."}
 
   - name: voynich-nlp-analysis
     url: https://github.com/ifexthy/voynich-nlp-analysis
@@ -75,3 +79,75 @@ repos:
     priority: ignore
     use: []
     caveat: Inspected README describes an unrelated Astro showcase, not manuscript research.
+
+  # --- Added 2026-10-19 after an external landscape scan. Landing pages / commit
+  # lists only; no code or results audited. Candidates, not truth sources.
+  - name: epilectrik-voynich
+    url: https://github.com/epilectrik/voynich
+    pin: ff399c44c71bc38364361e51df2afbcb6b665406
+    category: [structural_competitor]
+    priority: high
+    use: [currier_b_token_grammar, line_position_zones, boundary_coupling, rival_generator_controls]
+    caveat: "Upstream Tier-0 (restated 2026-09-28): single compact Currier-B token grammar, 49 classes, 69.5% token coverage; reports Naibbe excluded across 64 variants. Own 2026-09-27 strategic review retracted several earlier claims (Testamentum chapter matching, forbidden-transition hazard classes, 100% coverage, atom glosses). Overlaps H002/H003/H005; requires independent reimplementation before any use."
+    license_note: "No separate code license stated on landing page; verify before copying."
+
+  - name: voynich-manuscript-analysis
+    url: https://github.com/Workwrite-Niidome/voynich-manuscript-analysis
+    pin: c11c64137ff319d4fe30ef69970e8ec616fcd2c4
+    category: [low_priority_methodology]
+    priority: medium_low
+    use: [hypothesis_inventory, negative_result_catalogue]
+    caveat: "Multi-agent AI structural analysis (2026); reports 33 hypotheses, 18 eliminated, 10 'validated'. Validation criteria not audited."
+    license_note: verify before copying.
+
+  - name: voynich-findings
+    url: https://github.com/Jad-deeb/voynich-findings
+    pin: 670570db08e826c81b5e0cb5d2027d3bcdc91a17
+    category: [low_priority_methodology]
+    priority: low
+    use: [negative_result_catalogue]
+    caveat: "Four rounds of computational decoding attempts (October 2026); reports no translation found. Transliteration downloaded by scripts, not redistributed."
+    license_note: "Not stated on landing page; verify."
+
+  - name: voynich-research-andreotti
+    url: https://github.com/AndreottiVIII/voynich-research
+    pin: da8329cb76d6bde9ce88c4a438bb7a77c3db6d10
+    category: [cipher_competitor]
+    priority: low
+    use: [concealment_mechanism_baseline]
+    caveat: "Research record for preprint 'Hiding a Message in a Voynich-like Book'; explicitly claims no decipherment of MS 408."
+    license_note: verify before copying.
+
+  - name: Jeffer1987-Voynich
+    url: https://github.com/Jeffer1987/Voynich
+    pin: a9b7d267cf090fb681d86a1f530293227e804abf
+    category: [low_priority_methodology]
+    priority: very_low
+    use: [statistical_anomaly_claim]
+    caveat: "Claims confirmation of a 2026 'Jaccard Anomaly'; not inspected."
+    license_note: verify before copying.
+
+  - name: peter-guillam123-voynich
+    url: https://github.com/peter-guillam123/voynich
+    pin: 1db2187ce494d6109fdcd93febc6709af86ff3c1
+    category: [unrelated_to_voynich_science]
+    priority: ignore
+    use: []
+    caveat: "Interactive explainer; cites a 2026 paper on misbound pages (follow the paper, not the site)."
+    license_note: n/a
+
+# Literature without a pinned code repository. Same rule: competitor, not truth.
+literature:
+  - name: Naibbe cipher
+    citation: "Greshko, M. A. (2025). The Naibbe cipher. Cryptologia (published Nov 2025)."
+    category: [cipher_competitor, generator_null]
+    priority: high
+    use: [E008_cipher_baseline]
+    caveat: "Verbose homophonic substitution (die + card-selected tables) reproducing several Voynichese statistics; author states it is not a solution and replicates Currier B incompletely. No released code located 2026-10-19; would need independent reimplementation from the paper."
+
+  - name: Pastiche / generative-grammar preprint
+    citation: "arXiv:2609.20835, 'A Generative Grammar Underlying the Voynich Manuscript, the Pastiche Hypothesis: Evidence from Large Language Models'."
+    category: [generator_competitor]
+    priority: medium
+    use: [E008_family_G_candidate]
+    caveat: "Not peer reviewed; arxiv.org unreachable from the 2026-10-19 session, so contents not inspected."

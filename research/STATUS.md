@@ -70,3 +70,25 @@ prequential KT description-length (bits/surface-token) with an identical
 estimator + char-escape for P70 and competitors A0–A8; the folio split is only a
 common comparison surface (P70 is **non-prospective** — built on the whole VMS).
 No E007 metric is computed yet. R3 (independent transcription) is DEFERRED.
+
+## External landscape check (2026-10-19)
+
+Landing pages and commit lists only; nothing audited or accepted. Details and
+observed upstream heads in `external/repos.yml`.
+
+- **Voynichdecomp** (E007 upstream) moved past our pin to `b4f4995` (Super
+  Grammar v03, bifolium/ordering tests, PREREG 1–38, retractions R1–R6). E007
+  stays frozen on `4f8a1117…`; testing Super Grammar would need a separate
+  preregistration.
+- **Voynich-Deshuffling-Matrix** (E009 upstream) is **unreachable** (404 /
+  auth). No local spec copy → E009 needs a human provenance decision before
+  freeze.
+- **New structural competitor:** `epilectrik/voynich` reports a single Currier-B
+  token grammar (49 classes, 69.5% coverage, line-position zones, boundary
+  coupling) after a 2026-09-27 self-review that retracted several earlier
+  claims. Overlaps H002/H003/H005; candidate for E008 after independent
+  reimplementation.
+- **New generator/cipher baselines for E008:** Naibbe cipher (Greshko,
+  Cryptologia 2025; no code located) and arXiv:2609.20835 (pastiche /
+  generative-grammar hypothesis; not inspected).
+- No external work reports an accepted decipherment.

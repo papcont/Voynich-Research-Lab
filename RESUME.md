@@ -47,6 +47,14 @@ Honesty anchors: zero chain-rule residual is a mathematical identity, not eviden
 
 **PREFLIGHT_AMENDMENT_001** (committed pre-reveal) fixed all open operationalizations: A8 = deterministic per-type sha256 cut with a development-only slot-length profile; **A4 = DEFERRED_PRE_REVEAL** (gate competitors = A0,A1,A2,A3,A5,A6,A7,A8); R1 tolerances (non-degenerate parse ≥85%, empty-core 52.7±10pp, total entropy 10.311±1.0; reconstruction/zero-residual descriptive only); model-cost = char-code of literal inventories + Elias-gamma ints; Gate-3 folds = 5-fold cross-fitted bits/token; Currier from ZL3b `$L` (A/B); major sections from ZL3b `$I` (tokens≥2000 & folios≥8 ⇒ {S,H,B,P}); running-text = paragraph `P*` loci (`loci.is_running_text`); P70 parse precedence in `p70.parse_p70`; KT coder in `mdl.KTCoder`. Helpers are fixture-tested; no corpus metric run. Next action: implement `run.py`/`validate.py` and perform the first reveal, writing `results.json` before `REPORT.md`.
 
+## External check (2026-10-19)
+
+See `research/STATUS.md` § External landscape check and `external/repos.yml`.
+Does not change E007 (frozen on its pin). **E009 provenance blocker:** the
+Deshuffling-Matrix upstream is unreachable and no spec copy exists here; E009
+must not be frozen without a human decision. New E008 candidates:
+`epilectrik/voynich` Currier-B grammar, Naibbe cipher, arXiv:2609.20835.
+
 ## Previously completed
 
 - `E006_canonical_sequence_holdout` — INCONCLUSIVE_UNDERPOWERED (1 qualifying holdout chain < floor 3; H008 unresolved; no tuning of the revealed holdout).
