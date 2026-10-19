@@ -106,6 +106,11 @@ Two human decisions are pending: (1) a confirmation surface or a protocol tier f
 semi-independent lockboxes (A001 erratum 2); (2) E012 corpora/licences. Development-stage
 work can continue meanwhile (see RESEARCH_STATE.json).
 
+## Tooling
+
+`voynichlab.signature` (2026-10-20): one hypothesis-neutral module for the seven-component
+structural signature, fixture-tested and regression-tested against E011/E014/E016/E017.
+
 ## External landscape check (2026-10-19)
 
 Landing pages and commit lists only; nothing audited or accepted. Details and

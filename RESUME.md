@@ -41,6 +41,8 @@ Before: `E016` (folio-local vocabulary +0.035), `E015`, `E014`, `E013`, `E010`, 
 
 Development-stage work that needs no decision: a y→qo-specific prefix test (H003); an A6-vs-P70 label-text follow-up; signature v3 (v2 + folio-local F and order locality with proper nulls) as the E012 scorecard. Bifolium/quire tests need registered collation data (human).
 
+**Signature v3 module:** `src/voynichlab/signature.py` (+ `tests/test_signature.py`) computes Δ_S, Δ_L, Δ_C, TTR, H1, folio-local reuse excess and codex-order locality for any line-structured text with the frozen definitions; the regression test reproduces the recorded E011/E014/E016/E017 values exactly. E012 scores reference texts and generators with this module.
+
 Gate v2 is in force (`research/protocol_amendments/A001_GATE_V2.md`, `research/gate/gate_v2.json`, `src/voynichlab/gate.py`, `tests/test_gate.py`, `scripts/gate_report.py`, `research/holdout_registry.json`). Confirmation surfaces: none inside ZL3b under the folio rule (A001 errata 1–2). IT2a/GC hashes unregistered (voynich.nu unreachable 2026-10-19).
 
 ## External check (2026-10-19)
