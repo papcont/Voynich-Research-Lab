@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-19T23:20:00Z",
-  "status": "READY_TO_FREEZE_PLAN",
+  "updated_utc": "2026-10-19T23:50:00Z",
+  "status": "PLAN_FROZEN",
   "active_experiment": "E011_targeted_context_scorecard",
-  "next_action": "Audit experiments/E011_targeted_context_scorecard/PLAN_DRAFT.md and freeze PLAN.md: backoff KT scorecard (PPM-style escape to parent context, exclusion), slot-targeted conditioning (S -> prefix slot; L -> prefix+suffix), development ONLY on SELECTION folios (research/holdout_registry.json), evaluation on LOCKBOX_RUNNING_SEMI_V1 with the Gate v2 compression protocol (folio bootstrap CI, margin calibrated on development, INCONCLUSIVE when underpowered), within-folio shuffle null, pre-result predictions, retraction condition, sha256 registration. Commit the freeze without computing targets.",
+  "next_action": "Implement frozen E011 PLAN.md without changing frozen choices: (a) mdl.BackoffKTCoder + fixture tests (sum-to-one, exclusion, determinism; no corpus metric); (b) run.py: population + S/L features, models M0/M_S/M_L/M_SL/M_Sfam/M_Sall, 5-fold cross-fit by efold over all 206 folios, feature-permuted null models and margin rule FIRST, then primary contrasts with folio bootstrap CI and Currier subsets, descriptive confounds; write results.json before REPORT.md; write claim_E011_M_S.json and run scripts/gate_report.py (expected: no gate level, DEVELOPMENT_ONLY pool); (c) validate.py independent; (d) update ledger H014/H015, STATUS, RESUME, state. Amend before computing if any detail is open.",
   "blocked_reason": null,
   "last_completed_experiment": "E008_mechanism_competition",
   "last_completed_result": "ALL_COMPONENTS_NOT_INFORMATIVE",

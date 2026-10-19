@@ -1,0 +1,63 @@
+{
+  "experiment_id": "E011",
+  "name": "targeted_context_scorecard",
+  "status": "PLAN_FROZEN",
+  "evidence_class": "DEVELOPMENT_CROSSFIT",
+  "hypotheses": {
+    "H014": "M_S - M0 (prefix slot | previous final glyph)",
+    "H015": "M_L - M0 (prefix+suffix slots | line position)"
+  },
+  "gate_version": "2.0.0",
+  "gate_level_claimable": "none (no running-text lockbox in ZL3b; see research/holdout_registry.json)",
+  "inputs": [
+    {
+      "source": "data/raw/ZL3b-n.txt",
+      "identity": "upstream_git_blob_sha1:2a4533ab9bdfa85db9bad602d590978953055df1",
+      "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+    }
+  ],
+  "population": "E007/E008 running-text strict tokens; S/L features as E008 §6.1-6.2",
+  "split": {
+    "definition": "efold(folio) = int(sha256(('E007:'+folio.lower()).encode()).hexdigest(),16) % 5; 5-fold cross-fit; pool=db9769d89c48df61343620c284d9ecc9341426b0d83701b5ccb39163c5037d27",
+    "development_pool": "DEVELOPMENT_POOL_RUNNING_V1",
+    "n_folios": 206,
+    "n_tokens": 33611,
+    "dependency_unit": "folio"
+  },
+  "scorecard": "mdl.BackoffKTCoder: KT in conditioned context, escape mass -> parent (unconditioned) KT context with exclusion, char escape at the root; M0 = plain KT (E007/E008 B1)",
+  "models": {
+    "M0": "P70 slots, plain KT (null)",
+    "M_S": "prefix | S",
+    "M_L": "prefix,suffix | L",
+    "M_SL": "prefix | (S,L); suffix | L",
+    "M_Sfam": "prefix | previous P70 suffix string/BOL/UNC",
+    "M_Sall": "all slots | S (descriptive)"
+  },
+  "primary_contrasts": [
+    "M_S-M0",
+    "M_L-M0"
+  ],
+  "statistics": {
+    "ci": "percentile bootstrap of folio-mean paired difference, 10000 resamples, seed 20261019, 2.5/97.5%",
+    "margin_rule": "max(0.05, q97.5 of bootstrap means of the within-folio feature-permuted null model's delta vs M0); seed 20261019; computed before the real contrasts are read",
+    "decision": "SUPPORTED_DEV iff mean>=margin AND ci_lower>0 AND mean-mean_null>=margin AND positive in Currier A and B; FALSIFIED_DEV iff ci_upper<margin; else INCONCLUSIVE_DEV"
+  },
+  "pre_result_predictions": {
+    "H014": "SUPPORTED_DEV, larger in Currier B, 0.05-0.3 bits/token",
+    "H015": "small; INCONCLUSIVE_DEV or weak SUPPORTED_DEV",
+    "secondary": "M_Sall-M0 < M_S-M0; M_Sfam ~ M_S"
+  },
+  "retraction_conditions": {
+    "H014": "FALSIFIED_DEV retires previous-final->next-initial as predictive component on ZL3b",
+    "H015": "FALSIFIED_DEV drops line position from the mechanism inventory"
+  },
+  "degrees_of_freedom": "none free",
+  "sha256": {
+    "inputs": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "split": "e0860af7fe400c4365016782327a7a6d5bb284b283dd2cadca84139e74e06e41",
+    "config": "8ac6a487635a624ce77f64b1160b3204c697f841ce8d5486b5c3f06dfe43d31b",
+    "predictions": "db177a9ba52e5e3e4b085cd00d0e431c9e775bb073e471558d9665426bf5d6fd"
+  },
+  "claim_ceiling": "Development-stage structural statement only; registers the strongest structural null; no Gate v2 level.",
+  "amendments": []
+}

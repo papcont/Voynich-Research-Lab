@@ -75,9 +75,10 @@ conditioning hypotheses need a backoff coder and slot-targeted conditioning
 (E011 draft).
 
 Gate v2 (protocol amendment A001, 2026-10-19) is in force for all new claims; E006–E008
-are not reinterpreted. Holdout audit: only 38 running-text folios were never used for
-selection → `LOCKBOX_RUNNING_SEMI_V1` (semi-independent); no fully independent running-text
-data remain. Next frontier: freeze E011.
+are not reinterpreted. Holdout audit (with erratum): every ZL3b running-text folio carries a SELECTION role
+(E006/E007/E008 development folds or the E008 exploratory analysis) → **no running-text
+lockbox exists**; running-text work is development-stage until new data are registered.
+Next frontier: **E011** (PLAN_FROZEN) — slot-targeted conditioning under a backoff scorecard.
 
 ## External landscape check (2026-10-19)
 

@@ -34,9 +34,9 @@ Retained structural observations:
 
 ## Active frontier
 
-Gate v2 is in force (`research/protocol_amendments/A001_GATE_V2.md`, `research/gate/gate_v2.json`, `src/voynichlab/gate.py`, `tests/test_gate.py`, `scripts/gate_report.py`, `research/holdout_registry.json`). Lockboxes: `LOCKBOX_RUNNING_SEMI_V1` (38 folios, 6,262 tokens, SEMI_INDEPENDENT, excluded from all development from 2026-10-19) and `LOCKBOX_NONRUNNING_V1` (710 label/circular/radial tokens, INDEPENDENT). No fully independent running-text data remain in ZL3b. IT2a/GC hashes unregistered (voynich.nu unreachable 2026-10-19).
+`E011_targeted_context_scorecard` — **PLAN_FROZEN** (development-stage, `DEVELOPMENT_CROSSFIT`). Backoff KT scorecard (escape to parent context with exclusion), slot-targeted conditioning: M_S (prefix | previous final glyph, H014), M_L (prefix+suffix | line position, H015) vs M0 = P70 plain KT; 5-fold cross-fit over all 206 running-text folios; folio bootstrap CI; margin = max(0.05, q97.5 of a feature-permuted null) computed before the real contrasts; labels SUPPORTED_DEV / FALSIFIED_DEV / INCONCLUSIVE_DEV; sha256 registration in `experiment.json`. **No Gate v2 level is claimable**: the holdout registry (A001 §4 erratum) shows every ZL3b running-text folio carries a SELECTION role, so `DEVELOPMENT_POOL_RUNNING_V1` is development-only. Next action: implement `BackoffKTCoder` (+fixtures), `run.py`, `validate.py`; results before report.
 
-Next: freeze **E011** (`experiments/E011_targeted_context_scorecard/PLAN_DRAFT.md`): hypothesis-shaped conditioning with a backoff scorecard, developed only on SELECTION folios, evaluated per Gate v2 on the lockbox.
+Gate v2 is in force (`research/protocol_amendments/A001_GATE_V2.md`, `research/gate/gate_v2.json`, `src/voynichlab/gate.py`, `tests/test_gate.py`, `scripts/gate_report.py`, `research/holdout_registry.json`). Confirmation surfaces: `LOCKBOX_NONRUNNING_V1` (710 label/circular/radial tokens, INDEPENDENT) only; running-text confirmation needs data registered from outside ZL3b. IT2a/GC hashes unregistered (voynich.nu unreachable 2026-10-19).
 
 ## External check (2026-10-19)
 

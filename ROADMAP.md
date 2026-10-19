@@ -12,4 +12,4 @@
 | E008 | DONE — ALL_COMPONENTS_NOT_INFORMATIVE (stage A) | S/L/C predictive components on the E007 scorecard; stage B (reference corpora) deferred |
 | E009 | QUEUED — provenance blocker (upstream unreachable) | Deshuffling Matrix blind test |
 | E010 | QUEUED | External decode-claim stress tests |
-| E011 | DRAFT | Hypothesis-shaped conditioning with backoff coder (prefix-slot edge state, line position) |
+| **E011** | **PLAN_FROZEN** (development-stage) | Slot-targeted conditioning (prefix | previous final glyph; prefix+suffix | line position) under a backoff KT scorecard; Gate v2 statistics; no lockbox claim |
