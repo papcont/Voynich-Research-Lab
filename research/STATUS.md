@@ -47,6 +47,20 @@ The stronger claim — same underlying unit sequence — has **not passed a cont
 
 ## Current frontier
 
+**E016 complete.** Folio-local vocabulary is real: within-folio repetition F = 0.242 vs
+0.207 under a Currier × section, size-preserving token permutation (0.163 unstratified);
+excess **+0.035** (CI 0.027–0.044, p < 0.001, 142/196 folios, Currier A +0.039 / B +0.031)
+→ **H024 SUPPORTED_DEV**. Codex-order adjacency: the frozen token-permutation null was the
+wrong baseline (it also destroys folio-specific vocabulary) → **H025 FALSIFIED_DEV as
+frozen**; an exploratory order-permutation null shows adjacent folios *are* more alike
+(0.107 vs 0.096, p < 0.001) → needs a corrected preregistration (H025b).
+
+Retained structural components after E006–E016 (all development-stage, all validated):
+four-slot token form (E007/E013); edge state → next prefix, strongest in B (E011/E010);
+no local copying, self-citation excluded at every horizon (E008/E014/E015); line-position
+not predictive, text line-homogeneous (E011/E015); folio-local vocabulary (E016);
+epilectrik's boundary coupling reproduced, its class grammar not predictive (E010).
+
 **E015 complete.** Signature v2 (Δ_S, Δ_L, Δ_C + TTR, hapax share H1, within-folio
 repetition F, cross-folio sharing X) vs three generators on the ZL3b skeleton: G4
 edge-coupled, G5 edge-coupled + Pitman–Yor vocabulary, G6 folio-horizon self-citation —

@@ -1,0 +1,16 @@
+{
+  "evidence_class": "EXPLORATORY_POST_RUN",
+  "gated": false,
+  "J_adj_obs": 0.10661271397842301,
+  "n_pairs": 204,
+  "order_null_global": {
+    "mean": 0.07024457943901516,
+    "q975": 0.0740497849902834,
+    "p": 0.000999000999000999
+  },
+  "order_null_within_strata": {
+    "mean": 0.09637460833801736,
+    "q975": 0.09907019769374954,
+    "p": 0.000999000999000999
+  }
+}

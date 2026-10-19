@@ -30,16 +30,16 @@ Retained structural observations:
 
 ## Last completed experiment
 
-`E015_signature_v2_generators` — **COMPLETED (development-stage).** Signature v2 vs G4 edge-coupled, G5 edge + Pitman–Yor (d 0.7, θ 10), G6 folio-horizon self-citation (0.5, 0.6): all MISMATCH → H022, H023 FALSIFIED. Edge-coupled generators overshoot Δ_S (0.14 vs 0.088); self-citation leaves Δ_C +1.6; the growth process matches cross-folio sharing X but not within-folio repetition F (0.17 vs 0.24). Validator pass. See `REPORT.md`.
+`E016_folio_vocabulary_locality` — **COMPLETED (development-stage).** H024 SUPPORTED_DEV: folio-local vocabulary reuse +0.035 (CI 0.027–0.044, p < 0.001) beyond a Currier × section, size-preserving permutation; both languages. H025 FALSIFIED_DEV under the frozen rule, whose token-permutation null was unsuitable for an adjacency question (recorded as a design flaw); the exploratory order-permutation null is strongly positive (0.107 vs 0.096) → H025b to be preregistered. Validator pass. See `REPORT.md`.
 
-Before: `E014` (H020 FALSIFIED, H021 PARTIAL), `E013`, `E010`, `E011`, `E008`, `E007`, `E006`.
+Before: `E015`, `E014`, `E013`, `E010`, `E011`, `E008`, `E007`, `E006`.
 
 ## Active frontier — BLOCKED on two human decisions
 
 1. **Confirmation surface.** Under the folio rule ZL3b has no independent lockbox for any claim. Options: (a) register data from outside ZL3b (a transliteration with independent readings — IT2a/GC if reachable — or newly transcribed material); (b) amend A001 with an explicit SEMI_INDEPENDENT tier (registration flag, not FAIL) for candidates demonstrably not developed on the overlapping folios; (c) accept that all ZL3b results stay development-stage.
 2. **E012 corpora/licences** (reference-text signature comparison): PerseusDL canonical-latinLit (CC-BY-SA 4.0), Dante; network use; generator/cipher set.
 
-Development-stage work that needs no decision: E016 within-folio vocabulary locality (F) with folio-shuffle and section-matched nulls; a y→qo-specific prefix test (H003); an A6-vs-P70 label-text follow-up.
+Development-stage work that needs no decision: H025b codex-order adjacency with an order-permutation null (and collation data if registered); a y→qo-specific prefix test (H003); an A6-vs-P70 label-text follow-up; signature v2 + F with a proper null as the E012 scorecard.
 
 Gate v2 is in force (`research/protocol_amendments/A001_GATE_V2.md`, `research/gate/gate_v2.json`, `src/voynichlab/gate.py`, `tests/test_gate.py`, `scripts/gate_report.py`, `research/holdout_registry.json`). Confirmation surfaces: none inside ZL3b under the folio rule (A001 errata 1–2). IT2a/GC hashes unregistered (voynich.nu unreachable 2026-10-19).
 

@@ -1,7 +1,7 @@
 {
   "experiment_id": "E016",
   "name": "folio_vocabulary_locality",
-  "status": "PLAN_FROZEN",
+  "status": "COMPLETED",
   "evidence_class": "DEVELOPMENT",
   "gate_level_claimable": "none",
   "hypotheses": {
@@ -36,5 +36,11 @@
     "predictions": "459f167fa7bccfc08fe3e3c501ab4f032e6da3970c363519d622bd1368c7891b"
   },
   "claim_ceiling": "Structural statement about vocabulary distribution across folios; no meaning/authorship/quire claims.",
-  "amendments": []
+  "amendments": [],
+  "result": "results.json",
+  "decisions": {
+    "H024": "SUPPORTED_DEV",
+    "H025": "FALSIFIED_DEV (frozen null unsuitable for adjacency; see REPORT §3)"
+  },
+  "exploratory_post_run": "exploratory_post_run.json (order-permutation null; not gated)"
 }
