@@ -1,0 +1,38 @@
+{
+  "experiment_id": "E018",
+  "name": "y_qo_edge_test",
+  "status": "PLAN_FROZEN",
+  "evidence_class": "DEVELOPMENT",
+  "gate_level_claimable": "none",
+  "hypotheses": {
+    "H003a": "qo enrichment after y-final tokens in Biological B beyond within-folio permutation",
+    "H003b": "the binary y/non-y edge feature captures >=50% of the Currier-B edge-state gain"
+  },
+  "inputs": [
+    {
+      "source": "data/raw/ZL3b-n.txt",
+      "identity": "upstream_git_blob_sha1:2a4533ab9bdfa85db9bad602d590978953055df1",
+      "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+    }
+  ],
+  "statistics": {
+    "R": "P(qo|prev y)/P(qo|prev other final), Biological B; within-folio permutation null 1000, seed 20261070",
+    "delta_Sy": "folio-mean M0-M_Sy, prefix | {y,other,BOL,UNC}, Currier B, 5-fold cross-fit, backoff coder",
+    "share": "delta_Sy/delta_S"
+  },
+  "decision": {
+    "H003a": "SUPPORTED_DEV iff R>=1.5 and p<=0.01; FALSIFIED_DEV iff R<=1.1 or null q97.5>=R",
+    "H003b": "SUPPORTED_DEV iff delta_Sy>=0.05 with CI lower>0 and share>=0.5; FALSIFIED_DEV iff CI upper<0.05 or share<0.25"
+  },
+  "pre_result_predictions": {
+    "H003a": "SUPPORTED_DEV, R 2-4",
+    "H003b": "INCONCLUSIVE_DEV/weak, share 0.3-0.6"
+  },
+  "sha256": {
+    "inputs": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "config": "fa2de814d476dfb8093d9aa31468b9ad3ef228609e1f59b34b46aaf20f4874b8",
+    "predictions": "8552755e26b41fc4bcb8fdea4153c32bdfa0c94ec7b48a7632d3fd783229cf2b"
+  },
+  "claim_ceiling": "Structural transition statistics; no meaning claims.",
+  "amendments": []
+}
