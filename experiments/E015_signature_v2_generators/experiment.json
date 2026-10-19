@@ -1,0 +1,62 @@
+{
+  "experiment_id": "E015",
+  "name": "signature_v2_generators",
+  "status": "PLAN_FROZEN",
+  "evidence_class": "MECHANISM_DEMONSTRATION/DEVELOPMENT",
+  "gate_level_claimable": "none",
+  "hypotheses": {
+    "H022": "G5 edge-coupled + Pitman-Yor vocabulary reproduces signature v2",
+    "H023": "G6 folio-horizon self-citation reproduces signature v2"
+  },
+  "inputs": [
+    {
+      "source": "data/raw/ZL3b-n.txt",
+      "identity": "upstream_git_blob_sha1:2a4533ab9bdfa85db9bad602d590978953055df1",
+      "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+    }
+  ],
+  "components": [
+    "delta_S",
+    "delta_L",
+    "delta_C",
+    "TTR",
+    "H1",
+    "F",
+    "X"
+  ],
+  "tolerances": {
+    "bits": [
+      0.05,
+      0.1
+    ],
+    "fractions": [
+      0.02,
+      0.05
+    ]
+  },
+  "generators": {
+    "G4_EDGE": "E014 definition",
+    "G5_EDGE_PY": "prefix | previous final; per-prefix Pitman-Yor over tokens; grid d x theta calibrated on TTR+H1 (seed 0)",
+    "G6_FOLIO_SC": "self-citation with folio-wide uniform source; grid p_copy x p_edit calibrated on TTR+H1 (seed 0)"
+  },
+  "seeds": [
+    20261040,
+    20261041,
+    20261042,
+    20261043,
+    20261044
+  ],
+  "pre_result_predictions": {
+    "G4": "MISMATCH (TTR/H1)",
+    "G5": "PARTIAL (delta_S overshoot)",
+    "G6": "MISMATCH (delta_S ~0, delta_C > 0, F high)"
+  },
+  "sha256": {
+    "inputs": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "split": "3e55ac4dc2c7858a2d0750fd4ce00825f251a563103db8e07956ddad73b5b001",
+    "config": "90a20df404704d5c99ef6daf5845c2fd914b5a78d68a41f487fef342a8c25bc2",
+    "predictions": "82047914ebf7cd84bf67dc602ccfe4dc5954ef0ca158f1e8a1d516d41471bf02"
+  },
+  "claim_ceiling": "Which generators reproduce which structural components; no meaning/language; no Gate level.",
+  "amendments": []
+}
