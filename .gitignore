@@ -6,6 +6,6 @@ __pycache__/
 data/raw/
 data/local_manifest.json
 .external/
-runs/*.json
-runs/*.log
+runs/**
+!runs/.gitkeep
 .claude/worktrees/

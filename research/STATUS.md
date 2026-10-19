@@ -154,6 +154,8 @@ Two human decisions are pending: (1) a confirmation surface or a protocol tier f
 semi-independent lockboxes (A001 erratum 2); (2) E012 corpora/licences. Development-stage
 work can continue meanwhile (see RESEARCH_STATE.json).
 
+**Incident 2026-10-20 (provenance review):** prepared texts under `runs/` (ZL3b-derived token streams, Copiale/Gutenberg derivatives, generator output; 66 files) were tracked from E012 onward because the ignore pattern missed nested paths, and reached the public branch. Untracked in HEAD, ignore pattern fixed, validator guard added; history rewrite pending a human decision (`RESEARCH_STATE.json`). Reference-corpus attribution recorded in `data/sources.yml`.
+
 ## Tooling
 
 `voynichlab.signature` (2026-10-20): one hypothesis-neutral module for the seven-component

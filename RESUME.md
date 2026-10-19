@@ -47,6 +47,18 @@ Development-stage work that needs no decision: an A6-vs-P70 label-text follow-up
 
 Gate v2 is in force (`research/protocol_amendments/A001_GATE_V2.md`, `research/gate/gate_v2.json`, `src/voynichlab/gate.py`, `tests/test_gate.py`, `scripts/gate_report.py`, `research/holdout_registry.json`). Confirmation surfaces: none inside ZL3b under the folio rule (A001 errata 1–2). IT2a/GC hashes unregistered (voynich.nu unreachable 2026-10-19).
 
+## Incident 2026-10-20 — prepared texts were tracked and pushed
+
+`.gitignore` had `runs/*.json`, which does not match nested paths. Commits 06774ae (E012) to
+ea51f3e (E021) therefore tracked 66 files / 28 MB under `runs/`: ZL3b-derived Voynich token
+streams (`V_full.json`, `V_matched.json`; policy `do_not_commit_by_default`), the normalised
+Copiale plaintext and its cipher transforms, Gutenberg samples, generator output. Found by the
+2026-10-20 provenance review. Fixed in HEAD: files untracked (kept on disk; `run.py` regenerates
+them), pattern now `runs/**`, `scripts/validate_repo.py` fails on any tracked file under `runs/`.
+**Still open (human decision):** the files remain in the public branch's history; a rewrite needs
+a force push, which is not allowed autonomously. Fresh clones must run the `run.py` of
+E012/E014/E015/E019–E021 before their `validate.py`.
+
 ## External check (2026-10-19)
 
 See `research/STATUS.md` § External landscape check and `external/repos.yml`.

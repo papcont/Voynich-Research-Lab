@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-20T16:00:00Z",
+  "updated_utc": "2026-10-19T22:59:33Z",
   "status": "BLOCKED",
   "active_experiment": "E021_selective_boundaries",
-  "next_action": "Await the two human decisions: (1) A002 proposal (approve/modify/reject); (2) Borg approval for E012-B. Decision-free work of value is exhausted; low-priority: A6-vs-P70 label follow-up.",
-  "blocked_reason": null,
+  "next_action": "Await human decisions: (0) history_redistribution; (1) A002 proposal; (2) Borg approval for E012-B. Decision-free work: A6-vs-P70 label follow-up; E012 run.py clone path -> env var (review finding).",
+  "blocked_reason": "Redistribution incident: prepared texts under runs/ (ZL3b-derived Voynich token streams, Copiale/Gutenberg derivatives, generator output; 66 files, 28 MB) were tracked and pushed to the public branch by commits 06774ae, 8ea951c, b8b09f9, 97fb967, d19f9a4, ea51f3e because .gitignore 'runs/*.json' did not match nested paths. Untracked in HEAD and guarded by validate_repo.py; the files remain in branch history. Removing them needs a history rewrite and force push, which is not allowed autonomously (CLAUDE.md git policy).",
   "last_completed_experiment": "E021_selective_boundaries",
   "last_completed_result": "H031_PARTIAL;H032_FALSIFIED;H033_FALSIFIED",
   "scientific_claim_ceiling": "Structural evidence only; no plaintext, language or semantic decipherment claim.",
@@ -12,6 +12,7 @@
   "gate_version": "2.0.0",
   "pending_human_decisions": {
     "confirmation_surface": "CONCRETE PROPOSAL drafted (not in force): research/protocol_amendments/A002_PROPOSAL_semi_independent_tier.md \u2014 candidate-specific contamination; SEMI_INDEPENDENT lockboxes admissible for levels 1-2 only under registration/log conditions; levels 3-5 still need INDEPENDENT data. Approve / modify / reject.",
-    "E012_reference_signature": "E012-B: approve local analysis use of linked_only Borg plaintext + ciphertext (never committed); otherwise E012-B runs only verbose-cipher transforms of the open texts."
+    "E012_reference_signature": "E012-B: approve local analysis use of linked_only Borg plaintext + ciphertext (never committed); otherwise E012-B runs only verbose-cipher transforms of the open texts.",
+    "history_redistribution": "Branch history still carries runs/ prepared texts (see blocked_reason). Options: (a) rewrite the branch history and force-push (changes every later commit hash, incl. frozen_plan_commit references in E019-E021 results.json -> needs a hash remap table); (b) leave history, squash-merge later and delete the branch; (c) accept as is. Decide; nothing is rewritten autonomously."
   }
 }

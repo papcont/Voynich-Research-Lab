@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,6 +25,19 @@ def main() -> int:
     if state.get("status") == "PLAN_FROZEN":
         if not (ROOT / "experiments" / str(active) / "PLAN.md").is_file():
             errors.append("state says PLAN_FROZEN but PLAN.md is missing")
+
+
+    # Prepared texts (reference corpora, ZL3b-derived streams, generator output) live in
+    # runs/ and must never be tracked (CLAUDE.md rule 12). Incident 2026-10-20: the old
+    # pattern runs/*.json missed nested paths and 66 files reached the public branch.
+    try:
+        tracked = subprocess.run(["git", "ls-files", "--", "runs/"], cwd=ROOT, capture_output=True,
+                                 text=True, check=True).stdout.split()
+        for t in tracked:
+            if t != "runs/.gitkeep":
+                errors.append(f"tracked file under runs/ (must stay untracked): {t}")
+    except (OSError, subprocess.CalledProcessError):
+        pass
 
     if errors:
         for e in errors:
