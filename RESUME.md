@@ -30,13 +30,12 @@ Retained structural observations:
 
 ## Last completed experiment
 
-`E007_p70_replication` — **COMPLETED, REPRODUCED_BUT_NOT_VALIDATED** (first reveal 2026-10-19; plan `2f77096`, amendments `d42d9f0`, `db81687`).
-
-R1: our independent P70 layer-A parser reproduces the published structural values approximately on ZL3b. R2: P70 has the lowest prequential KT bits/token (15.03) against A0, A1, A2, A3, A5, A6, A7, A8 (+0.18 to +1.87), wins 5/5 cross-fitted folds and both Currier languages, but the frozen Gate 5 fails in major section P (A6 lower), so H009 is not supported under the frozen gate. An exploratory post-reveal check (`exploratory_post_reveal.json`) indicates an order artefact; it must not be used to relabel E007. See `experiments/E007_p70_replication/REPORT.md`.
+`E008_mechanism_competition` stage A — **COMPLETED, ALL_COMPONENTS_NOT_INFORMATIVE** (first reveal 2026-10-19; plan `9563bc4`, amendment `f71a588`). Edge state S, line position L and local copy/modify C each *increase* holdout bits/token over the bare P70 base under the frozen no-backoff KT scorecard (unique Δ −1.95 / −0.36 / −0.25). S and L beat the within-folio shuffle null by 0.89 / 0.33 (information present, context fragmentation dominates); C equals the null. H011–H013 falsified as predictive components (scorecard-specific). An implementation deviation in the canonical edit string was caught by `validate.py`, corrected and re-run before interpretation (verdicts unchanged). Exploratory backoff coder: +L gains 0.10, +S still −0.13 → test S on the prefix slot only (E011 draft). See `REPORT.md`.
 
 ## Active frontier
 
-`E008_mechanism_competition` — **status PLAN_FROZEN (stage A)**, see `experiments/E008_mechanism_competition/PLAN.md` + `experiment.json`. Question: do S (previous token's final glyph), L (line position) and C (exact/one-edit copy of a recent same-folio token, window W ∈ {5,10,20,40} chosen on development only) carry independent held-out predictive information beyond P70 slots? 16 models, KT scorecard inherited from E007, dev→holdout frozen counts on the E007 split, folio-level stability, Currier A/B, within-folio shuffle null N1 (seed 20261019). Hypotheses H011/H012/H013 with pre-result predictions in PLAN §8. Family readout (copy/modify vs sequential vs line-unit signature) is ordinal only. Stage B with reference corpora is deferred. Next action: implement `run.py`/`validate.py`, amend before first holdout coding if needed, write `results.json` before `REPORT.md`.
+1. **Gate v2** — human-approved protocol amendment (evidence levels, fair MDL test with folio-level CI, negative controls, holdout registry/lockbox, transliteration robustness, independent semantics, mandatory falsification, machine-checkable spec + tests). Must not reinterpret E006–E008.
+2. Then freeze **E011** (`experiments/E011_targeted_context_scorecard/PLAN_DRAFT.md`): hypothesis-shaped conditioning with a backoff scorecard.
 
 ## External check (2026-10-19)
 
@@ -48,6 +47,7 @@ must not be frozen without a human decision. New E008 candidates:
 
 ## Previously completed
 
+- `E008_mechanism_competition` stage A — ALL_COMPONENTS_NOT_INFORMATIVE (scorecard-specific; see REPORT).
 - `E007_p70_replication` — REPRODUCED_BUT_NOT_VALIDATED (Gate 5 section P miss; exploratory order artefact; non-prospective).
 - `E006_canonical_sequence_holdout` — INCONCLUSIVE_UNDERPOWERED (1 qualifying holdout chain < floor 3; H008 unresolved; no tuning of the revealed holdout).
 

@@ -1,7 +1,7 @@
 {
   "experiment_id": "E008",
   "name": "mechanism_competition_stage_A",
-  "status": "PLAN_FROZEN",
+  "status": "COMPLETED",
   "hypotheses": [
     "H011",
     "H012",
@@ -87,5 +87,14 @@
   "stage_B": "DEFERRED: reference corpora (Latin/Italian), Naibbe reimplementation, self-citation generator, epilectrik grammar; separate preregistration with provenance/hash/license.",
   "amendments": [
     "PREFLIGHT_AMENDMENT_001.md"
-  ]
+  ],
+  "result": "results.json",
+  "decision": "ALL_COMPONENTS_NOT_INFORMATIVE",
+  "hypothesis_outcomes": {
+    "H011": "NOT_INFORMATIVE",
+    "H012": "NOT_INFORMATIVE",
+    "H013": "NOT_INFORMATIVE"
+  },
+  "exploratory_post_reveal": "exploratory_post_reveal.json (not gated)",
+  "erratum": "first run deviated from PLAN §6.3 canonical insertion/deletion index (C-models, <=0.008 bits/token); corrected and re-run before any interpretation; verdicts unchanged"
 }

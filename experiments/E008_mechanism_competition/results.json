@@ -1,0 +1,959 @@
+{
+  "experiment": "E008",
+  "stage": "A",
+  "hypotheses": {
+    "H011": "S",
+    "H012": "C",
+    "H013": "L"
+  },
+  "evidence_class": "FROZEN_HOLDOUT (component contrasts); bases known from E007; P70 base NON-PROSPECTIVE",
+  "source_identity": {
+    "path": "data/raw/ZL3b-n.txt",
+    "git_blob_sha1": "2a4533ab9bdfa85db9bad602d590978953055df1",
+    "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "bytes": 411671
+  },
+  "frozen_plan_commit": "9563bc4",
+  "amendment_commits": {
+    "001": "f71a588"
+  },
+  "run_head_commit": "f71a5887ffe40d6001c79e92738a0c45a31b5dcb",
+  "first_reveal_timestamp": "2026-10-19T20:34:18Z",
+  "software": {
+    "python": "3.13.16",
+    "numpy": "2.5.3"
+  },
+  "seeds": {
+    "N1": 20261019,
+    "N0": 20261020
+  },
+  "population": {
+    "n_tokens": 33611,
+    "n_folios": 206,
+    "n_lines": 4072,
+    "sigma_size": 25,
+    "sigma": "abcdefghijklmnopqrstuvxyz",
+    "n_development_tokens": 19483,
+    "n_holdout_tokens": 14128,
+    "n_holdout_folios": 85,
+    "S_feature_counts": {
+      "BOL": 3900,
+      "glyph": 28853,
+      "UNC": 858
+    },
+    "L_feature_counts": {
+      "FIRST": 3878,
+      "MID": 25869,
+      "LAST": 3842,
+      "ONLY": 22
+    },
+    "line_length_terciles": [
+      9,
+      11
+    ],
+    "holdout_src_path_share": {
+      "none": 0.8318941109852774,
+      "edit": 0.12535390713476785,
+      "exact": 0.0427519818799547
+    }
+  },
+  "W_selection": {
+    "grid": [
+      5,
+      10,
+      20,
+      40
+    ],
+    "development_data_bits_B1+C": {
+      "5": 316705.43492844864,
+      "10": 322278.37153944036,
+      "20": 328193.87901172537,
+      "40": 332106.8075664698
+    },
+    "chosen_W": 5,
+    "selection_cost_bits": 3
+  },
+  "lossless": true,
+  "models_real": {
+    "B0": {
+      "dev_prequential_bits_per_token": 17.84036630826208,
+      "holdout_bits_per_token": 16.111120756144345,
+      "model_bits": 1.0,
+      "holdout_total_bits_per_token": 16.111191537571298
+    },
+    "B0+S": {
+      "dev_prequential_bits_per_token": 21.254258793898494,
+      "holdout_bits_per_token": 19.18139197528207,
+      "model_bits": 3.0,
+      "holdout_total_bits_per_token": 19.181604319562933
+    },
+    "B0+L": {
+      "dev_prequential_bits_per_token": 18.79942658624711,
+      "holdout_bits_per_token": 16.878422036833783,
+      "model_bits": 3.0,
+      "holdout_total_bits_per_token": 16.878634381114644
+    },
+    "B0+C": {
+      "dev_prequential_bits_per_token": 18.26107938628869,
+      "holdout_bits_per_token": 16.532133643557835,
+      "model_bits": 6.0,
+      "holdout_total_bits_per_token": 16.532558332119557
+    },
+    "B0+S+L": {
+      "dev_prequential_bits_per_token": 21.756417947192908,
+      "holdout_bits_per_token": 19.636469951400954,
+      "model_bits": 3.0,
+      "holdout_total_bits_per_token": 19.636682295681815
+    },
+    "B0+S+C": {
+      "dev_prequential_bits_per_token": 21.243044015690764,
+      "holdout_bits_per_token": 19.34830215424233,
+      "model_bits": 6.0,
+      "holdout_total_bits_per_token": 19.34872684280405
+    },
+    "B0+L+C": {
+      "dev_prequential_bits_per_token": 19.09981530994925,
+      "holdout_bits_per_token": 17.246846830600163,
+      "model_bits": 6.0,
+      "holdout_total_bits_per_token": 17.247271519161885
+    },
+    "B0+S+L+C": {
+      "dev_prequential_bits_per_token": 21.63941070809259,
+      "holdout_bits_per_token": 19.730676521024527,
+      "model_bits": 8.0,
+      "holdout_total_bits_per_token": 19.731242772440154
+    },
+    "B1": {
+      "dev_prequential_bits_per_token": 15.735032746646514,
+      "holdout_bits_per_token": 14.42168188063299,
+      "model_bits": 724.8677165937281,
+      "holdout_total_bits_per_token": 14.472989051966069
+    },
+    "B1+S": {
+      "dev_prequential_bits_per_token": 18.57677125512126,
+      "holdout_bits_per_token": 16.73791450827695,
+      "model_bits": 726.8677165937281,
+      "holdout_total_bits_per_token": 16.789363242463935
+    },
+    "B1+L": {
+      "dev_prequential_bits_per_token": 16.535571349382387,
+      "holdout_bits_per_token": 15.002718301090395,
+      "model_bits": 726.8677165937281,
+      "holdout_total_bits_per_token": 15.05416703527738
+    },
+    "B1+C": {
+      "dev_prequential_bits_per_token": 16.255475795742342,
+      "holdout_bits_per_token": 14.907828735028103,
+      "model_bits": 729.8677165937281,
+      "holdout_total_bits_per_token": 14.95948981349595
+    },
+    "B1+S+L": {
+      "dev_prequential_bits_per_token": 19.1842563701949,
+      "holdout_bits_per_token": 17.15804542236388,
+      "model_bits": 726.8677165937281,
+      "holdout_total_bits_per_token": 17.209494156550864
+    },
+    "B1+S+C": {
+      "dev_prequential_bits_per_token": 18.782370642950347,
+      "holdout_bits_per_token": 17.051212801978554,
+      "model_bits": 729.8677165937281,
+      "holdout_total_bits_per_token": 17.1028738804464
+    },
+    "B1+L+C": {
+      "dev_prequential_bits_per_token": 16.977667474550206,
+      "holdout_bits_per_token": 15.457070834295315,
+      "model_bits": 729.8677165937281,
+      "holdout_total_bits_per_token": 15.508731912763162
+    },
+    "B1+S+L+C": {
+      "dev_prequential_bits_per_token": 19.29161678321821,
+      "holdout_bits_per_token": 17.41121637924067,
+      "model_bits": 731.8677165937281,
+      "holdout_total_bits_per_token": 17.463019020562424
+    }
+  },
+  "contrasts_real": {
+    "B0": {
+      "S": {
+        "marginal_gain": -3.0702712191377266,
+        "unique_gain": -2.483829690424365,
+        "folio_wins": 0,
+        "n_folios": 85,
+        "folio_stability": 0.0,
+        "unique_gain_subsets": {
+          "currier:A": -2.8870410249788385,
+          "currier:B": -2.3318590231547525,
+          "section:B": -1.20873902485822,
+          "section:H": -2.719813262410959,
+          "section:P": -3.124334377212417,
+          "section:S": -2.8796909863183515,
+          "linelen:short": -2.4015892566889114,
+          "linelen:medium": -2.700928028656179,
+          "linelen:long": -2.3694290291638183,
+          "toklen:<=4": -1.4030311487794016,
+          "toklen:5-6": -2.8055338457378376,
+          "toklen:>=7": -3.8559862220760124,
+          "hand:1": -2.8870410249788385,
+          "hand:2": -1.7768281815207594,
+          "hand:3": -2.8957927413263427,
+          "hand:4": -1.6852226329117705,
+          "hand:5": -2.0715120146373707
+        }
+      },
+      "L": {
+        "marginal_gain": -0.7673012806894377,
+        "unique_gain": -0.38237436678219794,
+        "folio_wins": 15,
+        "n_folios": 85,
+        "folio_stability": 0.17647058823529413,
+        "unique_gain_subsets": {
+          "currier:A": -0.508449047625426,
+          "currier:B": -0.3340058049391317,
+          "section:B": -0.23777293988335657,
+          "section:H": -0.45191081941694833,
+          "section:P": -0.3908429451770452,
+          "section:S": -0.42375151955076973,
+          "linelen:short": -0.7247076627264875,
+          "linelen:medium": -0.3281622728702551,
+          "linelen:long": -0.1642973741688074,
+          "toklen:<=4": -0.24525960769241273,
+          "toklen:5-6": -0.4573397012177267,
+          "toklen:>=7": -0.47426431255630774,
+          "hand:1": -0.508449047625426,
+          "hand:2": -0.26527251549902786,
+          "hand:3": -0.4073886822979098,
+          "hand:4": -0.15863254197017085,
+          "hand:5": -0.10438048216919071
+        }
+      },
+      "C": {
+        "marginal_gain": -0.4210128874134895,
+        "unique_gain": -0.09420656962357299,
+        "folio_wins": 31,
+        "n_folios": 85,
+        "folio_stability": 0.36470588235294116,
+        "unique_gain_subsets": {
+          "currier:A": 0.002892672374134264,
+          "currier:B": -0.13532548958692558,
+          "section:B": -0.3035315702068946,
+          "section:H": -0.005316052102255497,
+          "section:P": -0.054709322310348085,
+          "section:S": -0.06039951218090778,
+          "linelen:short": 0.07099279123486824,
+          "linelen:medium": -0.09389475973947015,
+          "linelen:long": -0.22108001507525898,
+          "toklen:<=4": -0.40413251960194074,
+          "toklen:5-6": 0.06631409400585753,
+          "toklen:>=7": 0.13497737448096103,
+          "hand:1": 0.002892672374134264,
+          "hand:2": -0.23896414261858467,
+          "hand:3": -0.045258779924292725,
+          "hand:4": -0.1485400702841062,
+          "hand:5": 0.6638072591728523
+        }
+      }
+    },
+    "B1": {
+      "S": {
+        "marginal_gain": -2.316232627643961,
+        "unique_gain": -1.954145544945355,
+        "folio_wins": 0,
+        "n_folios": 85,
+        "folio_stability": 0.0,
+        "unique_gain_subsets": {
+          "currier:A": -2.211555431507378,
+          "currier:B": -1.8535974291082251,
+          "section:B": -0.9119232271352313,
+          "section:H": -2.115495869146484,
+          "section:P": -2.330770353263169,
+          "section:S": -2.3066817902132044,
+          "linelen:short": -1.8404291664490522,
+          "linelen:medium": -2.1561610135811247,
+          "linelen:long": -1.876197156676282,
+          "toklen:<=4": -1.023559123199611,
+          "toklen:5-6": -2.095969323386335,
+          "toklen:>=7": -3.4608792202402867,
+          "hand:1": -2.211555431507378,
+          "hand:2": -1.403817608352858,
+          "hand:3": -2.3124437672487623,
+          "hand:4": -1.5520291373609716,
+          "hand:5": -1.539567385758879
+        }
+      },
+      "L": {
+        "marginal_gain": -0.581036420457405,
+        "unique_gain": -0.3600035772621162,
+        "folio_wins": 13,
+        "n_folios": 85,
+        "folio_stability": 0.15294117647058825,
+        "unique_gain_subsets": {
+          "currier:A": -0.462952942936802,
+          "currier:B": -0.3149111287756696,
+          "section:B": -0.2336384264310709,
+          "section:H": -0.42373789926207905,
+          "section:P": -0.3535788768549182,
+          "section:S": -0.3763405146567642,
+          "linelen:short": -0.6353625576581052,
+          "linelen:medium": -0.3219627420466189,
+          "linelen:long": -0.1800428979897042,
+          "toklen:<=4": -0.20048037496630577,
+          "toklen:5-6": -0.41079056026548955,
+          "toklen:>=7": -0.5545788802044171,
+          "hand:1": -0.462952942936802,
+          "hand:2": -0.2700543782765159,
+          "hand:3": -0.3657097019579503,
+          "hand:4": -0.3480484309173093,
+          "hand:5": -0.0032643255606643606
+        }
+      },
+      "C": {
+        "marginal_gain": -0.4861468543951126,
+        "unique_gain": -0.25317095687679014,
+        "folio_wins": 20,
+        "n_folios": 85,
+        "folio_stability": 0.23529411764705882,
+        "unique_gain_subsets": {
+          "currier:A": -0.21757160479324966,
+          "currier:B": -0.27198610597835327,
+          "section:B": -0.4295865656183402,
+          "section:H": -0.19236876065222575,
+          "section:P": -0.302426866413132,
+          "section:S": -0.1959324268814484,
+          "linelen:short": -0.1230546514908184,
+          "linelen:medium": -0.2536991247283815,
+          "linelen:long": -0.3524681503193303,
+          "toklen:<=4": -0.5027876161905542,
+          "toklen:5-6": -0.1355846554498008,
+          "toklen:>=7": -0.04043284698658667,
+          "hand:1": -0.21757160479324966,
+          "hand:2": -0.3696976678573112,
+          "hand:3": -0.18821658397682128,
+          "hand:4": -0.15898023658236227,
+          "hand:5": 0.5452311275261472
+        }
+      }
+    }
+  },
+  "null_N1_within_folio": {
+    "models": {
+      "B0": {
+        "dev_prequential_bits_per_token": 17.840404332114634,
+        "holdout_bits_per_token": 16.111120756144345,
+        "model_bits": 1.0,
+        "holdout_total_bits_per_token": 16.111191537571298
+      },
+      "B0+S": {
+        "dev_prequential_bits_per_token": 22.512870760068502,
+        "holdout_bits_per_token": 20.423494075178848,
+        "model_bits": 3.0,
+        "holdout_total_bits_per_token": 20.42370641945971
+      },
+      "B0+L": {
+        "dev_prequential_bits_per_token": 19.523770888982433,
+        "holdout_bits_per_token": 17.412770499005845,
+        "model_bits": 3.0,
+        "holdout_total_bits_per_token": 17.412982843286706
+      },
+      "B0+C": {
+        "dev_prequential_bits_per_token": 18.301013664543675,
+        "holdout_bits_per_token": 16.567028429990177,
+        "model_bits": 6.0,
+        "holdout_total_bits_per_token": 16.5674531185519
+      },
+      "B0+S+L": {
+        "dev_prequential_bits_per_token": 23.390130644260257,
+        "holdout_bits_per_token": 21.28738224762147,
+        "model_bits": 3.0,
+        "holdout_total_bits_per_token": 21.28759459190233
+      },
+      "B0+S+C": {
+        "dev_prequential_bits_per_token": 22.47125973128005,
+        "holdout_bits_per_token": 20.533061706263588,
+        "model_bits": 6.0,
+        "holdout_total_bits_per_token": 20.53348639482531
+      },
+      "B0+L+C": {
+        "dev_prequential_bits_per_token": 19.841467197013532,
+        "holdout_bits_per_token": 17.785067325200874,
+        "model_bits": 6.0,
+        "holdout_total_bits_per_token": 17.785492013762596
+      },
+      "B0+S+L+C": {
+        "dev_prequential_bits_per_token": 23.210020397164318,
+        "holdout_bits_per_token": 21.31485691358273,
+        "model_bits": 8.0,
+        "holdout_total_bits_per_token": 21.315423164998357
+      },
+      "B1": {
+        "dev_prequential_bits_per_token": 15.73545665101791,
+        "holdout_bits_per_token": 14.42168188063299,
+        "model_bits": 724.8677165937281,
+        "holdout_total_bits_per_token": 14.472989051966069
+      },
+      "B1+S": {
+        "dev_prequential_bits_per_token": 19.73986940454502,
+        "holdout_bits_per_token": 17.76721566479679,
+        "model_bits": 726.8677165937281,
+        "holdout_total_bits_per_token": 17.818664398983774
+      },
+      "B1+L": {
+        "dev_prequential_bits_per_token": 17.07755059437725,
+        "holdout_bits_per_token": 15.434165750682368,
+        "model_bits": 726.8677165937281,
+        "holdout_total_bits_per_token": 15.485614484869354
+      },
+      "B1+C": {
+        "dev_prequential_bits_per_token": 16.273250631971298,
+        "holdout_bits_per_token": 14.91023272979534,
+        "model_bits": 729.8677165937281,
+        "holdout_total_bits_per_token": 14.961893808263186
+      },
+      "B1+S+L": {
+        "dev_prequential_bits_per_token": 20.627273683767072,
+        "holdout_bits_per_token": 18.529953089736317,
+        "model_bits": 726.8677165937281,
+        "holdout_total_bits_per_token": 18.5814018239233
+      },
+      "B1+S+C": {
+        "dev_prequential_bits_per_token": 19.866562794692737,
+        "holdout_bits_per_token": 18.016282443162673,
+        "model_bits": 729.8677165937281,
+        "holdout_total_bits_per_token": 18.067943521630518
+      },
+      "B1+L+C": {
+        "dev_prequential_bits_per_token": 17.506759079774145,
+        "holdout_bits_per_token": 15.864057305332153,
+        "model_bits": 729.8677165937281,
+        "holdout_total_bits_per_token": 15.9157183838
+      },
+      "B1+S+L+C": {
+        "dev_prequential_bits_per_token": 20.632359112315754,
+        "holdout_bits_per_token": 18.70968723187862,
+        "model_bits": 731.8677165937281,
+        "holdout_total_bits_per_token": 18.76148987320037
+      }
+    },
+    "contrasts": {
+      "B0": {
+        "S": {
+          "marginal_gain": -4.312373319034503,
+          "unique_gain": -3.529789588381856,
+          "folio_wins": 0,
+          "n_folios": 85,
+          "folio_stability": 0.0,
+          "unique_gain_subsets": {
+            "currier:A": -3.7421444924085563,
+            "currier:B": -3.4208062172847775,
+            "section:B": -1.9676841557941405,
+            "section:H": -3.614151995756746,
+            "section:P": -3.87424573767818,
+            "section:S": -4.1918619131239545,
+            "linelen:short": -3.1721108935948585,
+            "linelen:medium": -3.680243841619742,
+            "linelen:long": -3.680969426006616,
+            "toklen:<=4": -3.5254120694266327,
+            "toklen:5-6": -3.452274355892964,
+            "toklen:>=7": -3.7250223257736543,
+            "hand:1": -3.7421444924085563,
+            "hand:2": -2.7298787953585233,
+            "hand:3": -4.137369753312093,
+            "hand:4": -3.9924372627005624,
+            "hand:5": -2.2868599524766964
+          }
+        },
+        "L": {
+          "marginal_gain": -1.3016497428614997,
+          "unique_gain": -0.7817952073191421,
+          "folio_wins": 5,
+          "n_folios": 85,
+          "folio_stability": 0.058823529411764705,
+          "unique_gain_subsets": {
+            "currier:A": -0.749918058129726,
+            "currier:B": -0.7655967612647707,
+            "section:B": -0.6819726022498891,
+            "section:H": -0.7175188382942004,
+            "section:P": -0.806985195368128,
+            "section:S": -0.8561607039847061,
+            "linelen:short": -0.9814138824738166,
+            "linelen:medium": -0.6677098436484457,
+            "linelen:long": -0.7220376401412061,
+            "toklen:<=4": -0.8179958864937369,
+            "toklen:5-6": -0.7889165703394596,
+            "toklen:>=7": -0.692767601369308,
+            "hand:1": -0.749918058129726,
+            "hand:2": -0.7068003535871732,
+            "hand:3": -0.84330636703001,
+            "hand:4": -1.7057865581652614,
+            "hand:5": 0.26196507730175966
+          }
+        },
+        "C": {
+          "marginal_gain": -0.4559076738458323,
+          "unique_gain": -0.027474665961261024,
+          "folio_wins": 41,
+          "n_folios": 85,
+          "folio_stability": 0.4823529411764706,
+          "unique_gain_subsets": {
+            "currier:A": 0.1845200749656115,
+            "currier:B": -0.1284949173794807,
+            "section:B": -0.2635079274367591,
+            "section:H": 0.10860294793177871,
+            "section:P": 0.12047184603459726,
+            "section:S": -0.04851868187658681,
+            "linelen:short": 0.012740256159798236,
+            "linelen:medium": 0.08913463760826446,
+            "linelen:long": -0.15360263162723342,
+            "toklen:<=4": -0.004148338236028337,
+            "toklen:5-6": -0.08771258307611873,
+            "toklen:>=7": 0.07116395398331576,
+            "hand:1": 0.1845200749656115,
+            "hand:2": -0.2484320888645648,
+            "hand:3": -0.03314402181200293,
+            "hand:4": 0.19705173688750222,
+            "hand:5": 1.2904559445472081
+          }
+        }
+      },
+      "B1": {
+        "S": {
+          "marginal_gain": -3.3455337841638,
+          "unique_gain": -2.845629926546465,
+          "folio_wins": 0,
+          "n_folios": 85,
+          "folio_stability": 0.0,
+          "unique_gain_subsets": {
+            "currier:A": -2.9978868472680595,
+            "currier:B": -2.7570840027536896,
+            "section:B": -1.5573189749457192,
+            "section:H": -2.9033754652384225,
+            "section:P": -3.0635018036095314,
+            "section:S": -3.4333380088856487,
+            "linelen:short": -2.644213452460864,
+            "linelen:medium": -2.8342256397752514,
+            "linelen:long": -3.0093282075401255,
+            "toklen:<=4": -2.8628195354986072,
+            "toklen:5-6": -2.8022944198149293,
+            "toklen:>=7": -2.9157798634030883,
+            "hand:1": -2.9978868472680595,
+            "hand:2": -2.1477418549912937,
+            "hand:3": -3.3934575260957587,
+            "hand:4": -3.4948495139479157,
+            "hand:5": -1.5109417771965212
+          }
+        },
+        "L": {
+          "marginal_gain": -1.012483870049378,
+          "unique_gain": -0.6934047887159451,
+          "folio_wins": 4,
+          "n_folios": 85,
+          "folio_stability": 0.047058823529411764,
+          "unique_gain_subsets": {
+            "currier:A": -0.6778670390550836,
+            "currier:B": -0.6672349710191305,
+            "section:B": -0.5792625894567376,
+            "section:H": -0.6854324358959225,
+            "section:P": -0.6274487492286838,
+            "section:S": -0.7483346670772377,
+            "linelen:short": -0.9249443185995965,
+            "linelen:medium": -0.5868429959464727,
+            "linelen:long": -0.6030321629193836,
+            "toklen:<=4": -0.79696729672159,
+            "toklen:5-6": -0.6438334584193193,
+            "toklen:>=7": -0.6070351354208512,
+            "hand:1": -0.6778670390550836,
+            "hand:2": -0.6044905873989688,
+            "hand:3": -0.7431937294451565,
+            "hand:4": -1.7013803226891788,
+            "hand:5": 0.041532029232190126
+          }
+        },
+        "C": {
+          "marginal_gain": -0.48855084916234937,
+          "unique_gain": -0.17973414214230132,
+          "folio_wins": 25,
+          "n_folios": 85,
+          "folio_stability": 0.29411764705882354,
+          "unique_gain_subsets": {
+            "currier:A": -0.05976960525320507,
+            "currier:B": -0.23999335993924475,
+            "section:B": -0.3650306705416444,
+            "section:H": -0.1033809654984772,
+            "section:P": -0.12911046837409046,
+            "section:S": -0.14925514600890466,
+            "linelen:short": -0.18345707251448573,
+            "linelen:medium": -0.0761911155242494,
+            "linelen:long": -0.2615064509876426,
+            "toklen:<=4": -0.1465519466878149,
+            "toklen:5-6": -0.2302792651572183,
+            "toklen:>=7": -0.12399366975325066,
+            "hand:1": -0.05976960525320507,
+            "hand:2": -0.3538699338052069,
+            "hand:3": -0.1390249237879715,
+            "hand:4": 0.041710702000870015,
+            "hand:5": 0.5265366171147079
+          }
+        }
+      }
+    }
+  },
+  "null_N0_within_line": {
+    "models": {
+      "B0": {
+        "dev_prequential_bits_per_token": 17.840390733357545,
+        "holdout_bits_per_token": 16.111120756144345,
+        "model_bits": 1.0,
+        "holdout_total_bits_per_token": 16.111191537571298
+      },
+      "B0+S": {
+        "dev_prequential_bits_per_token": 22.470400295434217,
+        "holdout_bits_per_token": 20.388976169842014,
+        "model_bits": 3.0,
+        "holdout_total_bits_per_token": 20.389188514122875
+      },
+      "B0+L": {
+        "dev_prequential_bits_per_token": 19.512526421948394,
+        "holdout_bits_per_token": 17.49947568444199,
+        "model_bits": 3.0,
+        "holdout_total_bits_per_token": 17.49968802872285
+      },
+      "B0+C": {
+        "dev_prequential_bits_per_token": 18.28862146664088,
+        "holdout_bits_per_token": 16.55241165685779,
+        "model_bits": 6.0,
+        "holdout_total_bits_per_token": 16.55283634541951
+      },
+      "B0+S+L": {
+        "dev_prequential_bits_per_token": 23.39197087978783,
+        "holdout_bits_per_token": 21.30645159446705,
+        "model_bits": 3.0,
+        "holdout_total_bits_per_token": 21.30666393874791
+      },
+      "B0+S+C": {
+        "dev_prequential_bits_per_token": 22.330256459401426,
+        "holdout_bits_per_token": 20.43379083738231,
+        "model_bits": 6.0,
+        "holdout_total_bits_per_token": 20.434215525944033
+      },
+      "B0+L+C": {
+        "dev_prequential_bits_per_token": 19.727761191429924,
+        "holdout_bits_per_token": 17.84357360121703,
+        "model_bits": 6.0,
+        "holdout_total_bits_per_token": 17.843998289778753
+      },
+      "B0+S+L+C": {
+        "dev_prequential_bits_per_token": 23.04808457335535,
+        "holdout_bits_per_token": 21.220578272188824,
+        "model_bits": 8.0,
+        "holdout_total_bits_per_token": 21.22114452360445
+      },
+      "B1": {
+        "dev_prequential_bits_per_token": 15.735035356719518,
+        "holdout_bits_per_token": 14.42168188063299,
+        "model_bits": 724.8677165937281,
+        "holdout_total_bits_per_token": 14.472989051966069
+      },
+      "B1+S": {
+        "dev_prequential_bits_per_token": 19.717162345665084,
+        "holdout_bits_per_token": 17.721614929810546,
+        "model_bits": 726.8677165937281,
+        "holdout_total_bits_per_token": 17.77306366399753
+      },
+      "B1+L": {
+        "dev_prequential_bits_per_token": 17.076757905132773,
+        "holdout_bits_per_token": 15.487129191519562,
+        "model_bits": 726.8677165937281,
+        "holdout_total_bits_per_token": 15.538577925706548
+      },
+      "B1+C": {
+        "dev_prequential_bits_per_token": 16.280942262166636,
+        "holdout_bits_per_token": 14.917649991385215,
+        "model_bits": 729.8677165937281,
+        "holdout_total_bits_per_token": 14.969311069853061
+      },
+      "B1+S+L": {
+        "dev_prequential_bits_per_token": 20.668666906584946,
+        "holdout_bits_per_token": 18.532992447458415,
+        "model_bits": 726.8677165937281,
+        "holdout_total_bits_per_token": 18.5844411816454
+      },
+      "B1+S+C": {
+        "dev_prequential_bits_per_token": 19.79587685276248,
+        "holdout_bits_per_token": 17.946369268038687,
+        "model_bits": 729.8677165937281,
+        "holdout_total_bits_per_token": 17.998030346506532
+      },
+      "B1+L+C": {
+        "dev_prequential_bits_per_token": 17.44872410579833,
+        "holdout_bits_per_token": 15.91748489071563,
+        "model_bits": 729.8677165937281,
+        "holdout_total_bits_per_token": 15.969145969183476
+      },
+      "B1+S+L+C": {
+        "dev_prequential_bits_per_token": 20.570264089653154,
+        "holdout_bits_per_token": 18.652506197140667,
+        "model_bits": 731.8677165937281,
+        "holdout_total_bits_per_token": 18.70430883846242
+      }
+    },
+    "contrasts": {
+      "B0": {
+        "S": {
+          "marginal_gain": -4.277855413697669,
+          "unique_gain": -3.377004670971793,
+          "folio_wins": 0,
+          "n_folios": 85,
+          "folio_stability": 0.0,
+          "unique_gain_subsets": {
+            "currier:A": -3.687743669602689,
+            "currier:B": -3.247180117286508,
+            "section:B": -2.193077983774387,
+            "section:H": -3.440844422581005,
+            "section:P": -3.9790912322315286,
+            "section:S": -3.8074571521835097,
+            "linelen:short": -3.1544008424421115,
+            "linelen:medium": -3.570838492754241,
+            "linelen:long": -3.3892009576985984,
+            "toklen:<=4": -3.471890456797947,
+            "toklen:5-6": -3.336663027153815,
+            "toklen:>=7": -3.285654793345433,
+            "hand:1": -3.687743669602689,
+            "hand:2": -2.6897821534394897,
+            "hand:3": -3.7871613131477417,
+            "hand:4": -3.1492685806981804,
+            "hand:5": -4.452446461654603
+          }
+        },
+        "L": {
+          "marginal_gain": -1.3883549282976446,
+          "unique_gain": -0.7867874348065129,
+          "folio_wins": 3,
+          "n_folios": 85,
+          "folio_stability": 0.03529411764705882,
+          "unique_gain_subsets": {
+            "currier:A": -0.8092298349264375,
+            "currier:B": -0.7690738789318452,
+            "section:B": -0.7650167520230902,
+            "section:H": -0.8147391443989775,
+            "section:P": -0.8023591897407201,
+            "section:S": -0.759162557050896,
+            "linelen:short": -0.9295226725988179,
+            "linelen:medium": -0.8270266538645039,
+            "linelen:long": -0.6444991298398506,
+            "toklen:<=4": -0.9889365151313037,
+            "toklen:5-6": -0.7479166239183357,
+            "toklen:>=7": -0.47888621256226926,
+            "hand:1": -0.8092298349264375,
+            "hand:2": -0.7808978360315812,
+            "hand:3": -0.7567967928219019,
+            "hand:4": -1.0247329734291277,
+            "hand:5": -0.7892813820222173
+          }
+        },
+        "C": {
+          "marginal_gain": -0.4412909007134438,
+          "unique_gain": 0.08587332227822486,
+          "folio_wins": 48,
+          "n_folios": 85,
+          "folio_stability": 0.5647058823529412,
+          "unique_gain_subsets": {
+            "currier:A": 0.15603261913809874,
+            "currier:B": 0.04211889187042672,
+            "section:B": -0.10188417957946427,
+            "section:H": 0.20670671660036533,
+            "section:P": -0.028877689083614655,
+            "section:S": 0.12744965105758865,
+            "linelen:short": 0.29296534329225565,
+            "linelen:medium": 0.04494421595830289,
+            "linelen:long": -0.039402918381270524,
+            "toklen:<=4": 0.08140157219443012,
+            "toklen:5-6": 0.09554856449340932,
+            "toklen:>=7": 0.07147031217103716,
+            "hand:1": 0.15603261913809874,
+            "hand:2": -0.11153105718058853,
+            "hand:3": 0.1505260408957625,
+            "hand:4": 0.4751309468937883,
+            "hand:5": 2.62482291877976
+          }
+        }
+      },
+      "B1": {
+        "S": {
+          "marginal_gain": -3.2999330491775556,
+          "unique_gain": -2.735021306425038,
+          "folio_wins": 0,
+          "n_folios": 85,
+          "folio_stability": 0.0,
+          "unique_gain_subsets": {
+            "currier:A": -2.9080967438951717,
+            "currier:B": -2.6580758827205653,
+            "section:B": -1.7438081892228556,
+            "section:H": -2.765016790743278,
+            "section:P": -3.03502461196973,
+            "section:S": -3.1546238863716063,
+            "linelen:short": -2.604401118715149,
+            "linelen:medium": -2.9119696516641547,
+            "linelen:long": -2.690516378081675,
+            "toklen:<=4": -2.7826133054274074,
+            "toklen:5-6": -2.618183093558894,
+            "toklen:>=7": -2.9216792305898096,
+            "hand:1": -2.9080967438951717,
+            "hand:2": -2.179134099608156,
+            "hand:3": -3.118426222421185,
+            "hand:4": -2.749625694009204,
+            "hand:5": -3.8954809595421303
+          }
+        },
+        "L": {
+          "marginal_gain": -1.0654473108865723,
+          "unique_gain": -0.7061369291019801,
+          "folio_wins": 1,
+          "n_folios": 85,
+          "folio_stability": 0.011764705882352941,
+          "unique_gain_subsets": {
+            "currier:A": -0.7396273895994803,
+            "currier:B": -0.6733497419794752,
+            "section:B": -0.6617698471790767,
+            "section:H": -0.7625418205669092,
+            "section:P": -0.6310203096305678,
+            "section:S": -0.6841613115663705,
+            "linelen:short": -0.8800130194445401,
+            "linelen:medium": -0.7550631612981178,
+            "linelen:long": -0.5328805234124694,
+            "toklen:<=4": -0.8829136174266772,
+            "toklen:5-6": -0.6580067441693771,
+            "toklen:>=7": -0.4709047560663464,
+            "hand:1": -0.7396273895994803,
+            "hand:2": -0.6655611286043346,
+            "hand:3": -0.6821167721726127,
+            "hand:4": -1.2550825359005202,
+            "hand:5": -0.6222024305958698
+          }
+        },
+        "C": {
+          "marginal_gain": -0.4959681107522247,
+          "unique_gain": -0.11951374968225181,
+          "folio_wins": 33,
+          "n_folios": 85,
+          "folio_stability": 0.38823529411764707,
+          "unique_gain_subsets": {
+            "currier:A": -0.0639448460038956,
+            "currier:B": -0.15316133188783354,
+            "section:B": -0.2799518328262618,
+            "section:H": -0.030324518149299706,
+            "section:P": -0.20631465867906584,
+            "section:S": -0.06522428703894434,
+            "linelen:short": 0.01537153865733032,
+            "linelen:medium": -0.13748618792299183,
+            "linelen:long": -0.20820896126477706,
+            "toklen:<=4": -0.13818338004546504,
+            "toklen:5-6": -0.11239847870388076,
+            "toklen:>=7": -0.09956096217796073,
+            "hand:1": -0.0639448460038956,
+            "hand:2": -0.2868595905648945,
+            "hand:3": -0.045954592530979,
+            "hand:4": 0.15804776573601842,
+            "hand:5": 1.3776389468990224
+          }
+        }
+      }
+    }
+  },
+  "verdicts": {
+    "B0": {
+      "S": {
+        "verdict": "NOT_INFORMATIVE",
+        "criteria": {
+          "1_marginal_ge_0.05": false,
+          "2_unique_ge_0.05": false,
+          "3_folio_stability_ge_2/3": false,
+          "4_currier_A_and_B_positive": false,
+          "5_exceeds_N1_by_0.05": true
+        },
+        "unique_gain_N1": -3.529789588381856
+      },
+      "L": {
+        "verdict": "NOT_INFORMATIVE",
+        "criteria": {
+          "1_marginal_ge_0.05": false,
+          "2_unique_ge_0.05": false,
+          "3_folio_stability_ge_2/3": false,
+          "4_currier_A_and_B_positive": false,
+          "5_exceeds_N1_by_0.05": true
+        },
+        "unique_gain_N1": -0.7817952073191421
+      },
+      "C": {
+        "verdict": "NOT_INFORMATIVE",
+        "criteria": {
+          "1_marginal_ge_0.05": false,
+          "2_unique_ge_0.05": false,
+          "3_folio_stability_ge_2/3": false,
+          "4_currier_A_and_B_positive": false,
+          "5_exceeds_N1_by_0.05": false
+        },
+        "unique_gain_N1": -0.027474665961261024
+      }
+    },
+    "B1": {
+      "S": {
+        "verdict": "NOT_INFORMATIVE",
+        "criteria": {
+          "1_marginal_ge_0.05": false,
+          "2_unique_ge_0.05": false,
+          "3_folio_stability_ge_2/3": false,
+          "4_currier_A_and_B_positive": false,
+          "5_exceeds_N1_by_0.05": true
+        },
+        "unique_gain_N1": -2.845629926546465,
+        "base_dependent": false
+      },
+      "L": {
+        "verdict": "NOT_INFORMATIVE",
+        "criteria": {
+          "1_marginal_ge_0.05": false,
+          "2_unique_ge_0.05": false,
+          "3_folio_stability_ge_2/3": false,
+          "4_currier_A_and_B_positive": false,
+          "5_exceeds_N1_by_0.05": true
+        },
+        "unique_gain_N1": -0.6934047887159451,
+        "base_dependent": false
+      },
+      "C": {
+        "verdict": "NOT_INFORMATIVE",
+        "criteria": {
+          "1_marginal_ge_0.05": false,
+          "2_unique_ge_0.05": false,
+          "3_folio_stability_ge_2/3": false,
+          "4_currier_A_and_B_positive": false,
+          "5_exceeds_N1_by_0.05": false
+        },
+        "unique_gain_N1": -0.17973414214230132,
+        "base_dependent": false
+      }
+    }
+  },
+  "hypothesis_outcomes": {
+    "H011": "NOT_INFORMATIVE",
+    "H012": "NOT_INFORMATIVE",
+    "H013": "NOT_INFORMATIVE"
+  },
+  "family_readout": {
+    "copy_modify_generator_signature": false,
+    "sequential_dependency_signature": false,
+    "line_as_unit_signature": false,
+    "note": "Ordinal readout only (PLAN \u00a79); not a decision between language, cipher or generator."
+  },
+  "best_model_by_holdout_total_bits": "B1",
+  "sensitivity_natural_order_dev_B1_holdout_bits_per_token": {
+    "B1": 14.42168188063299,
+    "B1+S": 16.73791450827695,
+    "B1+L": 15.002718301090395,
+    "B1+C": 14.907828735028103,
+    "B1+S+L": 17.15804542236388,
+    "B1+S+C": 17.051212801978554,
+    "B1+L+C": 15.457070834295315,
+    "B1+S+L+C": 17.41121637924067
+  },
+  "claim_ceiling": "Structural predictive-information claims only; no morphemes/language/cipher/hoax/meaning."
+}

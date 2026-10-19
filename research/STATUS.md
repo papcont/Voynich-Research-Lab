@@ -63,13 +63,19 @@ relabel E007. Non-prospective (P70 built on the whole VMS). Structural only.
 
 Previous: E006 INCONCLUSIVE_UNDERPOWERED (H008 unresolved; no tuning).
 
-Next frontier: **E008 stage A** — mechanism tournament (**PLAN_FROZEN**
-2026-10-19). Sixteen models = {whole token, P70 slots} × {S edge state, L line
-position, C local copy/modify}; one KT scorecard; dev→holdout frozen counts on
-the E007 split; within-folio shuffle null; per-component INFORMATIVE /
-NOT_INFORMATIVE / MIXED verdicts for H011–H013. Family readout ordinal only;
-stage B (reference corpora, Naibbe, self-citation generator, epilectrik grammar)
-deferred to its own preregistration. No E008 target computed.
+**E008 stage A complete — ALL_COMPONENTS_NOT_INFORMATIVE** (first reveal
+2026-10-19; `validate.py` pass). On the frozen no-backoff KT scorecard, adding
+edge state S, line position L or local copy/modify C to the P70 base *costs*
+1.95 / 0.36 / 0.25 bits/token on the holdout (B1 = 14.42). S and L still beat
+the within-folio shuffle by 0.89 / 0.33 (information exists, fragmentation
+dominates); C equals the shuffle (no locality-specific copying at W ≤ 5).
+H011–H013 falsified as predictive components under this scorecard; H003 (prefix
+given previous final) is untested by E008. Lesson: codelength tests of
+conditioning hypotheses need a backoff coder and slot-targeted conditioning
+(E011 draft).
+
+Next frontier: Gate v2 protocol amendment (human-approved 2026-10-19), then
+freeze E011.
 
 ## External landscape check (2026-10-19)
 

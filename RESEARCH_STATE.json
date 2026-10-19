@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-19T21:10:00Z",
-  "status": "PLAN_FROZEN",
-  "active_experiment": "E008_mechanism_competition",
-  "next_action": "Implement frozen E008 stage A PLAN.md without changing frozen choices: run.py (population + line features, 16 models {B0,B1}x{S,L,C}, W selection on development only, dev->holdout frozen-count scoring, folio stability, Currier subsets, nulls N1/N0, descriptive confounds) and validate.py (independent coder + copy/edit search). Write results.json before REPORT.md. Resolve any open implementation detail in a committed PREFLIGHT_AMENDMENT before the first holdout coding. Then update ledger (H011-H013), STATUS, RESUME, state.",
+  "updated_utc": "2026-10-19T22:10:00Z",
+  "status": "READY_TO_FREEZE_PLAN",
+  "active_experiment": "E011_targeted_context_scorecard",
+  "next_action": "(1) Human-approved: write versioned Gate v2 amendment to RESEARCH_PROTOCOL.md with machine-readable spec, gate implementation, synthetic positive/negative tests, holdout registry/lockbox audit, reproducible report; do not reinterpret E006-E008. (2) Then audit experiments/E011_targeted_context_scorecard/PLAN_DRAFT.md and freeze PLAN.md (backoff scorecard, slot-targeted conditioning, Gate v2 compression protocol) without computing targets.",
   "blocked_reason": null,
-  "last_completed_experiment": "E007_p70_replication",
-  "last_completed_result": "REPRODUCED_BUT_NOT_VALIDATED",
+  "last_completed_experiment": "E008_mechanism_competition",
+  "last_completed_result": "ALL_COMPONENTS_NOT_INFORMATIVE",
   "scientific_claim_ceiling": "Structural evidence only; no plaintext, language or semantic decipherment claim.",
   "auto_advance": true
 }
