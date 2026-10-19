@@ -85,5 +85,7 @@
   ],
   "claim_ceiling": "Structural predictive-information claims only; no morphemes/language/cipher/hoax/meaning.",
   "stage_B": "DEFERRED: reference corpora (Latin/Italian), Naibbe reimplementation, self-citation generator, epilectrik grammar; separate preregistration with provenance/hash/license.",
-  "amendments": []
+  "amendments": [
+    "PREFLIGHT_AMENDMENT_001.md"
+  ]
 }
