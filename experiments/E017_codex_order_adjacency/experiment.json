@@ -1,0 +1,43 @@
+{
+  "experiment_id": "E017",
+  "name": "codex_order_adjacency",
+  "status": "PLAN_FROZEN",
+  "evidence_class": "DEVELOPMENT",
+  "gate_level_claimable": "none",
+  "hypotheses": {
+    "H025b": "adjacent same-stratum folios share vocabulary beyond an order-permutation null",
+    "H026": "same-leaf (recto->verso) pairs share more than facing-page pairs"
+  },
+  "inputs": [
+    {
+      "source": "data/raw/ZL3b-n.txt",
+      "identity": "upstream_git_blob_sha1:2a4533ab9bdfa85db9bad602d590978953055df1",
+      "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+    }
+  ],
+  "nulls": {
+    "order_permutation": {
+      "seed": 20261060,
+      "n": 1000
+    },
+    "pair_type_label_permutation": {
+      "seed": 20261061,
+      "n": 1000
+    }
+  },
+  "decision": {
+    "H025b": "SUPPORTED_DEV iff dJ>=0.01 and p<=0.01 and dJ>0 in A and in B; FALSIFIED_DEV iff null q97.5>=J_adj",
+    "H026": "SUPPORTED_DEV iff D>=0.01 and p<=0.01; FALSIFIED_DEV iff null q97.5>=D or D<0"
+  },
+  "pre_result_predictions": {
+    "H025b": "SUPPORTED_DEV ~0.01 both languages",
+    "H026": "SUPPORTED_DEV moderate confidence"
+  },
+  "sha256": {
+    "inputs": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "config": "daf31b74908f020d2010731e961b433e29a1610fb0e5ec22b42c3af019194ecb",
+    "predictions": "d265de59ef155f266a0980f819f2401ffa8ac5c3a34af31916420e1616f48a93"
+  },
+  "claim_ceiling": "Vocabulary distribution along the current folio order; no quire/binding/meaning claims.",
+  "amendments": []
+}
