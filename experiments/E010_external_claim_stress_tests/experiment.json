@@ -76,5 +76,7 @@
     "predictions": "5a7b71dc9e9229771327cb4c443256834b23a0ee357ec0096c9c514ccd74c6d7"
   },
   "claim_ceiling": "Structural, development-stage; upstream interpretations not evaluated or adopted.",
-  "amendments": []
+  "amendments": [
+    "PREFLIGHT_AMENDMENT_001.md"
+  ]
 }
