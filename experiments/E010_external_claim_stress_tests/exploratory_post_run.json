@@ -1,0 +1,11 @@
+{
+  "evidence_class": "EXPLORATORY_POST_RUN",
+  "gated": false,
+  "bits_per_token_out_of_fold_B": {
+    "W0": 15.294378148560597,
+    "W_class": 17.4354638498697,
+    "W_classprev": 17.435979501869856
+  },
+  "reference_M_Sfam": 13.565749755016954,
+  "reference_M_class_frozen_shape": 16.628289836751183
+}

@@ -47,23 +47,25 @@ The stronger claim — same underlying unit sequence — has **not passed a cont
 
 ## Current frontier
 
-**E011 complete (development-stage).** Under a backoff universal coder, conditioning the
-P70 prefix slot on the previous token's final glyph lowers out-of-fold description length by
-**0.088 bits/token** (folio-mean, CI 0.073–0.102; Currier A +0.035, B +0.166; feature-permuted
-null −0.004; token-permutation control removes the gain) → **H014 SUPPORTED_DEV**. Line
-position (prefix+suffix) raises it (−0.026, CI −0.042..−0.011) → **H015 FALSIFIED_DEV**.
-All-slot conditioning (E008 shape) loses 0.69 even with backoff: slot targeting matters.
-New strongest structural null for the running-text development pool: **M_Sfam 13.813 /
-M_S 13.829** bits/token vs plain P70 13.967 (`research/gate/registered_nulls.json`).
-No Gate v2 level is claimable (every ZL3b running-text folio has a SELECTION role).
+**E010 complete.** epilectrik's boundary glyph coupling reproduces on our pipeline to within
+0.002 bits (0.2548 all / 0.2134 definite vs 0.256 / 0.215) and their class table covers
+71.3% of B tokens (published 69.5%). Under the E011 scorecard on Currier B their refinements
+add nothing: glyph units vs EVA characters −0.0007, last two units +0.0012, and the 49-class
+table costs 3.08 bits/token (class → class transitions add nothing). H016–H018 falsified
+(development-stage). Upstream's measurement is solid; its grammar is not predictive.
+
+**E011 complete (development-stage).** Prefix slot | previous final glyph: +0.088 bits/token
+(CI 0.073–0.102; B +0.166 > A +0.035; permutation control removes it) → H014 SUPPORTED_DEV;
+line position −0.026 → H015 FALSIFIED_DEV. Registered strongest structural null for the
+running-text development pool: M_Sfam 13.813 / M_S 13.829 vs P70 13.967.
 
 Earlier: E008 stage A ALL_COMPONENTS_NOT_INFORMATIVE (no-backoff scorecard; see REPORT);
 E007 REPRODUCED_BUT_NOT_VALIDATED; E006 INCONCLUSIVE_UNDERPOWERED.
 
-Next frontier: **E010** (PLAN_FROZEN) — epilectrik's Currier-B claims as external structural
-competitor: reproduce their boundary coupling, then test glyph-unit edge features and their
-49-class table under the E011 scorecard (development-stage). **E012** (reference-text
-signature comparison, stage B) is drafted and waits for the human corpus/licence decision.
+Next frontier: **E013** — the first Gate v2 lockbox claim: P70 four-slot structural model vs
+the whole-token null on `LOCKBOX_NONRUNNING_V1` (labels/circular/radial, 710 tokens, 39
+folios, INDEPENDENT; never coded by any experiment), margin calibrated on running text.
+**E012** (reference-text signature comparison) still waits for the human corpus decision.
 
 ## External landscape check (2026-10-19)
 

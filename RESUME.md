@@ -30,11 +30,13 @@ Retained structural observations:
 
 ## Last completed experiment
 
-`E011_targeted_context_scorecard` — **COMPLETED (development-stage): H014 SUPPORTED_DEV, H015 FALSIFIED_DEV** (plan `24dc8c7`; validator pass; Gate v2 claim record correctly refused — development pool). Prefix slot | previous final glyph: +0.088 bits/token folio-mean (CI 0.073–0.102; B +0.166 > A +0.035; null −0.004; permutation control kills it). Line position (prefix+suffix): −0.026 (CI upper < margin). M_Sall (all slots) −0.69. New strongest structural null M_Sfam (13.813) / M_S (13.829) vs P70 plain 13.967, registered in `research/gate/registered_nulls.json`. Exploratory: 28% of the S gain is line-initial, 22% y → (qo). See `REPORT.md`.
+`E010_external_claim_stress_tests` — **COMPLETED**: R1 REPRODUCED (epilectrik boundary coupling 0.2548/0.2134 vs published 0.256/0.215; class coverage 71.3% vs 69.5%); H016 (glyph units) −0.0007, H017 (two units) +0.0012, H018 (49-class table) −3.085 bits/token → all FALSIFIED_DEV on Currier B under the E011 scorecard. Validator pass. See `REPORT.md`.
+
+Before that: `E011` (H014 SUPPORTED_DEV +0.088; H015 FALSIFIED_DEV; null M_Sfam registered), `E008` (all components NOT_INFORMATIVE under the no-backoff scorecard), `E007` (REPRODUCED_BUT_NOT_VALIDATED), `E006` (INCONCLUSIVE_UNDERPOWERED).
 
 ## Active frontier
 
-`E010_external_claim_stress_tests` — **PLAN_FROZEN** (`experiments/E010_external_claim_stress_tests/PLAN.md`). Upstream `epilectrik/voynich` @ `ff399c44` (read-only clone in git-ignored `.external/`, nothing copied). R1: reproduce their ZL3b boundary glyph coupling (0.215 definite / 0.256 all; their regex and shuffle-corrected MI) on our pipeline, ±0.03. R2 (Currier B, E011 scorecard, development-stage): H016 glyph-unit vs EVA-character edge feature; H017 last two units ("word-ending routing"); H018 their 49-class table (fixed external input, sha256 `338892c0…`) as class | previous class vs M_Sfam. Pre-result predictions and retraction conditions in PLAN §2/§4. Next action: implement run.py/validate.py; results before report.
+`E013` — **READY_TO_FREEZE_PLAN**: first Gate v2 lockbox claim. Candidate = P70 layer-A four-slot model (plain KT, frozen since E007); null = whole-token KT (to be registered for the non-running pool); lockbox = `LOCKBOX_NONRUNNING_V1` (710 label/circular/radial tokens on 39 folios, INDEPENDENT — never coded by any experiment); development = running-text pool for margin calibration (P70 beat whole-token by 1.87 bits/token prequentially in E007; provisional margin 0.5); E007 competitors A5/A6/A7/A8 reported, with a preregistered stricter rule that P70 must also beat each of them. Claim record + `scripts/gate_report.py`; expected level if it passes: `STRUCTURAL_MODEL_VALIDATED` (level 1 only). Freeze PLAN.md, register sha256, then run once.
 
 `E012_reference_signature` (stage B) remains a DRAFT **pending your decision** on corpora/licences, network use and the generator/cipher set.
 

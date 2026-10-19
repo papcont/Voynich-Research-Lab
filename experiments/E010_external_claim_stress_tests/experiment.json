@@ -1,7 +1,7 @@
 {
   "experiment_id": "E010",
   "name": "external_claim_stress_tests_epilectrik",
-  "status": "PLAN_FROZEN",
+  "status": "COMPLETED",
   "evidence_class": {
     "R1": "EXTERNAL_REPLICATION/REPRODUCTION",
     "R2": "DEVELOPMENT_CROSSFIT"
@@ -78,5 +78,13 @@
   "claim_ceiling": "Structural, development-stage; upstream interpretations not evaluated or adopted.",
   "amendments": [
     "PREFLIGHT_AMENDMENT_001.md"
-  ]
+  ],
+  "result": "results.json",
+  "decisions": {
+    "R1": "REPRODUCED",
+    "H016": "FALSIFIED_DEV",
+    "H017": "FALSIFIED_DEV",
+    "H018": "FALSIFIED_DEV"
+  },
+  "exploratory_post_run": "exploratory_post_run.json (not gated; hapax double-escape caveat)"
 }
