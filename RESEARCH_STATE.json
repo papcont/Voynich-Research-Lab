@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-20T15:40:00Z",
+  "updated_utc": "2026-10-20T16:00:00Z",
   "status": "BLOCKED",
   "active_experiment": "E021_selective_boundaries",
-  "next_action": "Await the two human decisions (confirmation surface / SEMI_INDEPENDENT tier; Borg approval for E012-B). The corpus-free mechanism programme has reached its registered quantitative target (see SYNTHESIS addendum); further progress needs the Borg real-cipher/Latin-recipe material or a confirmation surface.",
+  "next_action": "Await the two human decisions: (1) A002 proposal (approve/modify/reject); (2) Borg approval for E012-B. Decision-free work of value is exhausted; low-priority: A6-vs-P70 label follow-up.",
   "blocked_reason": null,
   "last_completed_experiment": "E021_selective_boundaries",
   "last_completed_result": "H031_PARTIAL;H032_FALSIFIED;H033_FALSIFIED",
@@ -11,7 +11,7 @@
   "auto_advance": true,
   "gate_version": "2.0.0",
   "pending_human_decisions": {
-    "confirmation_surface": "register outside data or amend A001 with a SEMI_INDEPENDENT tier or accept development-stage-only (A001 errata 1-2)",
+    "confirmation_surface": "CONCRETE PROPOSAL drafted (not in force): research/protocol_amendments/A002_PROPOSAL_semi_independent_tier.md \u2014 candidate-specific contamination; SEMI_INDEPENDENT lockboxes admissible for levels 1-2 only under registration/log conditions; levels 3-5 still need INDEPENDENT data. Approve / modify / reject.",
     "E012_reference_signature": "E012-B: approve local analysis use of linked_only Borg plaintext + ciphertext (never committed); otherwise E012-B runs only verbose-cipher transforms of the open texts."
   }
 }

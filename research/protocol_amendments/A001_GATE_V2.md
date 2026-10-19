@@ -151,3 +151,7 @@ fail at the right level.
    section/illustration confounds must be controlled in the registration.
 6. The gate validates claim *records*; it cannot verify that the numbers in a record were
    produced honestly. Reproduction scripts and hashes are required for that, as before.
+
+---
+
+*2026-10-20: a proposal to refine §4 with candidate-specific contamination and a semi-independent tier is drafted in `A002_PROPOSAL_semi_independent_tier.md`; it is not in force.*

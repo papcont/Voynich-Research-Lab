@@ -38,7 +38,7 @@ Before: `E020`, `E019`, `E012`, `E018`, `E017`, `E016`, `E015`, `E014`, `E013`, 
 
 ## Active frontier — BLOCKED on two human decisions
 
-1. **Confirmation surface.** Under the folio rule ZL3b has no independent lockbox for any claim. Options: (a) register data from outside ZL3b (a transliteration with independent readings — IT2a/GC if reachable — or newly transcribed material); (b) amend A001 with an explicit SEMI_INDEPENDENT tier (registration flag, not FAIL) for candidates demonstrably not developed on the overlapping folios; (c) accept that all ZL3b results stay development-stage.
+1. **Confirmation surface.** Under the folio rule ZL3b has no independent lockbox for any claim. A concrete proposal is drafted, **not in force**: `research/protocol_amendments/A002_PROPOSAL_semi_independent_tier.md` (candidate-specific contamination; SEMI_INDEPENDENT lockboxes for levels 1–2 only, under registration and development-log conditions; levels 3–5 still need new data). Approve, modify, or reject (= keep A001 strict).
 2. **E012-B (Borg)** — the open-rights texts are done; only the `linked_only` Borg material (17th-c. Latin pharmaceutical recipes + its real simple-substitution ciphertext, in the pinned `cipher_benchmark` clone) awaits your approval for local analysis use. It is the closest available analogue to the manuscript's subject matter and the only real historical cipher with known plaintext in hand.
 
 Development-stage work that needs no decision: an A6-vs-P70 label-text follow-up (small). Everything else of value now needs one of the two decisions (corpora for E012; a confirmation surface or collation data).
