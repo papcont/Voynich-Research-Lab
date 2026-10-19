@@ -1,5 +1,7 @@
 # Current research status
 
+Narrative synthesis of E006–E020: `SYNTHESIS_2026-10-20.md`.
+
 ## Claim ceiling
 
 **Structural analysis only. No accepted plaintext, language identification, phonetic key or semantic lexicon.**

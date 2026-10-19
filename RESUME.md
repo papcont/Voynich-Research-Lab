@@ -2,6 +2,8 @@
 
 ## Read order
 
+(Programme synthesis as of 2026-10-20: `research/SYNTHESIS_2026-10-20.md`.)
+
 1. `CLAUDE.md`
 2. `RESEARCH_STATE.json`
 3. `RESEARCH_PROTOCOL.md`
