@@ -73,8 +73,10 @@ The most useful current upstreams are:
 
 - `daito-dot/LETSGO-Voynich` — falsification/prospective-research workflow and deterministic handoff.
 - `yodakohl/VManus` — experiment manifests, preflight validation, provenance and guarded/sealed-data workflow.
-- `digitalgoldfisj79/Voynichdecomp` — directly relevant 4-slot decomposition hypothesis; independently reproduce and test it.
-- `Halkosuoja/Voynich-Deshuffling-Matrix` — concrete Latin/deshuffling claim; use as a falsifiable competitor, not an accepted decode.
+- `digitalgoldfisj79/Voynichdecomp` — the P70 4-slot decomposition; reproduced and benchmarked in E007 (REPRODUCED_BUT_NOT_VALIDATED).
+- `epilectrik/voynich` — Currier-B boundary-coupling measurement (reproduced in E010) and a 49-class grammar (not predictive, E010).
+- `matthewdgreen/cipher_benchmark` — source of our ZL3b file and of open-rights reference plaintexts and real historical ciphertexts (E012).
+- `Halkosuoja/Voynich-Deshuffling-Matrix` — unreachable since 2026-10-19 (404 / auth); E009 needs a human provenance decision.
 
 ## Data policy
 
@@ -82,6 +84,21 @@ Do not commit third-party manuscript images or transcriptions unless redistribut
 
 The primary transcription target is ZL3b / EVA v3b dated 2025-05-13. EVA labels glyph shapes; it is not a known phonetic alphabet.
 
-## Current frontier
+## Current frontier (2026-10-20)
 
-**E006 — canonical final-chain / attachment holdout test**.
+E006–E021 are complete (see `ROADMAP.md`); the narrative synthesis is
+`research/SYNTHESIS_2026-10-20.md`. Six validated structural components of the running
+text are recorded (four-slot token form; a cross-boundary coupling dominated by one
+probabilistic transition `y → qo`; no local copying; line homogeneity; folio-local
+vocabulary; weak codex-order locality), and simple generators, the epilectrik class
+grammar, natural prose at letter level and boundary-preserving or random-cut encodings are
+excluded as full accounts. **No decipherment is claimed and no Gate v2 level has been
+reached**: under the folio-as-dependency-unit rule ZL3b offers no independent lockbox
+(A001 §4, errata 1–2).
+
+Two human decisions are pending (`RESEARCH_STATE.json`, `RESUME.md`): the A002 proposal for
+a semi-independent confirmation tier, and approval of local analysis use of the Borg Latin
+recipe text and its real ciphertext (`experiments/E012_reference_signature/PLAN_DRAFT.md`).
+
+Promotion of any claim is governed by **Gate v2**: `research/protocol_amendments/A001_GATE_V2.md`,
+`research/gate/gate_v2.json`, `src/voynichlab/gate.py`, `scripts/gate_report.py`.
