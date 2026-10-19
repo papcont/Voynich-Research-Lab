@@ -8,7 +8,7 @@
 | E004 | HISTORICAL_EXPLORATORY | Module compatibility grammar |
 | E005 | HISTORICAL_EXPLORATORY | Attached vs spaced final discovery |
 | E006 | DONE — INCONCLUSIVE_UNDERPOWERED | Canonical final-chain holdout test |
-| **E007** | **PLAN_FROZEN** | Independent P70 grammar replication |
-| E008 | QUEUED | Mechanism tournament |
-| E009 | QUEUED | Deshuffling Matrix blind test |
+| E007 | DONE — REPRODUCED_BUT_NOT_VALIDATED | Independent P70 grammar replication |
+| **E008** | **READY_TO_FREEZE_PLAN** | Mechanism tournament |
+| E009 | QUEUED — provenance blocker (upstream unreachable) | Deshuffling Matrix blind test |
 | E010 | QUEUED | External decode-claim stress tests |

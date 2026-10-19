@@ -30,22 +30,13 @@ Retained structural observations:
 
 ## Last completed experiment
 
-`E006_canonical_sequence_holdout` — **COMPLETED, INCONCLUSIVE_UNDERPOWERED** (first reveal 2026-08-31, seed 20260831).
+`E007_p70_replication` — **COMPLETED, REPRODUCED_BUT_NOT_VALIDATED** (first reveal 2026-10-19; plan `2f77096`, amendments `d42d9f0`, `db81687`).
 
-On the frozen hash holdout (folds 3–4, 88 folios) only 1 k=2 canonical chain (`ok|al|or`) met the ≥2-fused-and-≥2-spaced threshold, below the preregistered power floor of 3. The frozen design computes no target JSD below that floor, so **H008 is unresolved** (neither supported nor falsified); N2 would also have been degenerate. See `experiments/E006_canonical_sequence_holdout/results.json` and `REPORT.md`. The revealed holdout must not be tuned (no widening grammar, no lowering thresholds); a powered retest needs a fresh preregistration.
+R1: our independent P70 layer-A parser reproduces the published structural values approximately on ZL3b. R2: P70 has the lowest prequential KT bits/token (15.03) against A0, A1, A2, A3, A5, A6, A7, A8 (+0.18 to +1.87), wins 5/5 cross-fitted folds and both Currier languages, but the frozen Gate 5 fails in major section P (A6 lower), so H009 is not supported under the frozen gate. An exploratory post-reveal check (`exploratory_post_reveal.json`) indicates an order artefact; it must not be used to relabel E007. See `experiments/E007_p70_replication/REPORT.md`.
 
 ## Active frontier
 
-`E007_p70_replication` — **status PLAN_FROZEN** (see `experiments/E007_p70_replication/PLAN.md` + `experiment.json`).
-
-Upstream `Voynichdecomp` audited @ `4f8a1117…`. Frozen design, three separated arms:
-- **R1** (`EXTERNAL_REPLICATION`): reimplement the published closed-inventory longest-match parser (layer A: 8 prefixes, 9 gallows, 33 suffixes/7 families, core=residual, ch/sh as prefixes) and check approximate reproduction of P70 structural values on ZL3b. The 210-rule `p70_rules_canonical.json` (layer B) is **not** implemented; `enriched_records` is **never** gold/training.
-- **R2** (`EXTERNAL_MODEL_EVALUATION`): primary = prequential KT description-length (bits/surface-token), identical estimator + char-escape for P70 and competitors A0–A8; gate = beat A0 and every non-deferred competitor by ≥0.05 bits/token (or lowest in ≥4/5 folds), not a complexity/fallback artefact, stable across Currier A/B. Outcomes: STRUCTURAL_SUPPORT / REPRODUCED_BUT_NOT_VALIDATED / REPRODUCTION_FAILURE / SPECIFICATION_AMBIGUITY.
-- **R3** (`TRANSFER`): DEFERRED (needs a genuinely independent transcription with provenance/hash).
-
-Honesty anchors: zero chain-rule residual is a mathematical identity, not evidence; P70 is **non-prospective** (built on the whole VMS), so the folio split is only a common comparison surface, never "validated holdout". No E007 target computed.
-
-**PREFLIGHT_AMENDMENT_001** (committed pre-reveal) fixed all open operationalizations: A8 = deterministic per-type sha256 cut with a development-only slot-length profile; **A4 = DEFERRED_PRE_REVEAL** (gate competitors = A0,A1,A2,A3,A5,A6,A7,A8); R1 tolerances (non-degenerate parse ≥85%, empty-core 52.7±10pp, total entropy 10.311±1.0; reconstruction/zero-residual descriptive only); model-cost = char-code of literal inventories + Elias-gamma ints; Gate-3 folds = 5-fold cross-fitted bits/token; Currier from ZL3b `$L` (A/B); major sections from ZL3b `$I` (tokens≥2000 & folios≥8 ⇒ {S,H,B,P}); running-text = paragraph `P*` loci (`loci.is_running_text`); P70 parse precedence in `p70.parse_p70`; KT coder in `mdl.KTCoder`. Helpers are fixture-tested; no corpus metric run. Next action: implement `run.py`/`validate.py` and perform the first reveal, writing `results.json` before `REPORT.md`.
+`E008_mechanism_competition` — **status READY_TO_FREEZE_PLAN**. Audit the one-line draft, then freeze an executable PLAN.md: common scorecard (E007 KT bits/token + model cost; order-free cross-fitted subset metric), competitor families N/C/G/M, P70 layer A as structural baseline, external mechanisms (Naibbe, epilectrik) only after independent reimplementation from pinned, license-checked sources. No targets before freeze.
 
 ## External check (2026-10-19)
 
@@ -57,11 +48,11 @@ must not be frozen without a human decision. New E008 candidates:
 
 ## Previously completed
 
+- `E007_p70_replication` — REPRODUCED_BUT_NOT_VALIDATED (Gate 5 section P miss; exploratory order artefact; non-prospective).
 - `E006_canonical_sequence_holdout` — INCONCLUSIVE_UNDERPOWERED (1 qualifying holdout chain < floor 3; H008 unresolved; no tuning of the revealed holdout).
 
-## After E006
+## Queue
 
-- E007 — independently reimplement and stress-test the P70 4-slot grammar.
 - E008 — common-scorecard competition between language/cipher/generator/state-module models.
 - E009 — independent blind implementation/test of the Deshuffling Matrix.
 - E010 — stress-test external full-decode claims without treating their glosses as truth.

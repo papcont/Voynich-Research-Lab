@@ -1,7 +1,7 @@
 {
   "experiment_id": "E007",
   "name": "p70_replication",
-  "status": "PLAN_FROZEN",
+  "status": "COMPLETED",
   "amendments": [
     "PREFLIGHT_AMENDMENT_001.md",
     "PREFLIGHT_AMENDMENT_002.md"
@@ -148,5 +148,8 @@
   },
   "a8_seed": 20260907,
   "claim_ceiling": "Reproducible four-slot structural factorization that generalizes better than tested alternatives; NOT morphemes/language/decipherment.",
-  "enriched_records_policy": "never training labels or gold; optional published-reference-output cross-check only after our parser is frozen"
+  "enriched_records_policy": "never training labels or gold; optional published-reference-output cross-check only after our parser is frozen",
+  "result": "results.json",
+  "decision": "REPRODUCED_BUT_NOT_VALIDATED",
+  "exploratory_post_reveal": "exploratory_post_reveal.json (not gated)"
 }

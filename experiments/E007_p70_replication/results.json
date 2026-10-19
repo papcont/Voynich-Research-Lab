@@ -1,0 +1,569 @@
+{
+  "experiment": "E007",
+  "hypothesis": "H009",
+  "evidence_class": {
+    "R1": "EXTERNAL_REPLICATION/REPRODUCTION",
+    "R2": "EXTERNAL_MODEL_EVALUATION",
+    "R3": "DEFERRED"
+  },
+  "prospectivity": "NON-PROSPECTIVE (P70 built on whole VMS; split is a comparison surface only)",
+  "source_identity": {
+    "path": "data/raw/ZL3b-n.txt",
+    "git_blob_sha1": "2a4533ab9bdfa85db9bad602d590978953055df1",
+    "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "bytes": 411671
+  },
+  "upstream": {
+    "repo": "digitalgoldfisj79/Voynichdecomp",
+    "pin": "4f8a11174189148f312205d088910361ee67bde6"
+  },
+  "frozen_plan_commit": "2f77096",
+  "amendment_commits": {
+    "001": "d42d9f0",
+    "002": "db81687"
+  },
+  "run_head_commit": "db8168706ea631cf800e95e87c6959791ba3cc6b",
+  "first_reveal_timestamp": "2026-10-19T19:57:14Z",
+  "software": {
+    "python": "3.13.16",
+    "numpy": "2.5.3"
+  },
+  "seeds": {
+    "A8": 20260907
+  },
+  "population": {
+    "n_tokens": 33611,
+    "n_folios": 206,
+    "sigma_size": 25,
+    "sigma": "abcdefghijklmnopqrstuvxyz",
+    "n_development_tokens": 19483,
+    "n_holdout_tokens": 14128,
+    "currier_counts": {
+      "A": 10833,
+      "B": 22255,
+      "None": 523
+    },
+    "fold_token_counts": [
+      6398,
+      6836,
+      6249,
+      6872,
+      7256
+    ],
+    "order": "folios sorted lexicographically by id; file order within folio"
+  },
+  "models": [
+    "P70",
+    "A0",
+    "A1",
+    "A2",
+    "A3",
+    "A5",
+    "A6",
+    "A7",
+    "A8"
+  ],
+  "deferred_models": {
+    "A4": "DEFERRED_PRE_REVEAL (Amendment 001 \u00a72)"
+  },
+  "a8_profile": {
+    "lengths_in_pool": 13,
+    "global_fractions": [
+      0.23953413870431037,
+      0.10173922928271001,
+      0.21723314766397636,
+      0.44149348434900326
+    ],
+    "dev_tokens": 19483
+  },
+  "lossless_rate": {
+    "P70": 1.0,
+    "A0": 1.0,
+    "A1": 1.0,
+    "A2": 1.0,
+    "A3": 1.0,
+    "A5": 1.0,
+    "A6": 1.0,
+    "A7": 1.0,
+    "A8": 1.0
+  },
+  "R1": {
+    "evidence_class": "EXTERNAL_REPLICATION/REPRODUCTION (approximate, ZL3b vs published ZL_2b)",
+    "n_tokens": 33611,
+    "reconstruction_exact_rate": 1.0,
+    "non_degenerate_parse_rate": 0.9960429621254946,
+    "empty_core_rate": 0.5527059593585434,
+    "published_empty_core_rate": 0.527,
+    "chain_rule_entropies_bits": {
+      "H_P": 2.7931169974065106,
+      "H_G_given_P": 1.3671526744159852,
+      "H_C_given_PG": 3.2905915087906283,
+      "H_S_given_PGC": 2.661956272833443,
+      "total": 10.112817453446567
+    },
+    "published_entropies_bits": {
+      "H_P": 2.788,
+      "H_G_given_P": 1.374,
+      "H_C_given_PG": 3.622,
+      "H_S_given_PGC": 2.527,
+      "total": 10.311
+    },
+    "H_W_bits": 10.112817453446567,
+    "chain_rule_residual_bits": 0.0,
+    "inventory_used_nonempty": {
+      "prefix": 7,
+      "gallows": 8,
+      "core": 1489,
+      "suffix": 34
+    },
+    "MI_section_prefix": {
+      "mi_bits": 0.04879136770485548,
+      "cramers_v": 0.1057617977230184,
+      "rows": 7,
+      "cols": 8
+    },
+    "MI_core_suffix": {
+      "mi_bits": 0.9214174733039071,
+      "cramers_v": 0.3551182032272079,
+      "rows": 1490,
+      "cols": 35
+    },
+    "section_rates": {
+      "A": {
+        "tokens": 271,
+        "non_degenerate": 1.0,
+        "empty_core": 0.3837638376383764
+      },
+      "B": {
+        "tokens": 6140,
+        "non_degenerate": 0.9962540716612378,
+        "empty_core": 0.6441368078175895
+      },
+      "C": {
+        "tokens": 337,
+        "non_degenerate": 0.9970326409495549,
+        "empty_core": 0.5548961424332344
+      },
+      "H": {
+        "tokens": 11027,
+        "non_degenerate": 0.998276956561168,
+        "empty_core": 0.5632538315044889
+      },
+      "P": {
+        "tokens": 2240,
+        "non_degenerate": 0.9973214285714286,
+        "empty_core": 0.4888392857142857
+      },
+      "S": {
+        "tokens": 11352,
+        "non_degenerate": 0.993569415081043,
+        "empty_core": 0.5043164200140944
+      },
+      "T": {
+        "tokens": 2244,
+        "non_degenerate": 0.9950980392156863,
+        "empty_core": 0.5793226381461676
+      }
+    },
+    "tolerance_checks": {
+      "non_degenerate_ge_0.85": true,
+      "empty_core_in_band": true,
+      "total_entropy_within_1bit": true
+    },
+    "decision": "REPRODUCED",
+    "note": "Reconstruction exactness and zero residual are constructive sanity checks, not evidence."
+  },
+  "R2": {
+    "primary_global_prequential": {
+      "P70": {
+        "data_bits": 505288.81464522274,
+        "data_bits_per_token": 15.033435918158423,
+        "model_bits": 728.8677165937281,
+        "total_bits_per_token": 15.055121310339366,
+        "n_slots": 4,
+        "n_inventory_strings": 49
+      },
+      "A0": {
+        "data_bits": 568217.3583830874,
+        "data_bits_per_token": 16.905696301302772,
+        "model_bits": 1,
+        "total_bits_per_token": 16.90572605346724,
+        "n_slots": 1,
+        "n_inventory_strings": 0
+      },
+      "A1": {
+        "data_bits": 537662.0743248677,
+        "data_bits_per_token": 15.996610464576111,
+        "model_bits": 82.90747520839857,
+        "total_bits_per_token": 15.999077141414302,
+        "n_slots": 2,
+        "n_inventory_strings": 7
+      },
+      "A2": {
+        "data_bits": 526469.0105525182,
+        "data_bits_per_token": 15.66359259029836,
+        "model_bits": 534.1496881499434,
+        "total_bits_per_token": 15.679484699671777,
+        "n_slots": 2,
+        "n_inventory_strings": 34
+      },
+      "A3": {
+        "data_bits": 539950.9035286338,
+        "data_bits_per_token": 16.06470808749022,
+        "model_bits": 3,
+        "total_bits_per_token": 16.064797343983628,
+        "n_slots": 3,
+        "n_inventory_strings": 0
+      },
+      "A5": {
+        "data_bits": 512398.64590736944,
+        "data_bits_per_token": 15.244968787223511,
+        "model_bits": 726.8677165937281,
+        "total_bits_per_token": 15.266594675075517,
+        "n_slots": 3,
+        "n_inventory_strings": 49
+      },
+      "A6": {
+        "data_bits": 521646.1300250078,
+        "data_bits_per_token": 15.520101455624879,
+        "model_bits": 195.71802844378476,
+        "total_bits_per_token": 15.525924490596877,
+        "n_slots": 3,
+        "n_inventory_strings": 15
+      },
+      "A7": {
+        "data_bits": 511371.95109392214,
+        "data_bits_per_token": 15.214422394273367,
+        "model_bits": 728.8677165937281,
+        "total_bits_per_token": 15.236107786454312,
+        "n_slots": 4,
+        "n_inventory_strings": 49
+      },
+      "A8": {
+        "data_bits": 536289.4671158539,
+        "data_bits_per_token": 15.955772429140874,
+        "model_bits": 54,
+        "total_bits_per_token": 15.957379046022252,
+        "n_slots": 4,
+        "n_inventory_strings": 0
+      }
+    },
+    "p70_core_escape_bits": 98955.76559818049,
+    "p70_core_escape_share_of_data_bits": 0.19584000818949468,
+    "cross_fitted_fold_bits_per_token": {
+      "P70": [
+        14.232315588268731,
+        13.740788057365755,
+        13.770464531723528,
+        14.008918594432203,
+        14.077386834015506
+      ],
+      "A0": [
+        15.933996407371682,
+        15.18298493968124,
+        15.085655061589888,
+        15.525741458657786,
+        15.550144508419544
+      ],
+      "A1": [
+        15.214514225784562,
+        14.553990902944019,
+        14.494696825589475,
+        14.912077657646757,
+        14.928070889129385
+      ],
+      "A2": [
+        14.704964823808321,
+        14.204878516291696,
+        14.216632536308826,
+        14.465037463613395,
+        14.51507682079093
+      ],
+      "A3": [
+        15.118186355148735,
+        14.504125924232046,
+        14.588209611660208,
+        14.810213977725125,
+        14.843284642765664
+      ],
+      "A5": [
+        14.388887040296384,
+        13.909529163848676,
+        13.916871704611648,
+        14.175654255463755,
+        14.23759903855293
+      ],
+      "A6": [
+        14.846793929320734,
+        14.185407943879113,
+        14.191397639802217,
+        14.552319770772812,
+        14.583790421788828
+      ],
+      "A7": [
+        14.374513929132867,
+        13.878013458500059,
+        13.911757129444277,
+        14.126163911726234,
+        14.185898395221471
+      ],
+      "A8": [
+        14.93556687940144,
+        14.329899659806301,
+        14.31038214945795,
+        14.649742167512146,
+        14.736852578037997
+      ]
+    },
+    "development_to_holdout_bits_per_token": {
+      "P70": 14.421681880636102,
+      "A0": 16.111120756144615,
+      "A1": 15.396329586960299,
+      "A2": 14.920145638375496,
+      "A3": 15.332251620636601,
+      "A5": 14.605264686821924,
+      "A6": 14.99289455488488,
+      "A7": 14.545496119992803,
+      "A8": 15.21357425213427
+    },
+    "development_to_holdout_lowest_model": "P70",
+    "currier": {
+      "A": {
+        "n_tokens": 10833,
+        "bits_per_token": {
+          "P70": 15.832746703126183,
+          "A0": 17.891782090544947,
+          "A1": 16.819579461887457,
+          "A2": 16.619127274479673,
+          "A3": 16.864430200486762,
+          "A5": 16.09761917930642,
+          "A6": 16.2101846319903,
+          "A7": 16.072430385428028,
+          "A8": 16.874918187673384
+        },
+        "lowest_model": "P70",
+        "p70_lowest": true
+      },
+      "B": {
+        "n_tokens": 22255,
+        "bits_per_token": {
+          "P70": 14.60845761244067,
+          "A0": 16.393880148680335,
+          "A1": 15.567034043935527,
+          "A2": 15.158677381060462,
+          "A3": 15.643654935683019,
+          "A5": 14.793772919046464,
+          "A6": 15.153631907388716,
+          "A7": 14.75965388134605,
+          "A8": 15.482429557266007
+        },
+        "lowest_model": "P70",
+        "p70_lowest": true
+      }
+    },
+    "sections": {
+      "A": {
+        "n_tokens": 271,
+        "n_folios": 5,
+        "major": false,
+        "bits_per_token": {
+          "P70": 17.940155827560865,
+          "A0": 19.79973799248396,
+          "A1": 18.712811930221747,
+          "A2": 18.818802112763343,
+          "A3": 19.171796804106755,
+          "A5": 18.198046952199096,
+          "A6": 18.266659779484662,
+          "A7": 18.18077629910284,
+          "A8": 18.57656917385982
+        },
+        "lowest_model": "P70",
+        "p70_lowest": true
+      },
+      "B": {
+        "n_tokens": 6140,
+        "n_folios": 19,
+        "major": true,
+        "bits_per_token": {
+          "P70": 12.101778139868301,
+          "A0": 13.093332532131006,
+          "A1": 12.66313382438064,
+          "A2": 12.354491898879433,
+          "A3": 12.756030626000673,
+          "A5": 12.165924336912083,
+          "A6": 12.500426762358941,
+          "A7": 12.147880355769159,
+          "A8": 12.54429355209875
+        },
+        "lowest_model": "P70",
+        "p70_lowest": true
+      },
+      "C": {
+        "n_tokens": 337,
+        "n_folios": 7,
+        "major": false,
+        "bits_per_token": {
+          "P70": 14.985511615865258,
+          "A0": 16.513815389281863,
+          "A1": 15.636651006890379,
+          "A2": 15.585114397371301,
+          "A3": 15.53975466705816,
+          "A5": 15.124370646606112,
+          "A6": 15.357254199235765,
+          "A7": 15.222141796190236,
+          "A8": 15.38102179258687
+        },
+        "lowest_model": "P70",
+        "p70_lowest": true
+      },
+      "H": {
+        "n_tokens": 11027,
+        "n_folios": 128,
+        "major": true,
+        "bits_per_token": {
+          "P70": 14.995454880926362,
+          "A0": 16.918479457565624,
+          "A1": 16.039814070967953,
+          "A2": 15.641159039782112,
+          "A3": 15.972069142635073,
+          "A5": 15.237532745406433,
+          "A6": 15.483701155088237,
+          "A7": 15.202917539422954,
+          "A8": 15.841521032712938
+        },
+        "lowest_model": "P70",
+        "p70_lowest": true
+      },
+      "P": {
+        "n_tokens": 2240,
+        "n_folios": 16,
+        "major": true,
+        "bits_per_token": {
+          "P70": 17.069438188033907,
+          "A0": 19.062517890245193,
+          "A1": 17.54368034076803,
+          "A2": 18.12979439948496,
+          "A3": 18.277852763652447,
+          "A5": 17.30723346650019,
+          "A6": 16.995956337725765,
+          "A7": 17.4131801611895,
+          "A8": 18.559557176540903
+        },
+        "lowest_model": "A6",
+        "p70_lowest": false
+      },
+      "S": {
+        "n_tokens": 11352,
+        "n_folios": 25,
+        "major": true,
+        "bits_per_token": {
+          "P70": 16.386974318064027,
+          "A0": 18.78678374253311,
+          "A1": 17.64574658532053,
+          "A2": 17.143485388077377,
+          "A3": 17.722587003627844,
+          "A5": 16.646573319518865,
+          "A6": 17.074661533149406,
+          "A7": 16.589373841875275,
+          "A8": 17.62940896501188
+        },
+        "lowest_model": "P70",
+        "p70_lowest": true
+      },
+      "T": {
+        "n_tokens": 2244,
+        "n_folios": 6,
+        "major": false,
+        "bits_per_token": {
+          "P70": 14.01811151995633,
+          "A0": 15.314496326065342,
+          "A1": 14.744349492119321,
+          "A2": 14.510563750867833,
+          "A3": 14.680577957520713,
+          "A5": 14.218765586025723,
+          "A6": 14.316656720483634,
+          "A7": 14.151714093528035,
+          "A8": 14.555676934829691
+        },
+        "lowest_model": "P70",
+        "p70_lowest": true
+      }
+    },
+    "major_sections_by_rule": [
+      "B",
+      "H",
+      "P",
+      "S"
+    ],
+    "major_sections_expected": [
+      "B",
+      "H",
+      "P",
+      "S"
+    ]
+  },
+  "gates": {
+    "G1_lossless_coverage_ge_0.99": true,
+    "G2_beats_A0_by_0.05": true,
+    "G2_delta_A0_minus_P70": 1.872260383144349,
+    "G3_beats_each_competitor": true,
+    "G3_detail": {
+      "A1": {
+        "delta_bits_per_token": 0.9631745464176884,
+        "fold_wins": 5,
+        "pass": true
+      },
+      "A2": {
+        "delta_bits_per_token": 0.6301566721399379,
+        "fold_wins": 5,
+        "pass": true
+      },
+      "A3": {
+        "delta_bits_per_token": 1.0312721693317979,
+        "fold_wins": 5,
+        "pass": true
+      },
+      "A5": {
+        "delta_bits_per_token": 0.2115328690650884,
+        "fold_wins": 5,
+        "pass": true
+      },
+      "A6": {
+        "delta_bits_per_token": 0.4866655374664557,
+        "fold_wins": 5,
+        "pass": true
+      },
+      "A7": {
+        "delta_bits_per_token": 0.18098647611494378,
+        "fold_wins": 5,
+        "pass": true
+      },
+      "A8": {
+        "delta_bits_per_token": 0.9223365109824506,
+        "fold_wins": 5,
+        "pass": true
+      }
+    },
+    "G4_total_bits_beats_A0": true,
+    "G5_currier_A_and_B": true,
+    "G5_major_sections": false,
+    "G5": false
+  },
+  "decision": "REPRODUCED_BUT_NOT_VALIDATED",
+  "descriptive_sensitivity": {
+    "natural_folio_order_bits_per_token": {
+      "P70": 15.032254449536346,
+      "A0": 16.899847530698427,
+      "A1": 15.992719209136954,
+      "A2": 15.661826464733242,
+      "A3": 16.06251704869525,
+      "A5": 15.244098935888449,
+      "A6": 15.5144700723476,
+      "A7": 15.211690313340638,
+      "A8": 15.950777380327532
+    },
+    "A7_literal_bits_per_token": 15.184249289782912,
+    "note": "Not gated (Amendment 002)."
+  },
+  "claim_ceiling": "Structural factorization only; NOT morphemes/language/decipherment."
+}

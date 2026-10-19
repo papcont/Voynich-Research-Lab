@@ -47,29 +47,25 @@ The stronger claim — same underlying unit sequence — has **not passed a cont
 
 ## Current frontier
 
-E006 is **complete with an INCONCLUSIVE_UNDERPOWERED result** (first reveal
-2026-08-31, seed 20260831, `results.json` + independent `validate.py`). On the
-frozen hash holdout (folds 3–4, 88 folios) only **1** k=2 canonical chain
-(`ok|al|or`) had ≥2 fused AND ≥2 spaced occurrences, below the preregistered
-power floor of 3; the frozen design therefore computes no target JSD and H008
-stays **unresolved** (neither supported nor falsified). N2 would also have been
-degenerate (fused/spaced of the same chain never share a folio). The narrow k=2
-same-chain co-occurrence is simply too rare in ZL3b to power this test. No
-grammar/threshold tuning is permitted on this revealed holdout; a powered
-retest would require a separate preregistration.
+**E007 complete — REPRODUCED_BUT_NOT_VALIDATED** (first reveal 2026-10-19;
+`results.json` + independent `validate.py` pass; amendment 002 committed before
+reveal). Independent P70 layer-A parser on ZL3b (33,611 running-text strict
+tokens): R1 reproduces published values approximately (empty core 55.3% vs
+52.7%; total chain-rule entropy 10.11 vs 10.311 bits). R2 prequential KT
+bits/token: P70 15.03, best alternatives A7 (ch/sh not prefix) 15.21 and A5 (no
+gallows) 15.25, matched random 4-slot A8 15.96, whole token A0 16.91; P70 wins
+5/5 cross-fitted folds against every competitor and is lowest in Currier A and
+B. The frozen gate fails only in major section P (A6 16.996 < P70 17.069), so
+H009 is **not supported under the frozen gate**. Exploratory post-reveal check:
+under natural folio order and order-free cross-fitted costs P70 is lowest in all
+major sections — the miss looks like a prequential-order artefact, but cannot
+relabel E007. Non-prospective (P70 built on the whole VMS). Structural only.
 
-Next frontier: **E007** — independent P70 4-slot grammar replication
-(**PLAN_FROZEN**). Upstream `Voynichdecomp` audited at the pinned commit: the
-published spec is dual-layer — a compact closed-inventory longest-match parser
-(reconstructible; we reimplement it) plus a 210-rule section-weighted
-`p70_rules_canonical.json` (not reconstructible; not implemented, optional fixed
-input only). Their validator targets P70's own entropy profile (10.311 bits) and
-zero residual is a chain-rule identity — both rejected as evidence. P70 used
-ZL_ivtff_2b, we use ZL3b, so reproduction is approximate. Primary benchmark is a
-prequential KT description-length (bits/surface-token) with an identical
-estimator + char-escape for P70 and competitors A0–A8; the folio split is only a
-common comparison surface (P70 is **non-prospective** — built on the whole VMS).
-No E007 metric is computed yet. R3 (independent transcription) is DEFERRED.
+Previous: E006 INCONCLUSIVE_UNDERPOWERED (H008 unresolved; no tuning).
+
+Next frontier: **E008** — mechanism tournament (**READY_TO_FREEZE_PLAN**). Reuse
+the E007 scorecard with an order-free subset metric; P70 layer A as structural
+baseline; external mechanisms only after independent reimplementation.
 
 ## External landscape check (2026-10-19)
 
