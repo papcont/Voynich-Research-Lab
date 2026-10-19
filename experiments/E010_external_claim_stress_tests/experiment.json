@@ -1,0 +1,80 @@
+{
+  "experiment_id": "E010",
+  "name": "external_claim_stress_tests_epilectrik",
+  "status": "PLAN_FROZEN",
+  "evidence_class": {
+    "R1": "EXTERNAL_REPLICATION/REPRODUCTION",
+    "R2": "DEVELOPMENT_CROSSFIT"
+  },
+  "gate_level_claimable": "none",
+  "upstream": {
+    "repo": "epilectrik/voynich",
+    "pin": "ff399c44c71bc38364361e51df2afbcb6b665406",
+    "license": "'provided for research purposes'; no code licence; nothing copied or redistributed",
+    "class_table_file": "results/phase20a_operator_equivalence.json",
+    "class_table_file_sha256": "ccc0ea339badc1dfdb3caa3b5962421dbb84be22ccec07e2bc7f701fdb5395fe",
+    "class_table_pairs_sha256": "338892c0068ed28fdf41d7c105da7b617e85672ec5522fc5a9416f528123b1b1",
+    "n_classes": 49,
+    "n_types": 480,
+    "local_path": ".external/epilectrik_voynich (git-ignored)",
+    "glyph_unit_regex": "c[tkpf]h|[cs]h|i+[nrlm]|.",
+    "published_targets": {
+      "C_all_ZL": 0.256,
+      "C_def_ZL": 0.215,
+      "coverage_B_H_track": 0.695
+    }
+  },
+  "hypotheses": {
+    "H016": "M_Sunit - M_S",
+    "H017": "M_S2unit - M_Sunit",
+    "H018": "M_classprev - M_Sfam"
+  },
+  "scope": "Currier B running text only; A descriptive",
+  "inputs": [
+    {
+      "source": "data/raw/ZL3b-n.txt",
+      "identity": "upstream_git_blob_sha1:2a4533ab9bdfa85db9bad602d590978953055df1",
+      "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+    }
+  ],
+  "R1": {
+    "statistic": "MI(last glyph unit left; first glyph unit right) - mean over 1000 permutations of right units; seed 20261020",
+    "sets": [
+      "all boundaries",
+      "definite '.' boundaries"
+    ],
+    "tolerance": "REPRODUCED iff |C_def-0.215|<=0.03 and |C_all-0.256|<=0.03; REPRODUCTION_FAILURE iff either >0.06; else APPROXIMATE"
+  },
+  "R2": {
+    "scorecard": "E011 BackoffKTCoder, P70 slots, prefix-slot conditioning, 5-fold cross-fit, folio bootstrap CI (10000, seed 20261019)",
+    "models": [
+      "M_S",
+      "M_Sfam",
+      "M_Sunit",
+      "M_S2unit",
+      "M_class",
+      "M_classprev"
+    ],
+    "null_seed": 20261020,
+    "margin_rule": "max(0.05, q97.5 of feature-permuted null mean) per contrast",
+    "decision": "as E011 (SUPPORTED_DEV / FALSIFIED_DEV / INCONCLUSIVE_DEV)"
+  },
+  "pre_result_predictions": {
+    "H016": "small positive or INCONCLUSIVE_DEV",
+    "H017": "positive if C2082 is real at codelength level",
+    "H018": "FALSIFIED_DEV or INCONCLUSIVE_DEV"
+  },
+  "retraction_conditions": {
+    "H016": "FALSIFIED_DEV -> EVA-character edge feature stays",
+    "H017": "FALSIFIED_DEV -> word-ending routing not supported here",
+    "H018": "FALSIFIED_DEV -> class table recorded as non-predictive description"
+  },
+  "sha256": {
+    "inputs": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "split": "814eb974cf2a2a4901430fe2a9751f0b840cbb6c0b5e980aea8f21d90cd2b74e",
+    "config": "6425a40c108fc6e42580bd0367f6af551ef2e719445209346f45da16601169fb",
+    "predictions": "5a7b71dc9e9229771327cb4c443256834b23a0ee357ec0096c9c514ccd74c6d7"
+  },
+  "claim_ceiling": "Structural, development-stage; upstream interpretations not evaluated or adopted.",
+  "amendments": []
+}

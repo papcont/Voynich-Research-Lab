@@ -90,6 +90,7 @@ repos:
     use: [currier_b_token_grammar, line_position_zones, boundary_coupling, rival_generator_controls]
     caveat: "Upstream Tier-0 (restated 2026-09-28): single compact Currier-B token grammar, 49 classes, 69.5% token coverage; reports Naibbe excluded across 64 variants. Own 2026-09-27 strategic review retracted several earlier claims (Testamentum chapter matching, forbidden-transition hazard classes, 100% coverage, atom glosses). Overlaps H002/H003/H005; requires independent reimplementation before any use."
     license_note: "No separate code license stated on landing page; verify before copying."
+    usage_2026-10-20: "E010: read-only clone at the pin in git-ignored .external/; results/phase20a_operator_equivalence.json (sha256 ccc0ea33...) used as a FIXED EXTERNAL MODEL INPUT only (49 classes x 480 types); nothing copied or redistributed; interpretations not adopted."
 
   - name: voynich-manuscript-analysis
     url: https://github.com/Workwrite-Niidome/voynich-manuscript-analysis

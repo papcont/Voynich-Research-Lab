@@ -34,7 +34,9 @@ Retained structural observations:
 
 ## Active frontier
 
-`E012_reference_signature` — **DRAFT** (`experiments/E012_reference_signature/PLAN_DRAFT.md`): identical scorecard on reference texts (Latin prose; second language; verbose-cipher and substitution transforms; self-citation and slot-grammar generators), line-segmented to ZL3b's line-length distribution; compare component signatures (Δ_S, Δ_C, Δ_L) with Voynich's (known → EXPLORATORY for V). **Human decision needed before freeze:** corpus choice and licenses (proposal: PerseusDL canonical-latinLit, CC-BY-SA 4.0, via GitHub; Dante for a second language), network access to those sources, generator set.
+`E010_external_claim_stress_tests` — **PLAN_FROZEN** (`experiments/E010_external_claim_stress_tests/PLAN.md`). Upstream `epilectrik/voynich` @ `ff399c44` (read-only clone in git-ignored `.external/`, nothing copied). R1: reproduce their ZL3b boundary glyph coupling (0.215 definite / 0.256 all; their regex and shuffle-corrected MI) on our pipeline, ±0.03. R2 (Currier B, E011 scorecard, development-stage): H016 glyph-unit vs EVA-character edge feature; H017 last two units ("word-ending routing"); H018 their 49-class table (fixed external input, sha256 `338892c0…`) as class | previous class vs M_Sfam. Pre-result predictions and retraction conditions in PLAN §2/§4. Next action: implement run.py/validate.py; results before report.
+
+`E012_reference_signature` (stage B) remains a DRAFT **pending your decision** on corpora/licences, network use and the generator/cipher set.
 
 Gate v2 is in force (`research/protocol_amendments/A001_GATE_V2.md`, `research/gate/gate_v2.json`, `src/voynichlab/gate.py`, `tests/test_gate.py`, `scripts/gate_report.py`, `research/holdout_registry.json`). Confirmation surfaces: `LOCKBOX_NONRUNNING_V1` (710 label/circular/radial tokens, INDEPENDENT) only; running-text confirmation needs data registered from outside ZL3b. IT2a/GC hashes unregistered (voynich.nu unreachable 2026-10-19).
 

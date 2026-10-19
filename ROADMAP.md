@@ -11,6 +11,6 @@
 | E007 | DONE — REPRODUCED_BUT_NOT_VALIDATED | Independent P70 grammar replication |
 | E008 | DONE — ALL_COMPONENTS_NOT_INFORMATIVE (stage A) | S/L/C predictive components on the E007 scorecard; stage B (reference corpora) deferred |
 | E009 | QUEUED — provenance blocker (upstream unreachable) | Deshuffling Matrix blind test |
-| E010 | QUEUED | External decode-claim stress tests |
+| **E010** | **PLAN_FROZEN** | epilectrik Currier-B claims: boundary-coupling reproduction (R1); glyph-unit edge features and the 49-class table under the E011 scorecard (R2, development-stage) |
 | E011 | DONE — H014 SUPPORTED_DEV, H015 FALSIFIED_DEV (development-stage) | Slot-targeted conditioning under a backoff KT scorecard; new strongest structural null M_Sfam |
 | E012 | DRAFT | Mechanism-family signature comparison on reference texts (stage B); human corpus decision needed |

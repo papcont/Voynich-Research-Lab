@@ -1,13 +1,16 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-20T00:40:00Z",
-  "status": "BLOCKED",
-  "active_experiment": "E012_reference_signature",
-  "next_action": "Freeze E012 (stage B reference-signature comparison) once the human has confirmed corpora, licenses and network use; then implement per PLAN with provenance hashes recorded before any metric.",
-  "blocked_reason": "Human decision required before E012 freeze (CLAUDE.md stop conditions: source licensing / materially different designs): (1) reference corpora and licenses \u2014 proposal: PerseusDL canonical-latinLit (CC-BY-SA 4.0, GitHub) for Latin prose, Dante Commedia (public domain) for a second language; fetched locally only, never committed; (2) whether cloning those GitHub sources from the research environment is acceptable; (3) generator set for family G (self-citation reimplementation, slot-grammar generator) and cipher set for family C (Naibbe-style from description since the paper is inaccessible; monoalphabetic substitution control). Alternative next action if E012 is deferred: E010 external structural competitor (epilectrik Currier-B grammar) under the E011 scorecard.",
+  "updated_utc": "2026-10-20T01:30:00Z",
+  "status": "PLAN_FROZEN",
+  "active_experiment": "E010_external_claim_stress_tests",
+  "next_action": "Implement frozen E010 PLAN.md without changing frozen choices: run.py (R1 boundary-coupling reproduction with upstream regex/MI/permutation; R2 models M_S, M_Sfam, M_Sunit, M_S2unit, M_class, M_classprev on Currier B with the E011 scorecard, feature-permuted nulls and margins FIRST, then contrasts; class table loaded from .external/epilectrik_voynich with sha256 check; results.json before REPORT.md), validate.py independent, then ledger H016-H018, STATUS, RESUME, state. Amend before computing if any detail is open.",
+  "blocked_reason": null,
   "last_completed_experiment": "E011_targeted_context_scorecard",
   "last_completed_result": "H014_SUPPORTED_DEV;H015_FALSIFIED_DEV",
   "scientific_claim_ceiling": "Structural evidence only; no plaintext, language or semantic decipherment claim.",
   "auto_advance": true,
-  "gate_version": "2.0.0"
+  "gate_version": "2.0.0",
+  "pending_human_decisions": {
+    "E012_reference_signature": "corpora/licences (proposal PerseusDL canonical-latinLit CC-BY-SA 4.0; Dante), network use for those sources, generator/cipher set \u2014 see experiments/E012_reference_signature/PLAN_DRAFT.md"
+  }
 }

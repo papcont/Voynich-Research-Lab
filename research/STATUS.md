@@ -60,9 +60,10 @@ No Gate v2 level is claimable (every ZL3b running-text folio has a SELECTION rol
 Earlier: E008 stage A ALL_COMPONENTS_NOT_INFORMATIVE (no-backoff scorecard; see REPORT);
 E007 REPRODUCED_BUT_NOT_VALIDATED; E006 INCONCLUSIVE_UNDERPOWERED.
 
-Next frontier: **E012** (draft) — apply the identical scorecard to reference texts (natural
-language, verbose cipher of it, substitution control, self-citation and slot-grammar
-generators) and compare component signatures. Needs a human decision on corpora/licenses.
+Next frontier: **E010** (PLAN_FROZEN) — epilectrik's Currier-B claims as external structural
+competitor: reproduce their boundary coupling, then test glyph-unit edge features and their
+49-class table under the E011 scorecard (development-stage). **E012** (reference-text
+signature comparison, stage B) is drafted and waits for the human corpus/licence decision.
 
 ## External landscape check (2026-10-19)
 
