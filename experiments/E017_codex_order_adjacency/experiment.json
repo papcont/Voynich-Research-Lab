@@ -1,7 +1,7 @@
 {
   "experiment_id": "E017",
   "name": "codex_order_adjacency",
-  "status": "PLAN_FROZEN",
+  "status": "COMPLETED",
   "evidence_class": "DEVELOPMENT",
   "gate_level_claimable": "none",
   "hypotheses": {
@@ -39,5 +39,10 @@
     "predictions": "d265de59ef155f266a0980f819f2401ffa8ac5c3a34af31916420e1616f48a93"
   },
   "claim_ceiling": "Vocabulary distribution along the current folio order; no quire/binding/meaning claims.",
-  "amendments": []
+  "amendments": [],
+  "result": "results.json",
+  "decisions": {
+    "H025b": "SUPPORTED_DEV",
+    "H026": "FALSIFIED_DEV"
+  }
 }

@@ -18,4 +18,4 @@
 | E014 | DONE — H020 FALSIFIED (self-citation Δ_C +2.93 vs −0.46); H021 PARTIAL (edge-coupled overshoots Δ_S) | Corpus-free generator signatures; inventory growth identified as the stronger discriminator for E012 |
 | E015 | DONE — all three generators MISMATCH; H022/H023 FALSIFIED | Signature v2 discriminates every tested generator; within-folio repetition F is the key component |
 | E016 | DONE — H024 SUPPORTED_DEV (+0.035 folio-local reuse); H025 FALSIFIED_DEV as frozen (null unsuitable; order-null exploratory positive) | Within-folio vocabulary locality and codex-order adjacency |
-| **E017** | **PLAN_FROZEN** | Codex-order adjacency with order-permutation null; same-leaf vs facing-page sharing |
+| E017 | DONE — H025b SUPPORTED_DEV (+0.013); H026 FALSIFIED_DEV | Weak codex-order vocabulary locality; leaf structure adds nothing |

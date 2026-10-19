@@ -1,0 +1,76 @@
+{
+  "experiment": "E017",
+  "evidence_class": "DEVELOPMENT",
+  "gate_level_claimable": "none",
+  "frozen_plan_commit": "54ab005",
+  "run_head_commit": "54ab0055aa0282d991e95ef8a6ed381092f54578",
+  "first_run_timestamp": "2026-10-19T21:57:57Z",
+  "software": {
+    "python": "3.13.16",
+    "numpy": "2.5.3"
+  },
+  "seeds": {
+    "order": 20261060,
+    "type": 20261061
+  },
+  "n_permutations": 1000,
+  "source_identity": {
+    "zl3b_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+  },
+  "population": {
+    "n_folios": 206,
+    "n_adjacent_same_stratum_pairs": 151,
+    "pair_type_counts": {
+      "same-leaf": 100,
+      "facing": 44,
+      "other": 7
+    },
+    "strata": {
+      "('A', 'P')": 16,
+      "('B', 'S')": 23,
+      "('A', 'H')": 95,
+      "('A', 'rest')": 3,
+      "('B', 'H')": 32,
+      "('rest', 'rest')": 1,
+      "('B', 'T')": 5,
+      "(None, 'A')": 5,
+      "(None, 'C')": 4,
+      "('B', 'B')": 19,
+      "('B', 'C')": 3
+    }
+  },
+  "H025b": {
+    "J_adj_obs": 0.12285968268590618,
+    "null_mean": 0.10954665432785873,
+    "null_q975": 0.11282540737832177,
+    "excess_dJ": 0.013313028358047443,
+    "p_perm": 0.000999000999000999,
+    "by_currier": {
+      "A": {
+        "J_obs": 0.10438020532620311,
+        "excess": 0.01562488255440167
+      },
+      "B": {
+        "J_obs": 0.15744705312922458,
+        "excess": 0.010614953928472642
+      }
+    },
+    "margin": 0.01,
+    "decision": "SUPPORTED_DEV",
+    "note": "overall excess EXPLORATORY-known from E016 check; Currier split new"
+  },
+  "H026": {
+    "J_by_type": {
+      "same-leaf": 0.12560846811488474,
+      "facing": 0.12144955930208391,
+      "other": 0.09245495211309504
+    },
+    "D_same_leaf_minus_facing": 0.0041589088128008295,
+    "null_mean": -9.451977869432886e-05,
+    "null_q975": 0.018399602888819512,
+    "p_perm": 0.33166833166833165,
+    "margin": 0.01,
+    "decision": "FALSIFIED_DEV"
+  },
+  "claim_ceiling": "Vocabulary distribution along the current folio order; no quire/binding/meaning claims."
+}
