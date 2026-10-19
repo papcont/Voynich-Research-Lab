@@ -98,3 +98,17 @@ def test_regression_against_recorded_experiment_values():
     assert abs(sig["TTR"] - e014["ttr"]) < 1e-12 and abs(sig["H1"] - e014["hapax"]) < 1e-12
     assert abs(sig["F_excess"] - e016["excess_dF"]) < 1e-9
     assert abs(sig["dJ_order"] - e017["excess_dJ"]) < 1e-9
+
+
+def test_a3_slots_and_substitution_invariance():
+    """Signature-G must be invariant under a bijective relabelling of characters."""
+    lines = _synthetic(5, True)
+    alphabet = sorted({c for f in lines for _l, _s, full in lines[f] for v, _u in full for c in v})
+    perm = dict(zip(alphabet, reversed(alphabet)))
+    sub = {f: [(l, s, [["".join(perm[c] for c in v), u] for v, u in full]) for l, s, full in lines[f]] for f in lines}
+    comps = ("delta_S", "delta_L", "delta_C", "TTR", "H1")
+    a = S.signature(lines, components=comps, slot_fn=S.a3_slots)
+    b = S.signature(sub, components=comps, slot_fn=S.a3_slots)
+    for k in comps:
+        assert abs(a[k] - b[k]) < 1e-9
+    assert S.a3_slots("ab") == ("", "ab", "") and S.a3_slots("qokeedy") == ("q", "okeed", "y")

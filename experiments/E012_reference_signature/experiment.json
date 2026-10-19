@@ -1,0 +1,86 @@
+{
+  "experiment_id": "E012",
+  "name": "reference_signature_stage_B_open",
+  "status": "PLAN_FROZEN",
+  "evidence_class": "MECHANISM_DEMONSTRATION/DEVELOPMENT",
+  "gate_level_claimable": "none",
+  "scope": "open-rights texts only; Borg (linked_only) excluded pending human approval (extension E012-B)",
+  "hypotheses": {
+    "H027": "some natural-language text MATCHes Voynich on Signature-G",
+    "H028": "Signature-G invariant under monoalphabetic substitution"
+  },
+  "inputs": [
+    {
+      "source": "data/raw/ZL3b-n.txt",
+      "identity": "upstream_git_blob_sha1:2a4533ab9bdfa85db9bad602d590978953055df1",
+      "sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+    }
+  ],
+  "reference_texts": {
+    "N_DEU": {
+      "source": "copiale",
+      "sha256": "1f93e9902ac068f244e0cceb76a170f3d1cf7c58d556846719ee6a52ae76ef3a",
+      "n_files": 101,
+      "rights_class": "open"
+    },
+    "N_ITA": {
+      "source": "it_ss_synth",
+      "sha256": "1cc3c7d4a88327c84ed917914d59dce22f1fe2f795bf4de52aa20fc9e3da540b",
+      "n_files": 30,
+      "rights_class": "open"
+    },
+    "N_ENG": {
+      "source": "en_ss_synth",
+      "sha256": "fad46190e8c9c1820f9b29f762795edff6df3bb73f242281b8dff602d9c67982",
+      "n_files": 30,
+      "rights_class": "open"
+    },
+    "N_DE2": {
+      "source": "de_ss_synth",
+      "sha256": "0b1a0600f19295de22de622e2c75921d07be2e944ac717d7693ea66adaf213b6",
+      "n_files": 30,
+      "rights_class": "open"
+    },
+    "N_FRA": {
+      "source": "fr_ss_synth",
+      "sha256": "9b119dc6e108945ad87527be458812a929bbd905f7083b5f938d353e048d7073",
+      "n_files": 30,
+      "rights_class": "open"
+    }
+  },
+  "corpus_repo": {
+    "repo": "matthewdgreen/cipher_benchmark",
+    "pin": "729aad62d12483c549e64a2541d4f9255538c8cf",
+    "local": "/home/user/matthewdgreen/cipher_benchmark (read-only; nothing copied)"
+  },
+  "signature": "Signature-G: voynichlab.signature with slot_fn=a3_slots; components delta_S,delta_L,delta_C,TTR,H1,F_excess,dJ_order",
+  "size_match_tokens": 3660,
+  "seeds": {
+    "resegment": 20261080,
+    "substitution": 20261081,
+    "F": 20261050,
+    "J": 20261060
+  },
+  "tolerances": {
+    "bits": [
+      0.05,
+      0.1
+    ],
+    "fractions": [
+      0.02,
+      0.05
+    ]
+  },
+  "pre_result_predictions": {
+    "H027": "FALSIFIED (delta_C and TTR/H1 mismatch for every natural text)",
+    "H028": "SUPPORTED",
+    "nearest": "G4"
+  },
+  "sha256": {
+    "inputs": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+    "config": "6bcbd443a28d3868d9b5a4db6dcc499ca8eb6971a36aa0b3c2694a1e97dd7884",
+    "predictions": "c0bd489f69f0539b3f6306ce85449cc2564ccf1e5bd7baa118a286e3824a2300"
+  },
+  "claim_ceiling": "Signature similarity between texts; no decipherment, no language identification, no Gate level.",
+  "amendments": []
+}

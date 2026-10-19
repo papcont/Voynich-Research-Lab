@@ -45,11 +45,16 @@ def efold(folio: str) -> int:
 # --------------------------------------------------------------------------- #
 # tokens with features
 # --------------------------------------------------------------------------- #
+def a3_slots(value: str) -> tuple:
+    """E007 competitor A3: fixed cuts (first character, middle, last character); script-agnostic."""
+    return (value[0], value[1:-1], value[-1]) if len(value) >= 3 else ("", value, "")
+
+
 class Tok:
     __slots__ = ("value", "slots", "folio", "language", "section", "fold", "S", "L", "k_exact", "k_edit", "edit")
 
-    def __init__(self, value, folio, language, section, S, L):
-        self.value, self.slots, self.folio = value, parse_p70(value), folio
+    def __init__(self, value, folio, language, section, S, L, slot_fn=parse_p70):
+        self.value, self.slots, self.folio = value, slot_fn(value), folio
         self.language, self.section, self.fold = language, section, efold(folio)
         self.S, self.L = S, L
         self.k_exact = self.k_edit = self.edit = None
@@ -79,10 +84,10 @@ def canonical_edit(src: str, t: str) -> str:
     return f"d{p}"
 
 
-def tokens(lines: dict) -> list[Tok]:
-    """Feature tokens in reading order (folios sorted lexicographically)."""
+def tokens(lines: dict, slot_fn=parse_p70, folio_order=None) -> list[Tok]:
+    """Feature tokens in reading order (folios sorted lexicographically unless folio_order given)."""
     out = []
-    for folio in sorted(lines):
+    for folio in (folio_order if folio_order is not None else sorted(lines)):
         window = []
         for lang, sec, full in lines[folio]:
             n = len(full)
@@ -91,7 +96,7 @@ def tokens(lines: dict) -> list[Tok]:
                     continue
                 S = "BOL" if i == 0 else "UNC" if full[i - 1][1] else full[i - 1][0][-1]
                 L = "ONLY" if n == 1 else "FIRST" if i == 0 else "LAST" if i == n - 1 else "MID"
-                t = Tok(v, folio, lang, sec, S, L)
+                t = Tok(v, folio, lang, sec, S, L, slot_fn)
                 for k in range(1, min(W_MAX, len(window)) + 1):
                     w = window[-k]
                     if w == v:
@@ -189,7 +194,7 @@ def strata(lines: dict) -> dict:
 
 
 def _per_folio_tokens(lines):
-    return {f: [v for _l, _s, full in lines[f] for v, u in full if not u] for f in sorted(lines)}
+    return {f: [v for _l, _s, full in lines[f] for v, u in full if not u] for f in lines}
 
 
 def _F(tk, folios):
@@ -224,10 +229,16 @@ def _J_adjacent(tk, order, skey):
 # public API
 # --------------------------------------------------------------------------- #
 def signature(lines: dict, n_perm: int = 1000, seed_F: int = 20261050, seed_J: int = 20261060,
-              components=("delta_S", "delta_L", "delta_C", "TTR", "H1", "F_excess", "dJ_order")) -> dict:
-    """Compute the requested signature components for a line-structured text."""
+              components=("delta_S", "delta_L", "delta_C", "TTR", "H1", "F_excess", "dJ_order"),
+              slot_fn=parse_p70, folio_order=None) -> dict:
+    """Compute the requested signature components for a line-structured text.
+
+    slot_fn: token -> slot tuple (parse_p70 = signature v3; a3_slots = script-agnostic Signature-G).
+    folio_order: explicit unit order (default: lexicographic) — used by texts whose units are not
+    folio ids; the order also defines dJ_order adjacency and the cross-fit fold hash input.
+    """
     out = {}
-    toks = tokens(lines)
+    toks = tokens(lines, slot_fn, folio_order)
     sigma = len({c for t in toks for c in t.value})
     out["n_tokens"], out["n_folios"], out["sigma_size"] = len(toks), len({t.folio for t in toks}), sigma
     if {"delta_S", "delta_L"} & set(components):
@@ -239,7 +250,7 @@ def signature(lines: dict, n_perm: int = 1000, seed_F: int = 20261050, seed_J: i
     if "delta_C" in components:
         out["delta_C"] = folio_mean_delta(toks, _crossfit_copy(toks, sigma, False), _crossfit_copy(toks, sigma, True))
     tk = _per_folio_tokens(lines)
-    folios = [f for f in sorted(tk) if tk[f]]
+    folios = [f for f in (folio_order if folio_order is not None else sorted(tk)) if tk.get(f)]
     all_tokens = [v for f in folios for v in tk[f]]
     c = Counter(all_tokens)
     if "TTR" in components:

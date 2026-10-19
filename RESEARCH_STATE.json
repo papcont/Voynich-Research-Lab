@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-20T10:20:00Z",
-  "status": "BLOCKED",
+  "updated_utc": "2026-10-20T11:00:00Z",
+  "status": "PLAN_FROZEN",
   "active_experiment": "E012_reference_signature",
-  "next_action": "Await the two human decisions. E012 is ready to freeze immediately on approval (corpora in hand, scorecard = voynichlab.signature + script-agnostic A3-slot variant to be added).",
+  "next_action": "Implement frozen E012 stage B-open: run.py (load open-rights texts from the pinned cipher_benchmark clone with the frozen normalization, units, re-segmentation and size matching; substitution controls; Voynich and G4 under Signature-G; distances and decisions), validate.py, results.json before REPORT.md; ledger H027/H028; STATUS/RESUME/state. Borg extension only after human approval.",
   "blocked_reason": null,
   "last_completed_experiment": "E018_y_qo_edge_test",
   "last_completed_result": "H003a_SUPPORTED_DEV;H003b_SUPPORTED_DEV",
@@ -12,6 +12,6 @@
   "gate_version": "2.0.0",
   "pending_human_decisions": {
     "confirmation_surface": "register outside data or amend A001 with a SEMI_INDEPENDENT tier or accept development-stage-only (A001 errata 1-2)",
-    "E012_reference_signature": "CONCRETE PROPOSAL in experiments/E012_reference_signature/PLAN_DRAFT.md: local, provenance-documented texts from the pinned cipher_benchmark clone (Copiale German open; Gutenberg it/en/de/fr open; Borg Latin recipes + real ciphertext linked_only). Decision needed only on local analysis use of the linked_only Borg material; no network required."
+    "E012_reference_signature": "Only the linked_only Borg material (Latin recipes + real ciphertext) awaits approval for local analysis use (extension E012-B). The open-rights texts are frozen in E012 stage B-open."
   }
 }
