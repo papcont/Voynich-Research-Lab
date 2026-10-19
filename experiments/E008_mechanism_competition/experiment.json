@@ -1,0 +1,89 @@
+{
+  "experiment_id": "E008",
+  "name": "mechanism_competition_stage_A",
+  "status": "PLAN_FROZEN",
+  "hypotheses": [
+    "H011",
+    "H012",
+    "H013"
+  ],
+  "question": "Which mechanism components (S edge state, L line position, C local copy/modify) carry independent held-out predictive information about the next ZL3b running-text token beyond a four-slot token grammar, under one fixed universal coding scorecard?",
+  "inputs": [
+    {
+      "source": "data/raw/ZL3b-n.txt",
+      "identity": "upstream_git_blob_sha1:2a4533ab9bdfa85db9bad602d590978953055df1"
+    }
+  ],
+  "population": "E007 population: running-text strict tokens, lexicographic folio order; line features from full line token lists; uncertain tokens never coded (feature UNC only)",
+  "split": {
+    "efold_fn": "int(sha256(('E007:'+folio.lower())).hexdigest(),16) % 5",
+    "development_folds": [
+      0,
+      1,
+      2
+    ],
+    "holdout_folds": [
+      3,
+      4
+    ],
+    "primary": "dev-trained frozen counts -> holdout bits/token",
+    "dependency_unit": "folio"
+  },
+  "evidence_class": "FROZEN_HOLDOUT for component contrasts; bases known from E007; P70 base NON-PROSPECTIVE",
+  "scorecard": "voynichlab.mdl.KTCoder prequential KT + char escape; model_bits = base inventory cost + elias_gamma(1+#components) + [C: elias_gamma(W_index+1) + 2]",
+  "bases": {
+    "B0": "whole token",
+    "B1": "P70 layer A (p,g,c,s)"
+  },
+  "components": {
+    "S": "last EVA char of previous token in same line; BOL; UNC — appended to every base-slot context",
+    "L": "FIRST/MID/LAST/ONLY in line — appended to every base-slot context",
+    "C": "window of previous W population tokens in same folio; src slot 'k:d' (d=0 exact, d=1 Levenshtein 1) or NONE, context ('src',); edit slot s{p}{c}/i{p}{c}/d{p}, context ('edit',); NONE -> base slots; base counts updated on every token"
+  },
+  "W_selection": {
+    "grid": [
+      5,
+      10,
+      20,
+      40
+    ],
+    "rule": "lowest development-only prequential data_bits of B1+C; ties -> smaller W; applied to all C models and holdout",
+    "cost_bits": "2 + elias_gamma(index+1)"
+  },
+  "models": "full factorial {S,L,C} x {B0,B1} = 16",
+  "nulls": {
+    "N1": {
+      "definition": "within-folio population-token order shuffle; uncertain tokens fixed; features recomputed",
+      "seed": 20261019,
+      "role": "primary (criterion 5)"
+    },
+    "N0": {
+      "definition": "within-line shuffle",
+      "seed": 20261020,
+      "role": "reported only"
+    }
+  },
+  "decision_rule": "X INFORMATIVE iff on B1: marginal gain>=0.05 AND unique gain>=0.05 AND full beats reduced on >=2/3 holdout folios AND unique gain>0 in Currier A and B AND unique gain - N1 unique gain >=0.05; NOT_INFORMATIVE iff marginal<0.05 and unique<0.05; else MIXED. B0 = robustness (BASE_DEPENDENT if direction differs).",
+  "margins": {
+    "bits_per_token": 0.05,
+    "folio_stability": "2/3"
+  },
+  "pre_result_predictions": {
+    "H011_S": "marginal>=0.05 expected; unique uncertain",
+    "H012_C": "marginal>=0.05 expected; unique vs S is the contest",
+    "H013_L": "uncertain; falsification live"
+  },
+  "family_readout": "ordinal only: copy/modify signature = C INFORMATIVE and Du(C)>=Du(S); sequential signature = S INFORMATIVE; line-unit signature = L INFORMATIVE; no N/C/G decision",
+  "degrees_of_freedom": "W (4 values, dev-only, charged); nothing else",
+  "confounds_descriptive": [
+    "major section",
+    "line-length tercile",
+    "token length",
+    "hand $H",
+    "UNC/BOL share",
+    "natural folio order (dev)"
+  ],
+  "claim_ceiling": "Structural predictive-information claims only; no morphemes/language/cipher/hoax/meaning.",
+  "stage_B": "DEFERRED: reference corpora (Latin/Italian), Naibbe reimplementation, self-citation generator, epilectrik grammar; separate preregistration with provenance/hash/license.",
+  "amendments": []
+}

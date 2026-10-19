@@ -63,9 +63,13 @@ relabel E007. Non-prospective (P70 built on the whole VMS). Structural only.
 
 Previous: E006 INCONCLUSIVE_UNDERPOWERED (H008 unresolved; no tuning).
 
-Next frontier: **E008** — mechanism tournament (**READY_TO_FREEZE_PLAN**). Reuse
-the E007 scorecard with an order-free subset metric; P70 layer A as structural
-baseline; external mechanisms only after independent reimplementation.
+Next frontier: **E008 stage A** — mechanism tournament (**PLAN_FROZEN**
+2026-10-19). Sixteen models = {whole token, P70 slots} × {S edge state, L line
+position, C local copy/modify}; one KT scorecard; dev→holdout frozen counts on
+the E007 split; within-folio shuffle null; per-component INFORMATIVE /
+NOT_INFORMATIVE / MIXED verdicts for H011–H013. Family readout ordinal only;
+stage B (reference corpora, Naibbe, self-citation generator, epilectrik grammar)
+deferred to its own preregistration. No E008 target computed.
 
 ## External landscape check (2026-10-19)
 

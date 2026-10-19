@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-19T20:30:00Z",
-  "status": "READY_TO_FREEZE_PLAN",
+  "updated_utc": "2026-10-19T21:10:00Z",
+  "status": "PLAN_FROZEN",
   "active_experiment": "E008_mechanism_competition",
-  "next_action": "Audit experiments/E008_mechanism_competition/PLAN_DRAFT.md and freeze an executable, falsifiable PLAN.md before any target reveal: one common held-out scorecard (reuse the E007 prequential KT bits/token + model cost, order-free cross-fitted subset metric) comparing natural/technical-language controls, cipher baselines, copy/modify generators, boundary/state generators and module/state models (P70 layer A as structural baseline). Every external mechanism (e.g. Naibbe cipher, epilectrik Currier-B grammar; see external/repos.yml) must be independently reimplemented from a pinned, license-checked source or excluded. Define held-out unit, nulls, degrees of freedom, decision rule. Do NOT reanalyze or tune E007. Commit the freeze without computing E008 targets.",
+  "next_action": "Implement frozen E008 stage A PLAN.md without changing frozen choices: run.py (population + line features, 16 models {B0,B1}x{S,L,C}, W selection on development only, dev->holdout frozen-count scoring, folio stability, Currier subsets, nulls N1/N0, descriptive confounds) and validate.py (independent coder + copy/edit search). Write results.json before REPORT.md. Resolve any open implementation detail in a committed PREFLIGHT_AMENDMENT before the first holdout coding. Then update ledger (H011-H013), STATUS, RESUME, state.",
   "blocked_reason": null,
   "last_completed_experiment": "E007_p70_replication",
   "last_completed_result": "REPRODUCED_BUT_NOT_VALIDATED",

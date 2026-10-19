@@ -36,7 +36,7 @@ R1: our independent P70 layer-A parser reproduces the published structural value
 
 ## Active frontier
 
-`E008_mechanism_competition` — **status READY_TO_FREEZE_PLAN**. Audit the one-line draft, then freeze an executable PLAN.md: common scorecard (E007 KT bits/token + model cost; order-free cross-fitted subset metric), competitor families N/C/G/M, P70 layer A as structural baseline, external mechanisms (Naibbe, epilectrik) only after independent reimplementation from pinned, license-checked sources. No targets before freeze.
+`E008_mechanism_competition` — **status PLAN_FROZEN (stage A)**, see `experiments/E008_mechanism_competition/PLAN.md` + `experiment.json`. Question: do S (previous token's final glyph), L (line position) and C (exact/one-edit copy of a recent same-folio token, window W ∈ {5,10,20,40} chosen on development only) carry independent held-out predictive information beyond P70 slots? 16 models, KT scorecard inherited from E007, dev→holdout frozen counts on the E007 split, folio-level stability, Currier A/B, within-folio shuffle null N1 (seed 20261019). Hypotheses H011/H012/H013 with pre-result predictions in PLAN §8. Family readout (copy/modify vs sequential vs line-unit signature) is ordinal only. Stage B with reference corpora is deferred. Next action: implement `run.py`/`validate.py`, amend before first holdout coding if needed, write `results.json` before `REPORT.md`.
 
 ## External check (2026-10-19)
 
