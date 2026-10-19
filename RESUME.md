@@ -30,16 +30,16 @@ Retained structural observations:
 
 ## Last completed experiment
 
-`E017_codex_order_adjacency` — **COMPLETED (development-stage).** H025b SUPPORTED_DEV: adjacent same-stratum folios share vocabulary beyond an order-permutation null (+0.013, p < 0.001; A +0.016, B +0.011). H026 FALSIFIED_DEV: same-leaf pairs do not exceed facing pages (+0.004, p = 0.33). Validator pass. See `REPORT.md`.
+`E018_y_qo_edge_test` — **COMPLETED (development-stage).** H003a SUPPORTED_DEV: qo after y-final tokens 6.1× enriched in Biological B (3.7× other B, 2.2× A; all p < 0.001 vs within-folio permutation). H003b SUPPORTED_DEV: the y/not-y feature captures 72% of the Currier-B edge-state gain (0.124 of 0.171 bits/token). Validator pass. See `REPORT.md`.
 
-Before: `E016` (folio-local vocabulary +0.035), `E015`, `E014`, `E013`, `E010`, `E011`, `E008`, `E007`, `E006`.
+Before: `E017`, `E016`, `E015`, `E014`, `E013`, `E010`, `E011`, `E008`, `E007`, `E006`; shared module `voynichlab.signature`.
 
 ## Active frontier — BLOCKED on two human decisions
 
 1. **Confirmation surface.** Under the folio rule ZL3b has no independent lockbox for any claim. Options: (a) register data from outside ZL3b (a transliteration with independent readings — IT2a/GC if reachable — or newly transcribed material); (b) amend A001 with an explicit SEMI_INDEPENDENT tier (registration flag, not FAIL) for candidates demonstrably not developed on the overlapping folios; (c) accept that all ZL3b results stay development-stage.
 2. **E012 corpora/licences** (reference-text signature comparison): PerseusDL canonical-latinLit (CC-BY-SA 4.0), Dante; network use; generator/cipher set.
 
-Development-stage work that needs no decision: a y→qo-specific prefix test (H003); an A6-vs-P70 label-text follow-up; signature v3 (v2 + folio-local F and order locality with proper nulls) as the E012 scorecard. Bifolium/quire tests need registered collation data (human).
+Development-stage work that needs no decision: an A6-vs-P70 label-text follow-up (small). Everything else of value now needs one of the two decisions (corpora for E012; a confirmation surface or collation data).
 
 **Signature v3 module:** `src/voynichlab/signature.py` (+ `tests/test_signature.py`) computes Δ_S, Δ_L, Δ_C, TTR, H1, folio-local reuse excess and codex-order locality for any line-structured text with the frozen definitions; the regression test reproduces the recorded E011/E014/E016/E017 values exactly. E012 scores reference texts and generators with this module.
 

@@ -1,0 +1,83 @@
+{
+  "experiment": "E018",
+  "evidence_class": "DEVELOPMENT",
+  "gate_level_claimable": "none",
+  "frozen_plan_commit": "c980ba7",
+  "run_head_commit": "c980ba798998ab29fbcc26a01d62b7779dd06c26",
+  "first_run_timestamp": "2026-10-19T22:06:10Z",
+  "software": {
+    "python": "3.13.16",
+    "numpy": "2.5.3"
+  },
+  "seeds": {
+    "perm": 20261070,
+    "bootstrap": 20261019
+  },
+  "n_permutations": 1000,
+  "source_identity": {
+    "zl3b_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc"
+  },
+  "population": {
+    "n_tokens": 33611,
+    "n_bio_B": 6140,
+    "n_other_B": 16115,
+    "n_A": 10833,
+    "n_currier_B": 22255
+  },
+  "H003a": {
+    "enrichment": {
+      "bio_B": {
+        "R": 6.069953468806071,
+        "p_qo_after_y": 0.40091517071453714,
+        "p_qo_after_other": 0.06604913411196134,
+        "n_after_y": 2841,
+        "n_after_other": 2483,
+        "null_mean": 0.9880467226317817,
+        "null_q975": 1.0905238228456098,
+        "p_perm": 0.000999000999000999
+      },
+      "other_B": {
+        "R": 3.706276061975374,
+        "p_qo_after_y": 0.2814950775905223,
+        "p_qo_after_other": 0.07595092024539878,
+        "n_after_y": 5993,
+        "n_after_other": 8150,
+        "null_mean": 1.0152868332291083,
+        "null_q975": 1.0945032965061254,
+        "p_perm": 0.000999000999000999
+      },
+      "A": {
+        "R": 2.1915141565926133,
+        "p_qo_after_y": 0.14520156974669995,
+        "p_qo_after_other": 0.06625627733678924,
+        "n_after_y": 2803,
+        "n_after_other": 6173,
+        "null_mean": 1.0151057733883586,
+        "null_q975": 1.1510447997494524,
+        "p_perm": 0.000999000999000999
+      }
+    },
+    "biological_minus_otherB": 2.363677406830697,
+    "decision": "SUPPORTED_DEV"
+  },
+  "H003b": {
+    "delta_S_B": {
+      "mean": 0.1709061100413637,
+      "ci_lower": 0.15105469801263474,
+      "ci_upper": 0.19054146576827638
+    },
+    "delta_Sy_B": {
+      "mean": 0.12374956206873818,
+      "ci_lower": 0.10550848980465069,
+      "ci_upper": 0.14190293845585422
+    },
+    "share": 0.7240792154170942,
+    "bits_per_token": {
+      "M0": 13.76869920001627,
+      "M_S": 13.576937729483022,
+      "M_Sy": 13.625498535480778
+    },
+    "decision": "SUPPORTED_DEV"
+  },
+  "claim_ceiling": "Structural transition statistics; no meaning claims."
+}

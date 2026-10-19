@@ -1,7 +1,7 @@
 {
   "experiment_id": "E018",
   "name": "y_qo_edge_test",
-  "status": "PLAN_FROZEN",
+  "status": "COMPLETED",
   "evidence_class": "DEVELOPMENT",
   "gate_level_claimable": "none",
   "hypotheses": {
@@ -34,5 +34,10 @@
     "predictions": "8552755e26b41fc4bcb8fdea4153c32bdfa0c94ec7b48a7632d3fd783229cf2b"
   },
   "claim_ceiling": "Structural transition statistics; no meaning claims.",
-  "amendments": []
+  "amendments": [],
+  "result": "results.json",
+  "decisions": {
+    "H003a": "SUPPORTED_DEV",
+    "H003b": "SUPPORTED_DEV"
+  }
 }

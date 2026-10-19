@@ -47,14 +47,16 @@ The stronger claim — same underlying unit sequence — has **not passed a cont
 
 ## Current frontier
 
-**E017 complete.** With the correct order-permutation null (vocabularies intact),
-consecutive same-stratum folios share vocabulary beyond permuted neighbours: J 0.123 vs
-0.110, **+0.013**, p < 0.001, in Currier A (+0.016) and B (+0.011) → **H025b
-SUPPORTED_DEV**. Leaf structure adds nothing: recto→verso 0.126 vs facing pages 0.121
-(p = 0.33) → **H026 FALSIFIED_DEV**. E016's earlier H025 misreading is resolved.
+**E018 complete.** The historical y → qo observation is quantified: after a `y`-final
+token the next prefix is `qo` **6.1×** as often in Biological-section B (40.1% vs 6.6%,
+permutation p < 0.001), 3.7× in other B sections, 2.2× in Currier A → **H003a
+SUPPORTED_DEV**; the binary y/not-y feature carries **72%** of the Currier-B edge-state
+codelength gain (0.124 of 0.171 bits/token) → **H003b SUPPORTED_DEV**. The "edge state"
+component of the structural inventory is therefore mostly one graded, population-wide
+transition with the Biological section as its extreme.
 
 Retained structural components after E006–E016 (all development-stage, all validated):
-four-slot token form (E007/E013); edge state → next prefix, strongest in B (E011/E010);
+four-slot token form (E007/E013); edge state → next prefix, mostly y → qo, graded Bio-B > B > A (E011/E010/E018);
 no local copying, self-citation excluded at every horizon (E008/E014/E015); line-position
 not predictive, text line-homogeneous (E011/E015); folio-local vocabulary (E016); weak
 codex-order locality, leaf not a unit (E017);
