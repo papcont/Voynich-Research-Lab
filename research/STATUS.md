@@ -47,6 +47,15 @@ The stronger claim — same underlying unit sequence — has **not passed a cont
 
 ## Current frontier
 
+**E014 complete.** Four non-semantic generators on the ZL3b folio/line skeleton vs the
+Voynich component signature (Δ_S +0.088, Δ_L −0.026, Δ_C −0.463): independent slots
+MISMATCH; token unigram PARTIAL; **self-citation MISMATCH** (Δ_C +2.93 bits/token — the
+real text has no local-copy gain at all) → H020 FALSIFIED; **edge-coupled slot generator
+PARTIAL** (matches L and C, overshoots S: 0.144 vs 0.088) → H021 PARTIAL. The three
+components separate Voynich from a shallow edge-coupled generator by only 0.056 on one
+component; type-inventory growth (TTR 0.193 / hapax 0.669 vs ≈ 0.14 / 0.40 for token-
+sampling generators) is the stronger discriminator and must join the E012 signature.
+
 **E013 complete — the first Gate v2 claim was stopped at registration, correctly.** P70 vs
 whole-token on the 710 label/circular/radial tokens (never coded before): +2.20 bits/token
 from scratch with model bits charged (CI 0.99–3.50, 30/39 folios), but the gate found that

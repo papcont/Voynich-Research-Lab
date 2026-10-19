@@ -1,7 +1,7 @@
 {
   "experiment_id": "E014",
   "name": "generator_signatures",
-  "status": "PLAN_FROZEN",
+  "status": "COMPLETED",
   "evidence_class": "MECHANISM_DEMONSTRATION/DEVELOPMENT",
   "gate_level_claimable": "none",
   "hypotheses": {
@@ -47,5 +47,15 @@
     "predictions": "feae11a198883fb9906acf88307872a5dd8788a0bd585784e0cd1cf2893ea23e"
   },
   "claim_ceiling": "Which simple generators reproduce which structural components; no meaning/language; no Gate level.",
-  "amendments": []
+  "amendments": [],
+  "result": "results.json",
+  "decisions": {
+    "G1_IND": "SIGNATURE_MISMATCH",
+    "G2_UNI": "PARTIAL",
+    "G3_SC": "SIGNATURE_MISMATCH",
+    "G4_EDGE": "PARTIAL",
+    "H020": "FALSIFIED",
+    "H021": "PARTIAL"
+  },
+  "generated_texts": "runs/E014/*.json (git-ignored; regenerated deterministically by run.py)"
 }
