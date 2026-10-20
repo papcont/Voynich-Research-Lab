@@ -211,7 +211,7 @@ def own_null(plist, R, rng, n=1000):
     vals = np.array(vals, dtype=float)
     und = int(np.isnan(vals).sum()); fin = vals[~np.isnan(vals)]
     p = (1 + np.sum(fin >= R) + und) / (n + 1) if not isnan(R) else None
-    return p, float(np.quantile(np.where(np.isnan(vals), np.inf, vals), 0.975)), und / n
+    return p, float(np.quantile(np.where(np.isnan(vals), np.inf, vals), 0.975, method="higher")), und / n
 
 
 def folio_terms(plist, weight=None):

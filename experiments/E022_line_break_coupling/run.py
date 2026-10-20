@@ -255,7 +255,7 @@ def null_summary(null, R):
     finite = null[~np.isnan(null)]
     inf_null = np.where(np.isnan(null), np.inf, null)
     return {"null_mean": float(finite.mean()) if len(finite) else None, "null_median": float(np.median(finite)) if len(finite) else None,
-            "null_q975": float(np.quantile(inf_null, 0.975)), "null_undefined": undefined, "null_undefined_fraction": undefined / len(null),
+            "null_q975": float(np.quantile(inf_null, 0.975, method="higher")), "null_undefined": undefined, "null_undefined_fraction": undefined / len(null),
             "p_perm": float((1 + np.sum(finite >= R) + undefined) / (len(null) + 1)) if not math.isnan(R) else None,
             "null_status": "OK" if undefined / len(null) <= 0.05 and not math.isnan(R) else "NOT_DEFINED"}
 

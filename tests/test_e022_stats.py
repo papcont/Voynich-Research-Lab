@@ -84,11 +84,15 @@ def test_permutation_null_and_undefined_handling():
     assert E.decide_h034(b0, ci_upper=1.3) == "FALSIFIED_DEV"                          # R_MH <= 1.1 under independence
     mid = {**b0, "R_MH": 1.3, "p_perm": 0.2}                                           # attenuated to the detection floor
     assert E.decide_h034(mid, ci_upper=1.8) == "INCONCLUSIVE_DEV" and E.decide_h034(mid, ci_upper=1.45) == "FALSIFIED_DEV"
-    # undefined permutations: a single stratum with one qo event after y -> permutations put it after 'other' or not
-    tiny = _pl([("A", "y", "qo")] + [("A", "y", "ch")] * 3 + [("A", "n", "ch")] * 4)
+    # undefined permutations: one stratum, two qo events among eight pairs -> ~21% of permutations put both
+    # after y (zero MH denominator); observed R_MH = 1 is defined, the null is NOT_DEFINED (> 5% undefined)
+    tiny = _pl([("A", "y", "qo")] + [("A", "y", "ch")] * 3 + [("A", "n", "qo")] + [("A", "n", "ch")] * 3)
     bt = E.enrichment_block(tiny, np.random.default_rng(4))
-    assert bt["null_undefined"] > 0 and bt["null_status"] == "NOT_DEFINED" and bt["p_perm"] is not None
-    assert E.decide_h034(bt, ci_upper=None) == "INCONCLUSIVE_DEV"
+    assert bt["R_MH"] == 1.0 and bt["null_undefined"] > 0 and bt["null_status"] == "NOT_DEFINED" and bt["p_perm"] is not None
+    assert math.isinf(bt["null_q975"]) and E.decide_h034(bt, ci_upper=None) == "INCONCLUSIVE_DEV"
+    # observed R undefined (no qo after 'other'): no p-value, NOT_DEFINED
+    und = E.enrichment_block(_pl([("A", "y", "qo")] + [("A", "y", "ch")] * 3 + [("A", "n", "ch")] * 4), np.random.default_rng(5))
+    assert math.isnan(und["R_MH"]) and und["p_perm"] is None and und["null_status"] == "NOT_DEFINED"
 
 
 def test_bootstrap_rho_keeps_nonpositive_and_recovers_ratio():
